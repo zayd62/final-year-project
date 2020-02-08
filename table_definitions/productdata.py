@@ -14,6 +14,7 @@ class ProductData(Base):
     price = Column(Float(precision=2))
     brand = Column(String)
     itemName = Column(String)
+    size = Column(Integer)
 
     product_id = Column(
         Integer, ForeignKey("product.id", ondelete="CASCADE"), nullable=True
@@ -27,11 +28,12 @@ class ProductData(Base):
             ProductData.__tablename__, self.id, self.itemName, self.brand, self.price
         )
 
-    def __init__(self, url, html, date, price, brand, itemName, product):
+    def __init__(self, url, html, date, price, brand, itemName, size, product):
         self.url = url
         self.HTMLContent = html
         self.dateTimeCrawled = date
         self.price = price
         self.brand = brand
         self.itemName = itemName
+        self.size = size
         self.product = product

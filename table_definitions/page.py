@@ -12,8 +12,8 @@ class Page(Base):
     HTMLContent = Column(String)
     dateTimeCrawled = Column(Date)
 
-    category_id = Column(Integer, ForeignKey("category.id"), nullable=True)
-    category = relationship("Category", backref="page")
+    category_id = Column(Integer, ForeignKey("category.id", ondelete="CASCADE"), nullable=True)
+    category = relationship("Category", backref="page", cascade="delete")
 
     def __repr__(self):
         return "{} --> id: {}, url: {}".format(Page.__tablename__, self.id, self.url)

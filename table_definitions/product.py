@@ -12,8 +12,8 @@ class Product(Base):
     HTMLContent = Column(String)
     dateTimeCrawled = Column(Date)
 
-    page_id = Column(Integer, ForeignKey("page.id"), nullable=True)
-    page = relationship("Page", backref="product")
+    page_id = Column(Integer, ForeignKey("page.id", ondelete="CASCADE"), nullable=True)
+    page = relationship("Page", cascade="delete", backref="product")
 
     def __repr__(self):
         return "{} --> id: {}, url: {}".format(Product.__tablename__, self.id, self.url)

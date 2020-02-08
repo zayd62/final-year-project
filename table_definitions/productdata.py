@@ -15,8 +15,12 @@ class ProductData(Base):
     brand = Column(String)
     itemName = Column(String)
 
-    product_id = Column(Integer, ForeignKey("product.id"), nullable=True)
-    product = relationship("Product", backref=backref("productData", uselist=False))
+    product_id = Column(
+        Integer, ForeignKey("product.id", ondelete="CASCADE"), nullable=True
+    )
+    product = relationship(
+        "Product", cascade="delete", backref=backref("productData", uselist=False)
+    )
 
     def __repr__(self):
         return "{} --> id: {}, item: {}, brand: {}, price: {}".format(

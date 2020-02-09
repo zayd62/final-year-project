@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Date, ForeignKey, Integer, String, Float
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, String
+from sqlalchemy.orm import backref, relationship
 
 from .base import Base
 
@@ -10,7 +10,7 @@ class ProductData(Base):
     id = Column(Integer, primary_key=True)
     url = Column(String)
     HTMLContent = Column(String)
-    dateTimeCrawled = Column(Date)
+    dateTimeCrawled = Column(DateTime)
     price = Column(Float(precision=2))
     brand = Column(String)
     itemName = Column(String)

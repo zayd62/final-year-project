@@ -10,7 +10,6 @@ class Product(Base):
     id = Column(Integer, primary_key=True)
     url = Column(String)
     HTMLContent = Column(String)
-    dateTimeCrawled = Column(DateTime)
 
     page_id = Column(Integer, ForeignKey("page.id", ondelete="CASCADE"), nullable=True)
     page = relationship("Page", cascade="delete", backref="product")
@@ -18,8 +17,7 @@ class Product(Base):
     def __repr__(self):
         return "{} --> id: {}, url: {}".format(Product.__tablename__, self.id, self.url)
 
-    def __init__(self, url, html, date, page):
+    def __init__(self, url, html, page):
         self.url = url
         self.HTMLContent = html
-        self.dateTimeCrawled = date
         self.page = page

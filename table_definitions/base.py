@@ -4,8 +4,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
-engine = create_engine("sqlite:///dataset.sqlite3")
+pth = '/media/zayd/Common/University/Year 3/Final Year Project/code/dataset.sqlite3'
+engine = create_engine("sqlite:///" + pth)
 Session = sessionmaker(bind=engine)
 
 Base = declarative_base()

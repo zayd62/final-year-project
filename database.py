@@ -1,9 +1,5 @@
 # https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/
 
-from table_definitions import category
-from table_definitions import page
-from table_definitions import product
-from table_definitions import productdata
 from table_definitions.base import Base, Session, engine
 
 
@@ -15,6 +11,7 @@ def create_empty_database():
     session.commit()
     session.close()
     print("created empty database successfully")
+
 
 if __name__ == "__main__":
     create_empty_database()

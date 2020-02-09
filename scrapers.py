@@ -1,17 +1,18 @@
 import sys
 from datetime import datetime
-from database import loadSessionBase
+
 from scrapy import Spider
 from scrapy.crawler import CrawlerProcess
 from scrapy.http import TextResponse
+
+from table_definitions.base import Session
+from table_definitions.category import Category
+from table_definitions.page import Page
 
 # https://realpython.com/python-web-scraping-practical-introduction/
 # pip install requests BeautifulSoup4
 # pip install Scrapy
 # pip install sqlalchemy
-
-
-URL = None
 
 
 class CrawlCategory(Spider):
@@ -21,32 +22,26 @@ class CrawlCategory(Spider):
     information required
     """
 
-    # name of spider
-    name = "category"
-    crawlCategoryName = None
-    crawlCategoryId = None
+    name = 'category'
+    # SQLAlchemy category object
+    catObject = None
+
+    # SQLAlchemy session object
+    dbSession = None
 
     def parse(self, response: TextResponse):
         # getting the data required to store in the pages table
         r_url = response.url
         r_page = response.text
-        r_time = datetime.utcnow()
-
-        # loading sqlite db using sqlalchemy
-        session, base = loadSessionBase()
-
-        # creating page table
-        pageobj = base.classes.page
-
-        # creating page row
-        page_objectToCommit = pageobj(
-            url=r_url,
-            HTMLContent=r_page,
-            dateTimeCrawled=r_time,
-            categoryId=CrawlCategory.crawlCategoryId,
+        r_time = datetime.now()
+        print("scraping: {}".format(r_url))
+        # create SQLAlchemy page object
+        pge = Page(
+            url=r_url, html=r_page, date=r_time, category=CrawlCategory.catObject
         )
-        session.add(page_objectToCommit)
-        session.commit()
+
+        # add page object
+        CrawlCategory.dbSession.add(pge)
 
         # calculating the url for the next page
         next_page = response.css("li.next a").attrib["href"]
@@ -65,23 +60,29 @@ if __name__ == "__main__":
             "HTTPCACHE_ENABLED": "False",
         }
     )
-    CrawlCategory.start_urls = [sys.argv[2]]
-    CrawlCategory.crawlCategoryName = sys.argv[1]
 
-    # loading sqlite db using sqlalchemy
-    session, base = loadSessionBase()
+    # open database session and make it available to the crawler
+    session = Session()
+    CrawlCategory.dbSession = session
 
-    # writing information to category table
-    categoryobj = base.classes.category
-    category_objectToCommit = categoryobj(category=CrawlCategory.crawlCategoryName)
-    session.add(category_objectToCommit)
-    session.commit()
+    # url to scrape
+    url = sys.argv[1]
+    CrawlCategory.start_urls = [url]
 
-    # getting id of newly added row to category table
-    categoryId = category_objectToCommit.id
+    # create category object and add to session
+    catName = sys.argv[2]
+    cat = Category(catName)
+    session.add(cat)
 
-    # adding the id to spider object
-    CrawlCategory.crawlCategoryId = categoryId
+    # make category object available to the crawler
+    CrawlCategory.catObject = cat
 
+    # run the crawler
+    print("starting crawl")
     process.crawl(CrawlCategory)
     process.start()  # the script will wait here until the crawling is complete
+    print("crawl finished")
+
+    # commit and close the database session
+    session.commit()
+    session.close()

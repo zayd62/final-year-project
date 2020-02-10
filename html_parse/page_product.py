@@ -1,12 +1,10 @@
 import sys
 
 from bs4 import BeautifulSoup as bs
-from sqlalchemy.orm import Session as ses
 
 if __name__ == "__main__":
     sys.path.append("/media/zayd/Common/University/Year 3/Final Year Project/code")
 
-from table_definitions.base import Session
 from table_definitions.category import Category
 from table_definitions.page import Page
 from table_definitions.product import Product

@@ -122,17 +122,24 @@ def crawl_wrapper_category(session):
     process.start()  # the script will wait here until the crawling is complete
     print("crawl finished")
 
-if __name__ == "__main__":
+
+def crawl_wrapper_productdata():
     process = CrawlerProcess(
         settings={
-            "FEED_FORMAT": "json",
-            "FEED_URI": "items.json",
+            "FEED_FORMAT": "csv",
+            "FEED_URI": "items.csv",
             "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
             "DOWNLOAD_DELAY": "1",
             "AUTOTHROTTLE_ENABLED": "True",
             "HTTPCACHE_ENABLED": "False",
         }
     )
+    crawlProduct.start_urls = [
+        "https://www.bestwaywholesale.co.uk/product/586208-1",
+        "https://www.bestwaywholesale.co.uk/product/412060-1",
+    ]
+    process.crawl(crawlProduct)
+    process.start()
 
     # open database session and make it available to the crawler
     session = Session()

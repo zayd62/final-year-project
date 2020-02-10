@@ -1,3 +1,4 @@
+import re
 import sys
 from datetime import datetime
 
@@ -22,7 +23,7 @@ class CrawlCategory(Spider):
     information required
     """
 
-    name = 'category'
+    name = "category"
 
     # SQLAlchemy category object
     catObject = None
@@ -141,13 +142,18 @@ def crawl_wrapper_productdata():
     process.crawl(crawlProduct)
     process.start()
 
+
+if __name__ == "__main__":
+
     # open database session and make it available to the crawler
     session = Session()
 
-    # invoke crawler for category
-    crawl_wrapper_category(session)
+    # # invoke crawler for category
+    # crawl_wrapper_category(session)
 
     # invoke crawler for productdata
+    crawl_wrapper_productdata()
+
     # commit and close the database session
     session.commit()
     session.close()

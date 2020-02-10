@@ -50,6 +50,17 @@ class CrawlCategory(Spider):
             yield response.follow(next_page, callback=self.parse)
 
 def crawl_wrapper_category(session):
+    process = CrawlerProcess(
+        settings={
+            "FEED_FORMAT": "json",
+            "FEED_URI": "items.json",
+            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+            "DOWNLOAD_DELAY": "1",
+            "AUTOTHROTTLE_ENABLED": "True",
+            "HTTPCACHE_ENABLED": "False",
+        }
+    )
+
     CrawlCategory.dbSession = session
 
     # url to scrape

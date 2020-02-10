@@ -23,6 +23,7 @@ class CrawlCategory(Spider):
     """
 
     name = 'category'
+
     # SQLAlchemy category object
     catObject = None
 
@@ -48,21 +49,7 @@ class CrawlCategory(Spider):
         if next_page is not None:
             yield response.follow(next_page, callback=self.parse)
 
-
-if __name__ == "__main__":
-    process = CrawlerProcess(
-        settings={
-            "FEED_FORMAT": "json",
-            "FEED_URI": "items.json",
-            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-            "DOWNLOAD_DELAY": "1",
-            "AUTOTHROTTLE_ENABLED": "True",
-            "HTTPCACHE_ENABLED": "False",
-        }
-    )
-
-    # open database session and make it available to the crawler
-    session = Session()
+def crawl_wrapper_category(session):
     CrawlCategory.dbSession = session
 
     # url to scrape
@@ -83,6 +70,25 @@ if __name__ == "__main__":
     process.start()  # the script will wait here until the crawling is complete
     print("crawl finished")
 
+if __name__ == "__main__":
+    process = CrawlerProcess(
+        settings={
+            "FEED_FORMAT": "json",
+            "FEED_URI": "items.json",
+            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+            "DOWNLOAD_DELAY": "1",
+            "AUTOTHROTTLE_ENABLED": "True",
+            "HTTPCACHE_ENABLED": "False",
+        }
+    )
+
+    # open database session and make it available to the crawler
+    session = Session()
+
+    # invoke crawler for category
+    crawl_wrapper_category(session)
+
+    # invoke crawler for productdata
     # commit and close the database session
     session.commit()
     session.close()

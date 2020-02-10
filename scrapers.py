@@ -49,6 +49,47 @@ class CrawlCategory(Spider):
         if next_page is not None:
             yield response.follow(next_page, callback=self.parse)
 
+
+class crawlProduct(Spider):
+    """
+    This crawler scrapes individual product pages and extracts appropriate information
+    """
+
+    name = "product"
+
+    def parse(self, response: TextResponse):
+        # getting data for productdata object
+        r_url = response.url
+        r_page = response.text
+        r_time = datetime.now()
+
+        # get price
+        r_price = response.css(".prodtable tr:nth-of-type(2) td::text").get()
+        r_price = "".join(
+            re.findall(r"([\d,.])", r_price)
+        )  # use regex to remove the currency symbol
+
+        # get brand
+        r_brand = response.css(".prodtable tr:nth-of-type(8) td::text").get()
+
+        # get item name
+        r_itemname = response.css(".productpagedetail-inner .prodname::text").get()
+
+        # get item size
+        r_size = response.css(".prodtable tr:nth-of-type(4) td::text").get()
+        r_size = "".join(re.findall(r"([\d,.])", r_size))
+
+        yield {
+            "url": r_url,
+            "HTMLContent": r_page,
+            "dateTimeCrawled": r_time,
+            "price": r_price,
+            "brand": r_brand,
+            "itemName": r_itemname,
+            "size": r_size,
+        }
+
+
 def crawl_wrapper_category(session):
     process = CrawlerProcess(
         settings={

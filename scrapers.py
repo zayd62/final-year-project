@@ -66,6 +66,7 @@ class crawlProduct(Spider):
         r_page = response.text
         r_time = datetime.now()
 
+        print("scraping: {}".format(r_url))
         # get price
         r_price = response.css(".prodtable tr:nth-of-type(2) td::text").get()
         r_price = "".join(
@@ -91,71 +92,3 @@ class crawlProduct(Spider):
             "itemName": r_itemname,
             "size": r_size,
         }
-
-
-def crawl_wrapper_category(session):
-    process = CrawlerProcess(
-        settings={
-            "FEED_FORMAT": "json",
-            "FEED_URI": "items.json",
-            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-            "DOWNLOAD_DELAY": "1",
-            "AUTOTHROTTLE_ENABLED": "True",
-            "HTTPCACHE_ENABLED": "False",
-        }
-    )
-
-    CrawlCategory.dbSession = session
-
-    # url to scrape
-    url = sys.argv[1]
-    CrawlCategory.start_urls = [url]
-
-    # create category object and add to session
-    catName = sys.argv[2]
-    cat = Category(catName)
-    session.add(cat)
-
-    # make category object available to the crawler
-    CrawlCategory.catObject = cat
-
-    # run the crawler
-    print("starting crawl")
-    process.crawl(CrawlCategory)
-    process.start()  # the script will wait here until the crawling is complete
-    print("crawl finished")
-
-
-def crawl_wrapper_productdata():
-    process = CrawlerProcess(
-        settings={
-            "FEED_FORMAT": "csv",
-            "FEED_URI": "items.csv",
-            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-            "DOWNLOAD_DELAY": "1",
-            "AUTOTHROTTLE_ENABLED": "True",
-            "HTTPCACHE_ENABLED": "False",
-        }
-    )
-    crawlProduct.start_urls = [
-        "https://www.bestwaywholesale.co.uk/product/586208-1",
-        "https://www.bestwaywholesale.co.uk/product/412060-1",
-    ]
-    process.crawl(crawlProduct)
-    process.start()
-
-
-if __name__ == "__main__":
-
-    # open database session and make it available to the crawler
-    session = Session()
-
-    # # invoke crawler for category
-    # crawl_wrapper_category(session)
-
-    # invoke crawler for productdata
-    crawl_wrapper_productdata()
-
-    # commit and close the database session
-    session.commit()
-    session.close()

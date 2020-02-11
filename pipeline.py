@@ -63,9 +63,11 @@ def crawl_category(session, url, catName):
     session.commit()
     return cat
 
-print("Starting page --> product HTML parse")
-parse(session)
-print("HTML parse complete. scraping productdata")
+
+def page_parse(session, category_id):
+    print("Starting page --> product HTML parse")
+    parse(session, category_id)
+    print("HTML parse complete. scraping productdata")
 
 # create crawling process for productdata crawling
 process = CrawlerProcess(

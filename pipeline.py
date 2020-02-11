@@ -1,6 +1,8 @@
 import sys
 
-from scrapy.crawler import CrawlerProcess
+from scrapy.crawler import CrawlerRunner
+from scrapy.utils.log import configure_logging
+from twisted.internet import defer, reactor
 
 from html_parse.page_product import parse
 from scrapers import CrawlCategory, crawlProduct
@@ -21,68 +23,13 @@ category_name = sys.argv[2]
 # open database session and make it available to the crawler
 session = Session()
 
-
-def crawl_category(session, url, catName):
-    """
-    Given a url, the function will crawl the category and insert the crawled pages into the database.
-    it will also return the generate category object (using catName to name the category) from which you are able to determine
-    the page entries created in the database due to the one-to-many relationship between the category and the page
-    """
-    # create crawler process for category crawling
-    process = CrawlerProcess(
-        settings={
-            "FEED_FORMAT": "json",
-            "FEED_URI": "items.json",
-            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-            "DOWNLOAD_DELAY": "1",
-            "AUTOTHROTTLE_ENABLED": "True",
-            "HTTPCACHE_ENABLED": "False",
-        }
-    )
-
-    # Give the crawler access to the database session
-    CrawlCategory.dbSession = session
-
-    # Give the crawler the url to scrape
-    CrawlCategory.start_urls = [url]
-
-    # create category object and add to session
-    cat = Category(catName)
-    session.add(cat)
-
-    # Give the crawler the category object
-    CrawlCategory.catObject = cat
-
-    # run the crawler
-    print("starting crawl for category")
-    process.crawl(CrawlCategory)
-    process.start()  # the script will wait here until the crawling is complete
-    print("finished crawl for category. Committing the change to the database")
-
-    # save the results of the crawling to the database
-    session.commit()
-    return cat
-
-
 def page_parse(session, category_id):
     print("Starting page --> product HTML parse")
     parse(session, category_id)
     print("HTML parse complete. scraping productdata")
 
 
-def product_data(session, cat_id):
-    # create crawling process for productdata crawling
-    process = CrawlerProcess(
-        settings={
-            "FEED_FORMAT": "csv",
-            "FEED_URI": "items.csv",
-            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-            "DOWNLOAD_DELAY": "1",
-            "AUTOTHROTTLE_ENABLED": "True",
-            "HTTPCACHE_ENABLED": "False",
-        }
-    )
-
+def product_data_urls(session, cat_id):
     # return the products from the database with the appropriate category id
     correct_products = (
         session.query(Product)
@@ -95,13 +42,53 @@ def product_data(session, cat_id):
         # crawlProduct.dbSession = session
         # crawlProduct.productObject = i
         urlList.append(i.url)
-    crawlProduct.start_urls = urlList
-    process.crawl(crawlProduct)
-    process.start()
-    session.commit()
+
+    return urlList
     print("completed product --> productdata conversion")
 
 
-created_category_object = crawl_category(session, category_url, category_name)
-page_parse(session, created_category_object.id)
-product_data(session, created_category_object.id)
+configure_logging()
+runner = CrawlerRunner()
+category_settings = {
+    "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+    "DOWNLOAD_DELAY": "1",
+    "AUTOTHROTTLE_ENABLED": "True",
+    "HTTPCACHE_ENABLED": "False",
+}
+
+product_settings = {
+    "FEED_FORMAT": "csv",
+    "FEED_URI": "items.csv",
+    "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+    "DOWNLOAD_DELAY": "1",
+    "AUTOTHROTTLE_ENABLED": "True",
+    "HTTPCACHE_ENABLED": "False",
+}
+
+
+@defer.inlineCallbacks
+def crawl(session, category_url, category_name):
+    cat = Category(category_name)
+    session.add(cat)
+    session.commit()
+
+    CrawlCategory.dbSession = session
+    CrawlCategory.start_urls = [category_url]
+    CrawlCategory.catObject = cat
+    CrawlCategory.custom_settings = category_settings
+
+    print("starting crawl for category")
+    yield runner.crawl(CrawlCategory)
+    print("finished crawl for category. Committing the change to the database")
+
+    page_parse(session, cat.id)
+    urls = product_data_urls(session, cat.id)
+
+    crawlProduct.start_urls = urls
+    crawlProduct.custom_settings = product_settings
+    yield runner.crawl(crawlProduct)
+
+
+crawl(session, category_url, category_name)
+reactor.run()  # the script will block here until the last crawl call is finished
+

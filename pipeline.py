@@ -5,9 +5,11 @@ from scrapy.crawler import CrawlerProcess
 from html_parse.page_product import parse
 from scrapers import CrawlCategory, crawlProduct
 from table_definitions.base import Session
+from table_definitions.category import Category
+from table_definitions.page import Page
+from table_definitions.product import Product
+from table_definitions.productdata import ProductData
 
-# CONSTANTS
-PRODUCT_SAVE = "items.csv"
 # cli arguments
 # 1: category url
 # 2: category name
@@ -22,7 +24,7 @@ session = Session()
 
 def crawl_category(session, url, catName):
     """
-    Given a url, the function will crawl the category and insert the crawled pages into the database. 
+    Given a url, the function will crawl the category and insert the crawled pages into the database.
     it will also return the generate category object (using catName to name the category) from which you are able to determine
     the page entries created in the database due to the one-to-many relationship between the category and the page
     """
@@ -56,7 +58,7 @@ def crawl_category(session, url, catName):
     process.crawl(CrawlCategory)
     process.start()  # the script will wait here until the crawling is complete
     print("finished crawl for category. Committing the change to the database")
-        
+
     # save the results of the crawling to the database
     session.commit()
     return cat

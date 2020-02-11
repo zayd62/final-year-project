@@ -102,4 +102,6 @@ def product_data(session, cat_id):
     print("completed product --> productdata conversion")
 
 
-create_category_object = crawl_category()
+created_category_object = crawl_category(session, category_url, category_name)
+page_parse(session, created_category_object.id)
+product_data(session, created_category_object.id)

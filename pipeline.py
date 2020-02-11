@@ -69,17 +69,37 @@ def page_parse(session, category_id):
     parse(session, category_id)
     print("HTML parse complete. scraping productdata")
 
-# create crawling process for productdata crawling
-process = CrawlerProcess(
-    settings={
-        "FEED_FORMAT": "csv",
-        "FEED_URI": "items.csv",
-        "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-        "DOWNLOAD_DELAY": "1",
-        "AUTOTHROTTLE_ENABLED": "True",
-        "HTTPCACHE_ENABLED": "False",
-    }
-)
+
+def product_data(session, cat_id):
+    # create crawling process for productdata crawling
+    process = CrawlerProcess(
+        settings={
+            "FEED_FORMAT": "csv",
+            "FEED_URI": "items.csv",
+            "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+            "DOWNLOAD_DELAY": "1",
+            "AUTOTHROTTLE_ENABLED": "True",
+            "HTTPCACHE_ENABLED": "False",
+        }
+    )
+
+    # return the products from the database with the appropriate category id
+    correct_products = (
+        session.query(Product)
+        .filter(Product.page)
+        .filter(Page.category_id == cat_id)
+        .all()
+    )
+    urlList = []
+    for i in correct_products:
+        # crawlProduct.dbSession = session
+        # crawlProduct.productObject = i
+        urlList.append(i.url)
+    crawlProduct.start_urls = urlList
+    process.crawl(crawlProduct)
+    process.start()
+    session.commit()
+    print("completed product --> productdata conversion")
 
 
 create_category_object = crawl_category()

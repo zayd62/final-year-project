@@ -9,6 +9,8 @@ from scrapy.http import TextResponse
 from table_definitions.base import Session
 from table_definitions.category import Category
 from table_definitions.page import Page
+from table_definitions.product import Product
+from table_definitions.productdata import ProductData
 
 # https://realpython.com/python-web-scraping-practical-introduction/
 # pip install requests BeautifulSoup4

@@ -10,9 +10,9 @@ from table_definitions.page import Page
 from table_definitions.product import Product
 
 
-def parse(session):
+def parse(session, cat_id):
     # get all the elements in the page table
-    page_table = session.query(Page).all()
+    page_table = session.query(Page).filter(Page.category_id == cat_id).all()
 
     # iterate through all the rows in the page table (i is a row in the page table)
     for i in page_table:

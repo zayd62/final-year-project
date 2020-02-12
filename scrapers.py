@@ -1,9 +1,7 @@
 import re
-import sys
 from datetime import datetime
 
 from scrapy import Spider
-from scrapy.crawler import CrawlerProcess
 from scrapy.http import TextResponse
 
 from table_definitions.base import Session
@@ -59,6 +57,7 @@ class crawlProduct(Spider):
     """
 
     name = "product"
+    dbSession = None
 
     def parse(self, response: TextResponse):
         # getting data for productdata object
@@ -83,12 +82,20 @@ class crawlProduct(Spider):
         r_size = response.css(".prodtable tr:nth-of-type(4) td::text").get()
         r_size = "".join(re.findall(r"([\d,.])", r_size))
 
-        yield {
-            "url": r_url,
-            "HTMLContent": r_page,
-            "dateTimeCrawled": r_time,
-            "price": r_price,
-            "brand": r_brand,
-            "itemName": r_itemname,
-            "size": r_size,
-        }
+        # since product and productdata has a 1 to 1 relationship, the url of product and productdata is the same
+        # iterate thorugh the product table, find the matching url and create the productdata sqlalchemy object with the product object
+        Product_table = crawlProduct.dbSession.query(Product).all()
+        for i in Product_table:
+            if i.url == r_url:
+                product_data_object = ProductData(
+                    url=r_url,
+                    html=r_page,
+                    date=r_time,
+                    price=r_price,
+                    brand=r_brand,
+                    itemName=r_itemname,
+                    size=r_size,
+                    product=i
+                )
+                crawlProduct.dbSession.add(product_data_object)
+                crawlProduct.dbSession.commit()

@@ -23,6 +23,7 @@ category_name = sys.argv[2]
 # open database session and make it available to the crawler
 session = Session()
 
+
 def page_parse(session, category_id):
     print("Starting page --> product HTML parse")
     parse(session, category_id)
@@ -57,21 +58,26 @@ category_settings = {
 }
 
 product_settings = {
-    "FEED_FORMAT": "csv",
-    "FEED_URI": "items.csv",
     "USER_AGENT": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
     "DOWNLOAD_DELAY": "1",
     "AUTOTHROTTLE_ENABLED": "True",
     "HTTPCACHE_ENABLED": "False",
+    "DOWNLOADER_MIDDLEWARES": {
+        "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
+        "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
+    }
 }
 
+# "ROTATING_PROXY_LIST_PATH": 'proxies/proxy.txt'
 
 @defer.inlineCallbacks
 def crawl(session, category_url, category_name):
+    # create category object and commit to db
     cat = Category(category_name)
     session.add(cat)
     session.commit()
 
+    # add session, custom settings and category object to category crawler
     CrawlCategory.dbSession = session
     CrawlCategory.start_urls = [category_url]
     CrawlCategory.catObject = cat
@@ -83,7 +89,9 @@ def crawl(session, category_url, category_name):
 
     page_parse(session, cat.id)
     urls = product_data_urls(session, cat.id)
-
+    
+    # add session, custom settings and starting urls object to category crawler
+    crawlProduct.dbSession = session
     crawlProduct.start_urls = urls
     crawlProduct.custom_settings = product_settings
     yield runner.crawl(crawlProduct)
@@ -91,4 +99,4 @@ def crawl(session, category_url, category_name):
 
 crawl(session, category_url, category_name)
 reactor.run()  # the script will block here until the last crawl call is finished
-
+reactor.stop()

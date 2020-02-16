@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/zayd/anaconda3/envs/finalYearProject-database/bin/python",
+    "python.pythonPath": "/home/zayd/anaconda3/envs/finalYearProject-dataset/bin/python",
     "python.formatting.provider": "black",
 }

@@ -4,6 +4,7 @@ from datetime import datetime
 from scrapy import Spider
 from scrapy.http import TextResponse
 
+from html_parse.productdata import parse as product_data_html_parse
 from table_definitions.base import Session
 from table_definitions.category import Category
 from table_definitions.page import Page
@@ -36,7 +37,7 @@ class CrawlCategory(Spider):
         r_url = response.url
         r_page = response.text
         r_time = datetime.now()
-        print("scraping: {}".format(r_url))
+        print(__file__, "CrawCategory.parse()", "scraping for pages: {}".format(r_url))
         # create SQLAlchemy page object
         pge = Page(
             url=r_url, html=r_page, date=r_time, category=CrawlCategory.catObject
@@ -65,37 +66,52 @@ class crawlProduct(Spider):
         r_page = response.text
         r_time = datetime.now()
 
-        print("scraping: {}".format(r_url))
-        # get price
-        r_price = response.css(".prodtable tr:nth-of-type(2) td::text").get()
-        r_price = "".join(
-            re.findall(r"([\d,.])", r_price)
-        )  # use regex to remove the currency symbol
+        print("scraping for productData: {}".format(r_url))
 
-        # get brand
-        r_brand = response.css(".prodtable tr:nth-of-type(8) td::text").get()
+        dct = product_data_html_parse(response.css(".prodtable").get())
+        remove = False
+        try:
+            # get price
+            r_price = dct["RSP"]
+            r_price = "".join(
+                re.findall(r"([\d,.])", r_price)
+            )  # use regex to remove the currency symbol
 
-        # get item name
-        r_itemname = response.css(".productpagedetail-inner .prodname::text").get()
+            # get brand
+            r_brand = dct['Brand']
 
-        # get item size
-        r_size = response.css(".prodtable tr:nth-of-type(4) td::text").get()
-        r_size = "".join(re.findall(r"([\d,.])", r_size))
+            # get item name
+            r_itemname = response.css(".productpagedetail-inner .prodname::text").get()
+
+            # get item size
+            r_size = dct['Pack Size']
+            r_size = "".join(re.findall(r"([\d,.])", r_size))
+        except KeyError as e:
+            print(e)
+            print("Missing data, remove ")
+            remove = True
 
         # since product and productdata has a 1 to 1 relationship, the url of product and productdata is the same
         # iterate thorugh the product table, find the matching url and create the productdata sqlalchemy object with the product object
         Product_table = crawlProduct.dbSession.query(Product).all()
         for i in Product_table:
+            # if there is a matcging url, we found the matching product
             if i.url == r_url:
-                product_data_object = ProductData(
-                    url=r_url,
-                    html=r_page,
-                    date=r_time,
-                    price=r_price,
-                    brand=r_brand,
-                    itemName=r_itemname,
-                    size=r_size,
-                    product=i
-                )
-                crawlProduct.dbSession.add(product_data_object)
+                # check if any of the scraped data has none values. if true, delete the product entry
+                if remove:
+                    crawlProduct.dbSession.query(Product).filter(
+                        Product.id == i.id
+                    ).delete()
+                else:
+                    product_data_object = ProductData(
+                        url=r_url,
+                        html=r_page,
+                        date=r_time,
+                        price=r_price,
+                        brand=r_brand,
+                        itemName=r_itemname,
+                        size=r_size,
+                        product=i,
+                    )
+                    crawlProduct.dbSession.add(product_data_object)
                 crawlProduct.dbSession.commit()

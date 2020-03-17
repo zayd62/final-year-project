@@ -1,0 +1,37 @@
+# Risk Analysis {#risk-analysis}
+
+The following is a risk analysis of the project and is split into various sub chapters as defined in the session 7 lecture slides on page 13 [@naeemWeekInterimReport2019]
+
+## Project Risk {#project-risk}
+
+\begin{center}
+\emph{A project risk is defined as something affecting project schedule or resources}
+\end{center}
+
+### Out of Data Dataset
+
+The dataset will be obtained using web scraping. For web scraping, since the data is obtained by reading the HTML of a web page, the web page can change and thus the origin of dataset can be different from the dataset that has been scraped, parsed and stored
+
+### Availability of hardware/software
+
+This project will involve machine learning. Taking the Seq2SQL paper [@zhongSeq2SQLGeneratingStructured2017] in chapter 4 titled “Experiments”, the paper mentions that they implemented the model using **PyTorch**. For PyTorch, it is recommended, *"one or more high-end CUDA-capable GPUs is the norm for a deep learning environment"* under *"Processor and memory requirements"* [@ibmdeveloperGetStartedPyTorch2018]. The use of GPUs can result in much faster processing of models compared to CPU only [@johnsonJcjohnsonCnnbenchmarks2019]. The project also involves web scraping and parsing of HTML, finding the appropriate tools/libraries and learning how to use them may be a challenge.
+
+## Product Risk {#product-risk}
+
+\begin{center}
+\emph{Something affecting quality or performance of product}
+\end{center}
+
+### Lack of Knowledge {#LoK}
+
+Since this project involves advance machine learning, one issue could be the lack of knowledge needed to, for example, use the machine learning model to convert natural language queries into SQL.
+
+## Business Risk {#business-risk}
+
+\begin{center}
+\emph{Something affecting organisation or individual developing product}
+\end{center}
+
+### Unexpected Commitments
+
+There maybe other unexpected commitments that may take place during the development of the project, for example, job interviews which may take up time that was originally planned for the project

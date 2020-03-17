@@ -1,0 +1,14 @@
+# Literature review {#literature-review}
+
+## Seq2SQL {#seq2sql}
+
+Seq2SQL is a machine learning model that uses deep neural networks and reinforcement learning to “ translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. Included in this dataset are various other models that have been tested against the WikiSQL dataset as well as their performance and links to their papers.
+
+## Coarse-to-Fine Decoding for Neural Semantic Parsing {#coarse2fine}
+
+This model was found in the WikiSQL repository was based upon the Coarse-to-Fine model paper. The paper proposes a “structure-aware neural architecture which decomposes the semantic parsing process into two stages” [@dongCoarsetoFineDecodingNeural2018]  This model achieved a test execution accuracy of 78.5 compared to Seq2SQL whose accuracy is 59.4 [@salesforceSalesforceWikiSQL2019]
+
+## jonjrodriguez/nl2sql {#nl2sql}
+
+The other two models in Chapter \@ref(seq2sql) and Chapter \@ref(coarse2fine) use neural architectures which means that not only is significant time is required to train their models. It also requires the SQL table, the question and query to be defined in a specific format which is defined in the WikiSQL Github repository [@salesforceSalesforceWikiSQL2019].  This technique by jonjrodriguez [@rodriguezJonjrodriguezNl2sql2019] uses various NLP libraries such as Stanford CoreNLP (as mentioned in the GitHub repository) to automatically connect to a MySQL database, run various models and provide a CLI in which you can ask a question in natural language (english) and will then return the results of the query. Since the results of the query is returned and source code is available, the actual SQL query will be generated at some point before being executed by MySQL. 
+ 

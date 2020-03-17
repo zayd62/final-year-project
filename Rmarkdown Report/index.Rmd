@@ -1,0 +1,36 @@
+--- 
+title: "Translating Natural Language Queries into Structured Language"
+author: "Zayd Patel"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: report
+classoption: openany
+bibliography: [references.bib]
+link-citations: yes
+pagestyle: headings
+colorlinks: true
+description: "This paper describes the process of taking a natural language query and converting them into a structured language"
+---
+
+# Acknowledgements {#acknowledgements}
+
+- This document is written using bookdown [@rstudioRstudioBookdown2020] as well as various R packages. These packages include:
+    - DBI [@databasesr-sig-dbDBIDatabaseInterface2019]
+    - RSQLite [@mullerRSQLiteSQLiteInterface2020]
+- This document use a CSL style called `Cite Them Right 10th edition - Harvard` which is saved as the file `harvard.csl`[@zoteroZoteroStyleRepository]
+- Program of Study: **BSc (Hons) Computer Science**
+- Project Supervisor: **Dr Juilan Hough**
+
+## Abbreviations {#abbreviations}
+
+- **SQL**: Structured Query Language
+- **NLU**: Natural Query Understanding
+- **CLI**: Command Line Interface
+- **HTML**: HyperText Markup Language
+
+
+
+## Definitions {#definitions}
+
+- **Database**: A structured set of data held in a computer, especially one that is accessible in various ways.

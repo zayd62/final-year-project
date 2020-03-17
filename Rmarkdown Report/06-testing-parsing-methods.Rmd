@@ -1,0 +1,73 @@
+# Testing Parsing Methods {#testing-parsing-methods-chapter}
+
+Since the project is taking part in a retail context as mentioned in Chapter \@ref(aims) and that different techniques will be compared as mentioned in Chapter \@ref(query-parsing), being able to evaluate each technique is important. This chapter discusses the evaluation metrics that will be used in order to determine the better parsing method.
+
+## Evaluation Metrics {#evaluation-metrics}
+
+### Accuracy {#accuracy}
+
+This metric is simply a measure of how many SQL queries did the methods generate that match the actual solution. This metric however does have some issues of which will be discussed below.
+
+#### Query Equivalency {#query-equivalency}
+
+There are some SQL queries that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue. \pagebreak
+
+```{r example-table, echo=FALSE}
+sql_table_issue = read.csv("tables/sql-table-issue.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'An example SQL table called "test"',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+)
+```
+If we want to, for example, run a query that will "select all the products that are in the category drinks", then the following SQL queries will return the same results. Each query also has a short description on what differentiates it from the other queries and is not an exhaustive list of all possible combinations. 
+
+```{sql sql-similar, eval=FALSE, attr.source='.numberLines', tidy=TRUE, tidy.opts=list(width.cutoff=80)}
+-- Query 1: Common SQL query
+SELECT * FROM test WHERE category='drinks'
+-- Query 2: Selecting table columns using table_name.column_name
+SELECT test.id, test.product_name, test.size, test.category, 
+    test.brand FROM test WHERE category='drinks'
+-- Query 3: Selecting table columns using column_name only
+SELECT id, product_name, size, category, brand FROM test 
+    WHERE category='drinks'
+-- Query 4: Mixed use of lowercase and UPPERCASE SQL keywords
+select id, product_name, size, category, brand FROM test 
+    where test.category='drinks'
+```
+The results of all 4 queries above is as follows 
+
+```{r db-open, include=FALSE}
+library(DBI)
+db = dbConnect(RSQLite::SQLite(), dbname = "sql-table-issue.sqlite")
+```
+
+```{sql db-query, connection=db, echo=FALSE, output.var="RESULTS"}
+SELECT * FROM test WHERE category='drinks'
+```
+
+```{r query-results, echo=FALSE}
+knitr::kable(
+  head(RESULTS, 20), caption = "Results of the query", longtable = TRUE,
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(RESULTS))
+)
+```
+
+##### Solution
+
+The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results
+
+#### Results Equivalency {#results-equivalency}
+
+According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13 `Data Manipulation` sub-section `<declare cursor>` it states under `General Rules`
+
+> 2) If an \<order by clause\> is not specified, then the table specified by the \<cursor specification\> is T and the ordering of rows in T is implementation-dependent.
+
+Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL) \newpage
+
+##### Solution
+
+The solution to this is to ensure that each entry in the SQL table has a numberical unique identifier that way, the generated query and its results can be further sorted by its identifier
+
+## Evaluation Results {#evaluation-results}
+
+here lies the results of each evaluation methods against the test dataset

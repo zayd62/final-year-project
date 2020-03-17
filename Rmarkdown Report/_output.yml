@@ -1,0 +1,21 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">A Minimal Book Example</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  highlight: haddock
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: none
+  keep_tex: yes
+  pandoc_args: ["--csl","harvard.csl"]
+  toc_depth: 3
+  md_extensions: +definition_lists
+bookdown::epub_book: default

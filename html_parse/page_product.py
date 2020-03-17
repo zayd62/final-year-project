@@ -16,7 +16,8 @@ def parse(session, cat_id):
 
     # iterate through all the rows in the page table (i is a row in the page table)
     for i in page_table:
-        print("the url is {}".format(i.url))
+        print(__file__, "parse()", "the url is {}".format(i.url))
+
         # select the raw html
         soup = bs(i.HTMLContent, "html.parser")
 

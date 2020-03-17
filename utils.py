@@ -2,6 +2,9 @@
 # Author: J.Hadida (jhadida87 at ggooglemail)
 # https://gist.github.com/Sheljohn/68ca3be74139f66dbc6127784f638920
 
+# RED_BOLD_UNDERLINE = '\x1b[1;4;31m{}\x1b[0m'
+# BLUE_UNDERLINE = '\x1b[4;34m{}\x1b[0m'
+# GREEN = '\x1b[32m{}\x1b[0m'
 def cstring(fmt, fg=None, bg=None, style=None):
     """
     Colour-printer.
@@ -70,3 +73,9 @@ def cstring(fmt, fg=None, bg=None, style=None):
         return('\x1b[%sm%s\x1b[0m' % (props, fmt))
     else:
         return(fmt)
+
+def strip_dir(path):
+    """
+    take an absolute path and return just the filename
+    """
+    return os.path.basename(path)

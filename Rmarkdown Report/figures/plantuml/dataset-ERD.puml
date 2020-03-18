@@ -1,0 +1,42 @@
+@startuml
+
+left to right direction
+skinparam shadowing false
+
+entity category {
+    *id
+    *category
+} 
+
+entity page {
+    *id
+    *url
+    *HTMLContent
+    *dateTimeCrawled
+    *category_id
+}
+
+entity product {
+    *id
+    *url
+    *HTMLContent
+    *page_id
+}
+
+entity productData {
+    *id
+    *url
+    *HTMLContent
+    *dateTimeCrawled
+    *price
+    *brand
+    *itemName
+    *size
+    *product_id
+}
+
+category ||..o{ page
+page ||..o{ product
+product ||..||productData
+
+@enduml

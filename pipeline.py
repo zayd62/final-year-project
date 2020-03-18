@@ -1,12 +1,10 @@
-import sys
-
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from twisted.internet import defer, reactor
 
 from html_parse.page_product import parse
 from scrapers import CrawlCategory, crawlProduct
-from table_definitions.base import Session
+from table_definitions.base import Session, engine, Base
 from table_definitions.category import Category
 from table_definitions.page import Page
 from table_definitions.product import Product
@@ -17,11 +15,12 @@ from table_definitions.productdata import ProductData
 # 2: category name
 
 # crawl the category
-category_url = sys.argv[1]
-category_name = sys.argv[2]
-
+category_url = input("Enter the category url: ")
+category_name = input("Enter the category name: ")
 # open database session and make it available to the crawler
 print(__file__, "line 24", "opening connection to db")
+
+Base.metadata.create_all(engine)
 session = Session()
 
 
@@ -56,7 +55,6 @@ category_settings = {
     "DOWNLOAD_DELAY": "1",
     "AUTOTHROTTLE_ENABLED": "True",
     "HTTPCACHE_ENABLED": "False",
-    "LOG_LEVEL": "INFO",
 }
 
 product_settings = {
@@ -64,7 +62,6 @@ product_settings = {
     "DOWNLOAD_DELAY": "1",
     "AUTOTHROTTLE_ENABLED": "True",
     "HTTPCACHE_ENABLED": "False",
-    "LOG_LEVEL": "INFO",
     "DOWNLOADER_MIDDLEWARES": {
         "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
         "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
@@ -81,6 +78,8 @@ def crawl(session, category_url, category_name):
     cat = Category(category_name)
     session.add(cat)
     session.commit()
+    print(__file__, "crawl()", "added category object successfully")
+
 
     # add session, custom settings and category object to category crawler
     CrawlCategory.dbSession = session
@@ -116,11 +115,8 @@ def crawl(session, category_url, category_name):
     print(__file__, "crawl()", "end of pipeline")
 
 
-
-
 crawl(session, category_url, category_name)
-print(__file__, "crawl()", "end of pipeline")
 reactor.run()  # the script will block here until the last crawl call is finished
-
+print(__file__, "crawl()", "end of pipeline")
 # check urls list
 # check scrape for productdata

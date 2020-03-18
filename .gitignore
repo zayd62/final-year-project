@@ -149,8 +149,8 @@ vignettes/*.pdf
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
 /*_files/
-Rmarkdown Report/_book
-Rmarkdown Report/_bookdown_files
+*/_book
+*/_bookdown_files
 
 ### VisualStudioCode ###
 .vscode/*
@@ -164,3 +164,5 @@ Rmarkdown Report/_bookdown_files
 .history
 
 # End of https://www.gitignore.io/api/r,python,visualstudiocode
+
+*.png

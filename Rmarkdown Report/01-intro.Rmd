@@ -6,11 +6,11 @@ According to [db-engines.com](db-engines.com), 7 of the top 10 databases are rel
 
 ## Problem Statement {#problemStatement}
 
-Since SQL is a language, it has a certain syntax that needs to be learned. While quantifying the difficulty of learning the SQL syntax is difficult, English, the most common spoken language with “1.132 billion” speakers [@ethnologueWhatAreTop2018a], could potentially be used to make accessing and querying a database much easier. This problem is part of a field called NLU.
+Since SQL is a language, it has a certain syntax that needs to be learned. While quantifying the difficulty of learning the SQL syntax is difficult, English, the most common spoken language with “1.132 billion” speakers [@ethnologueWhatAreTop2018], could potentially be used to make accessing and querying a database much easier. This problem is part of a field called NLU.
 
 ## Aims {#aims}
 
-The aims of this project is to take a query in english and convert it into the appropriate SQL query. For example, taking the phrase “show me all the apples” could be converted into the query below. An example sql diagram. However, to be able to show a practical use case , the process of converting will be done within the context of retail (for example, Tesco supermarket) \newline
+The aims of this project is to take a query in english and convert it into the appropriate SQL query.  However, to be able to show a practical use case, the process of converting will be done within the context of retail. For example, taking the phrase *“show me all the apples”* could be converted into the query below. 
 
 ```{sql sql-example, eval=FALSE}
 -- An example SQL query

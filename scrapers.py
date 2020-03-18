@@ -85,7 +85,7 @@ class crawlProduct(Spider):
 
             # get item size
             r_size = dct['Pack Size']
-            r_size = "".join(re.findall(r"([\d,.])", r_size))
+            # r_size = "".join(re.findall(r"([\d,.])", r_size))
         except KeyError as e:
             print(e)
             print("Missing data, remove ")

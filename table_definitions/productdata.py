@@ -14,7 +14,7 @@ class ProductData(Base):
     price = Column(Float(precision=2))
     brand = Column(String)
     itemName = Column(String)
-    size = Column(Integer)
+    size = Column(String)
 
     product_id = Column(
         Integer, ForeignKey("product.id", ondelete="CASCADE"), nullable=True

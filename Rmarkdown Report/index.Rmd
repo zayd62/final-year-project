@@ -29,9 +29,11 @@ description: "This paper describes the process of taking a natural language quer
 - **CLI**: Command Line Interface
 - **HTML**: HyperText Markup Language
 - **ORM**: Object Relational Mapper
+- **ERD**: Entity Relationship Diagram
 
 
 ## Definitions {#definitions}
 
 - **Database**: A structured set of data held in a computer that is accessible in various ways.
 - **ORM**: Object/Relational Mapping (ORM) provides a methodology and mechanism for object-oriented systems to hold their long-term data safely in a database, with transactional control over it, yet have it expressed when needed in program objects [@oneilObjectRelationalMapping2008]. 
+- **ERD**: An ERD is a data model used to describe the relationship between different entities including the different attributes of each entity [@chenEntityrelationshipModelUnified1976].

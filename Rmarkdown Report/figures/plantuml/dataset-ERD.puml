@@ -35,8 +35,32 @@ entity productData {
     *product_id
 }
 
+
+entity authorQuestion {
+    *id
+    *englishQuery
+    *correctSQLQuery
+}
+
+entity alternativeQuestions {
+    *id
+    *personName
+    *englishQuery
+    *authorQuestion_id
+}
+
+authorQuestion ||..o{ alternativeQuestions
+
 category ||..o{ page
 page ||..o{ product
 product ||..||productData
 
+entity data {
+    *id
+    *category
+    *price
+    *brand
+    *itemName
+    *size
+}
 @enduml

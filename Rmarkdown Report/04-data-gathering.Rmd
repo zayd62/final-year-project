@@ -9,45 +9,36 @@ plantuml dataset-ERD.puml
 
 ## Gathering the Data {#gathering-data}
 
-As discussed is Chapter \@ref(data-gathering), the data we will be gathering is **product data**. In order to obtain this data, we will be web scraping. The website we will be using is [https://www.bestwaywholesale.co.uk/](https://www.bestwaywholesale.co.uk/) [@bestwaywholesaleUKCashCarry] and we will use scrapy to perform the web scraping [@scrapyScrapyScrapy2019] and BeautifulSoup4 [@]
+As discussed is Chapter \@ref(data-gathering), the data we will be gathering is **product data**. In order to obtain this data, we will be web scraping. The website we will be using is [https://www.bestwaywholesale.co.uk/](https://www.bestwaywholesale.co.uk) [@bestwaywholesaleUKCashCarry] and we will use scrapy to perform the web scraping [@scrapyScrapyScrapy2019] and BeautifulSoup4 [@]
 
 
 ### Scraping {#scraping}
 
 As mentioned in Chapter \@ref(gathering-data), we use scrapy, a python package to iterate through webpages, extracting the information required and storing it in a database. The database we are using is SQLite [@sqliteteamSQLiteHomePage] and SQLAlchemy [@sqlalchemySqlalchemySqlalchemy2019] is used as the ORM (see Chapter \@ref(definitions) for more information on ORMs)
 
-Using [@krebsSQLAlchemyORMTutorial] as guidance on how to use SQLAlchemy, A database schema was designed and is visualised in figure \@ref(fig:dataset-schema-diagram) \newpage
+Using [@krebsSQLAlchemyORMTutorial] as guidance on how to use SQLAlchemy, A database schema was designed and is visualised in figure \@ref(fig:dataset-schema-diagram) as an ERD \newpage
 
 ```{r dataset-schema-diagram, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
 knitr::include_graphics("figures/plantuml/dataset-ERD.png")
 ```
 
-The database fields mentioned in figure \@ref(fig:dataset-schema-diagram) are explained below 
+The entities mentioned in figure \@ref(fig:dataset-schema-diagram) are explained in Appendix \@ref(dataset-schema-explained).
 
-- **category**
-    - **id**: used as database primary key
-    - **category**: name of the product category
+> **Note**: Not all the entities in the diagram above are used in the dataset scraping. The entities used in the dataset scraping are found in Appendix \@ref(tables-raw-scrapped-data)
 
-- **page**
-    - **id**: used as database primary key
-    - **url**: for each category of products, the product information may span several "pages". 
-    - **HTMLContent**: stores the HTML of the url above
-    - **dateTimeCrawled**: the date and time the url was crawled
-    - **category_id**: used to identify which entry in the category table this page belongs to
+### Scraping Process {#scraping-process}
 
-- **product**
-    - **id**: used as database primary key
-    - **url**: for each category of products, the product information may span several "pages". 
-    - **HTMLContent**: stores the HTML of the product preview. A page contains multiple product previews. 
-    - **page_id**: used to identify which entry in the page table this product belongs to
+The scraping process involves various files. Below is a description of each file used in the scraping process and their function. the files are given as a path from the root of the GitHub repository the files are stored in [@patelZayd62Finalyearproject2019] (Note that the files below are **directly** involved in the scraping process)
 
-- **productData**
-    - **id**: used as database primary key
-    - **url**: for each category of products, the product information may span several "pages". 
-    - **HTMLContent**: stores the HTML of the url above
-    - **dateTimeCrawled**: the date and time the url was crawled
-    - **price**: price of the product
-    - **brand**: the brand of the product
-    - **itemName**: the name of the product
-    - **size**: the size of the product
-    - **product_id**: used to identify which entry in the product table this entry belongs to
+- **table_definitions/base.py**: Used for defining the database
+- **table_definitions/category.py**: A class used to create rows in the category table.
+- **table_definitions/page.py**: A class used to create rows in the page table.
+-**table_definitions/product.py**: A class used to create rows in the product table.
+- **table_definitions/productdata.py**: A class used to create rows in the productdata table.
+- **html_parse/page_product.py**: A function which given a category, gets the associated page rows. For each HTMLcontent in page row, find all the products elements and store in the database
+- **html_parse/productdata.py**: A function which converts a HTML table to a dictionary. Used to extract detailed information about a scraped product. Used by **scrapers.py** (specifically `class crawlProduct(Spider)` found in **scrapers.py**)
+- **database.py**: Used to create the actual database file. Uses **table_definitions/base.py** to help create the database.
+- **scrapers.py**: The code responsible for visiting the web pages and getting the HTML that is going to be parsed
+- **raw_data_pipeline.py**: The "glue" code that takes all the files mentioned above and performs a complete scrape from a category to scraped products.
+
+The scraped data is available in the file **dataset.sqlite3**

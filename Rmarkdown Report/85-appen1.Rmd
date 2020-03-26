@@ -1,0 +1,43 @@
+\newpage
+
+# (APPENDIX) Appendix {-}
+
+# Dataset Schema Explained {#dataset-schema-explained}
+
+```{r, echo=FALSE}
+knitr::include_graphics("figures/plantuml/dataset-ERD.png")
+```
+
+Figure \@ref(fig:dataset-schema-diagram) is repeated here. \newpage
+
+## Raw Scrapped Dataset {#tables-raw-scrapped-data}
+
+Below are the tables used in scraping the raw data
+
+- **category**
+    - **id**: used as database primary key
+    - **category**: name of the product category
+
+- **page**
+    - **id**: used as database primary key
+    - **url**: for each category of products, the product information may span several "pages". 
+    - **HTMLContent**: stores the HTML of the url above
+    - **dateTimeCrawled**: the date and time the url was crawled
+    - **category_id**: used to identify which entry in the category table this page belongs to
+
+- **product**
+    - **id**: used as database primary key
+    - **url**: for each page, the there are several product previews. This store the URL to find more detailed information about products. 
+    - **HTMLContent**: stores the HTML of the product preview. A page contains multiple product previews. 
+    - **page_id**: used to identify which entry in the page table this product belongs to
+
+- **productData**
+    - **id**: used as database primary key
+    - **url**: Stores the url of the product we are crawling. 
+    - **HTMLContent**: stores the HTML of the url above
+    - **dateTimeCrawled**: the date and time the url was crawled
+    - **price**: price of the product
+    - **brand**: the brand of the product
+    - **itemName**: the name of the product
+    - **size**: the size of the product
+    - **product_id**: used to identify which entry in the product table this entry belongs to

@@ -4,7 +4,7 @@ from twisted.internet import defer, reactor
 
 from html_parse.page_product import parse
 from scrapers import CrawlCategory, crawlProduct
-from table_definitions.base import Session, engine, Base
+from table_definitions.base import Base, Session, engine
 from table_definitions.category import Category
 from table_definitions.page import Page
 from table_definitions.product import Product

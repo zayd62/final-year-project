@@ -39,7 +39,7 @@ entity productData {
 entity authorQuestion {
     *id
     *englishQuery
-    *correctSQLQuery
+    *SQLQuery
 }
 
 entity alternativeQuestions {

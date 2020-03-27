@@ -3,7 +3,7 @@ import sys
 from bs4 import BeautifulSoup as bs
 
 if __name__ == "__main__":
-    sys.path.append("/media/zayd/Common/University/Year 3/Final Year Project/code")
+    sys.path.append("../")
 
 from table_definitions.category import Category
 from table_definitions.page import Page

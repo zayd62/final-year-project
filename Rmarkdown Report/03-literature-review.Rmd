@@ -20,6 +20,10 @@ Figure \@ref(fig:seq2sql-diagram) demonstrates an overview of the Seq2SQL model.
 
 The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field ([@zhongSeq2SQLGeneratingStructured2017], Chapter 3 table 1) and has also been used as a test dataset for other models details of which are available on the [WikiSQL GitHub](@salesforceSalesforceWikiSQL2019)  
 
+#### Logical Forms {#logical-forms}
+
+In the WikiSQL GitHub repository, there are leaderboards for various other models. One leaderboard is for *"Weakly supervised without logical forms"* and another is for *"Supervised via logical forms."*
+
 ## jonjrodriguez/nl2sql {#nl2sql}
 
 The model in Chapter \@ref(seq2sql) uses uses deep neural networks which means that not only is significant time is required to train their models. It also requires the SQL table, the question and query to be defined in a specific format which is discussed in more detail in the WikiSQL Github repository [@salesforceSalesforceWikiSQL2019]. 

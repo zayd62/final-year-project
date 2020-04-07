@@ -8,7 +8,6 @@ class AlternativeQuestions(Base):
     __tablename__ = "alternativeQuestions"
 
     id = Column(Integer, primary_key=True)
-    personName = Column(String)
     englishQuery = Column(String)
 
     authorQuestion_id = Column(
@@ -19,7 +18,6 @@ class AlternativeQuestions(Base):
     def __repr__(self):
         return "{} --> id: {}, url: {}".format(Page.__tablename__, self.id, self.url)
 
-    def __init__(self, personName, englishQuery, authorQuestions):
-        self.personName = personName
+    def __init__(self, englishQuery, authorQuestions):
         self.englishQuery = englishQuery
         self.authorquestions = authorQuestions

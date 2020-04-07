@@ -1,1 +1,3 @@
 # Query Parsing {#query-parsing-chapter}
+
+This chapter will deal with taking the natural language queries, feeding them into the parsing methods and collecting their results. 

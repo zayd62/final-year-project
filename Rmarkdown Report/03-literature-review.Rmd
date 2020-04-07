@@ -2,13 +2,31 @@
 
 ## Seq2SQL {#seq2sql}
 
-Seq2SQL is a machine learning model that uses deep neural networks and reinforcement learning to “ translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. Included in this dataset are various other models that have been tested against the WikiSQL dataset as well as their performance and links to their papers.
+Seq2SQL is a machine learning model that uses deep neural networks and policy based reinforcement learning to “translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. 
 
-## Coarse-to-Fine Decoding for Neural Semantic Parsing {#coarse2fine}
+### Model overview {#seq2sql-model-overview}
 
-This model was found in the WikiSQL repository was based upon the Coarse-to-Fine model paper. The paper proposes a “structure-aware neural architecture which decomposes the semantic parsing process into two stages” [@dongCoarsetoFineDecodingNeural2018]  This model achieved a test execution accuracy of 78.5 compared to Seq2SQL whose accuracy is 59.4 [@salesforceSalesforceWikiSQL2019]
+```{bash generate-seq2sql-plantuml, include=FALSE}
+plantuml figures/plantuml/seq2sql.puml
+```
+
+```{r seq2sql-diagram, echo=FALSE, fig.cap="An overview of Seq2SQL taken from the Seq2SQL paper"}
+knitr::include_graphics("figures/plantuml/seq2sql.png")
+```
+
+Figure \@ref(fig:seq2sql-diagram) demonstrates an overview of the Seq2SQL model. Reinforcement learning is used to *"generate the conditions of the query, which are unsuitable for optimization using cross entropy loss due to their unordered nature"*. Seq2SQL is trained *"using a mixed objective, combining cross entropy losses and RL rewards from in-the-loop query execution on a database."*
+
+### WikiSQL {#wikisql}
+
+The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field ([@zhongSeq2SQLGeneratingStructured2017], Chapter 3 table 1) and has also been used as a test dataset for other models details of which are available on the [WikiSQL GitHub](@salesforceSalesforceWikiSQL2019)  
 
 ## jonjrodriguez/nl2sql {#nl2sql}
 
-The other two models in Chapter \@ref(seq2sql) and Chapter \@ref(coarse2fine) use neural architectures which means that not only is significant time is required to train their models. It also requires the SQL table, the question and query to be defined in a specific format which is defined in the WikiSQL Github repository [@salesforceSalesforceWikiSQL2019].  This technique by jonjrodriguez [@rodriguezJonjrodriguezNl2sql2019] uses various NLP libraries such as Stanford CoreNLP (as mentioned in the GitHub repository) to automatically connect to a MySQL database, run various models and provide a CLI in which you can ask a question in natural language (english) and will then return the results of the query. Since the results of the query is returned and source code is available, the actual SQL query will be generated at some point before being executed by MySQL. 
+The model in Chapter \@ref(seq2sql) uses uses deep neural networks which means that not only is significant time is required to train their models. It also requires the SQL table, the question and query to be defined in a specific format which is discussed in more detail in the WikiSQL Github repository [@salesforceSalesforceWikiSQL2019]. 
+
+This technique by jonjrodriguez [@rodriguezJonjrodriguezNl2sql2019] uses various NLP libraries such as Stanford CoreNLP (as mentioned in the GitHub repository) and can automatically connect to a MySQL database, run various models and provide a CLI in which you can ask a question in natural language (english) and will then return the results of the query. Since the results of the query is returned and source code is available, the actual SQL query will be generated at some point before being executed by MySQL which can be extracted and stored later for evaluation.
+
+## Evaluation {#ch4-eval}
+
+Evaluation of these methods is discussed in Chapter \@ref(testing-parsing-methods-chapter).
  

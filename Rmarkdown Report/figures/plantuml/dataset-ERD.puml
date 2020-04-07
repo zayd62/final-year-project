@@ -44,7 +44,6 @@ entity authorQuestion {
 
 entity alternativeQuestions {
     *id
-    *personName
     *englishQuery
     *authorQuestion_id
 }

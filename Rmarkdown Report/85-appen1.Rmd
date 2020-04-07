@@ -8,11 +8,11 @@
 knitr::include_graphics("figures/plantuml/dataset-ERD.png")
 ```
 
-Figure \@ref(fig:dataset-schema-diagram) is repeated here. \newpage
+Figure \@ref(fig:dataset-schema-diagram) is repeated here. The dataset is stored in a file `dataset.sqlite3` \newpage
 
 ## Raw Scrapped Dataset {#tables-raw-scrapped-data}
 
-Below are the tables used in scraping the raw data
+Below are the tables used in scraping the raw data. Note that this is an internal table and will **NOT** be accessible to the parsers.
 
 - **category**
     - **id**: used as database primary key
@@ -20,7 +20,7 @@ Below are the tables used in scraping the raw data
 
 - **page**
     - **id**: used as database primary key
-    - **url**: for each category of products, the product information may span several "pages". 
+    - **url**: for each category, the product information may span several "pages". This field represents the url of each page
     - **HTMLContent**: stores the HTML of the url above
     - **dateTimeCrawled**: the date and time the url was crawled
     - **category_id**: used to identify which entry in the category table this page belongs to
@@ -40,4 +40,31 @@ Below are the tables used in scraping the raw data
     - **brand**: the brand of the product
     - **itemName**: the name of the product
     - **size**: the size of the product
-    - **product_id**: used to identify which entry in the product table this entry belongs to
+    - **product_id**: used to identify which entry in the product table this entry belongs to 
+
+## Data table {#date-table}
+
+The data table is the final table to be used as the test dataset mentioned in Chapter \@ref(data-gathering).
+
+- **products**
+    - **id**: used as database primary key
+    - **category**: name of the product category
+    - **price**: price of the product
+    - **brand**: the brand of the product
+    - **item name**: the name of the product
+    - **size**: the size of the product
+    - **product_id**: used to identify which entry in the product table this entry belongs to \newpage
+
+## Question tables {#question-tables}
+
+The purpose of theses tables are discussed in Chapter \@ref(nlq-questions)
+
+- **authorQuestion**
+    - **id**: used as database primary key
+    - **englishQuery**: The natural language query
+    - **SQLQuery**: The corresponding SQL query that the model should generate
+
+- **alternativeQuestions**
+    - **id**: used as database primary key
+    - **englishQuery**: The natural language query. An alternative to `authorQuestion.englishQuery` 
+    - **product_id**: used to identify which entry in the `authorQuestion` table this entry belongs to

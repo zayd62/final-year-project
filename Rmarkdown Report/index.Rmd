@@ -1,5 +1,5 @@
 --- 
-title: "Translating Natural Language Queries into Structured Language"
+title: "Using Domain General models in translating Natural Language Queries into Structured Language"
 author: "Zayd Patel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,19 +8,20 @@ documentclass: report
 classoption: openany
 bibliography: [references.bib]
 link-citations: yes
-pagestyle: headings
+pagestyle: plain
 colorlinks: true
+geometry: "left=3cm,right=3cm,top=2.9cm,bottom=2.9cm"
 description: "This paper describes the process of taking a natural language query and converting them into a structured language"
 ---
 
 # Acknowledgements {#acknowledgements}
 
 - This document is written using bookdown [@rstudioRstudioBookdown2020] as well as various R packages that Bookdown depends on.
-- This document use a CSL style called `Cite Them Right 10th edition - Harvard` which is saved as the file `harvard.csl`[@zoteroZoteroStyleRepository]
+- This document use a CSL style called `Cite Them Right 10th edition - Harvard` which is saved as the file `harvard.csl` [@zoteroZoteroStyleRepository].
 - Project used Python 3.7 [@pythonPythonDocumentation] and various other python packages which will be cited throughout the paper.
-- Diagrams drawn with draw.io [@JgraphDrawio2020] or plantuml [@PlantumlPlantuml2020]
-- Program of Study: **BSc (Hons) Computer Science**
-- Project Supervisor: **Dr Juilan Hough**
+- Diagrams drawn with draw.io [@JgraphDrawio2020] and/or plantuml [@PlantumlPlantuml2020].
+- Program of Study: **BSc (Hons) Computer Science**.
+- Project Supervisor: **Dr Juilan Hough**.
 
 ## Abbreviations {#abbreviations}
 
@@ -35,5 +36,7 @@ description: "This paper describes the process of taking a natural language quer
 ## Definitions {#definitions}
 
 - **Database**: A structured set of data held in a computer that is accessible in various ways.
-- **ORM**: Object/Relational Mapping (ORM) provides a methodology and mechanism for object-oriented systems to hold their long-term data safely in a database, with transactional control over it, yet have it expressed when needed in program objects [@oneilObjectRelationalMapping2008]. 
-- **ERD**: An ERD is a data model used to describe the relationship between different entities including the different attributes of each entity [@chenEntityrelationshipModelUnified1976].
+- **ORM**: Object/Relational Mapping (ORM) provides a *methodology and mechanism for object-oriented systems to hold their long-term data safely in a database, with transactional control over it, yet have it expressed when needed in program objects* [@oneilObjectRelationalMapping2008]. 
+- **ERD**: An ERD is a *data model used to describe the relationship between different entities including the different attributes of each entity* [@chenEntityrelationshipModelUnified1976].
+- **Reinforcement Learning**: A type of Artificial Intelligence where by artificial agents learn for themselves through trial and error by being rewarded for successful strategies and punished by unsuccessful strategies [@silverDeepReinforcementLearning2016].
+- **Neural Network**: Neural Networks are a way of doing machine learning by analysing hand labeled training examples. Neural Networks are loosely modelled on the human brain as they consist of nodes, usually organised into layers, that feed into other nodes. Each individual node is adjusted until the final layer of nodes, also known as the output layer, correctly outputs data as expected in accordance to the labeled training data. [@hardestyExplainedNeuralNetworks2017].

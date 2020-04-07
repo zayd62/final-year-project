@@ -2,7 +2,7 @@
 
 ## Background {#background}
 
-According to [db-engines.com](db-engines.com), 7 of the top 10 databases are relational databases [@db-engines.comDBEnginesRanking]. One method of extracting data from a relational database is the use of SQL. Like all language, SQL has certain syntax and rules that needs to be learned.
+According to [db-engines.com](db-engines.com), 7 of the top 10 databases are relational databases [@db-engines.comDBEnginesRanking]. One method of extracting data from a relational database is the use of SQL. Like all languages, SQL has certain syntax and rules that needs to be learned.
 
 ## Problem Statement {#problemStatement}
 
@@ -17,21 +17,23 @@ The aims of this project is to take a query in english and convert it into the a
 SELECT * FROM products WHERE name='apple'
 ```
 
+Another aim of the report is to discuss the difficulties of using a domain general model in a domain specific environment. \newpage
+
 ## Formal Report {#formal-report}
 
-Since there are multiple ways to approach this problem, this project will consist of the following stages
+Since there are multiple ways to approach this problem, this project will consist of the following stages.
 
 ### Data Gathering {#data-gathering}
 
-Since the project will take part in a retail context, appropriate data needs to be gathered. The data that will need to be gathered will be **product data** . Product data such as product name, the type of product as well as various other details will be gathered from the internet and will be discussed in more detail in Chapter \@ref(data-gathering-chapter)
+Since the project will take part in a retail context, appropriate data needs to be gathered. The data that will need to be gathered will be **product data** . Product data such as product name, the type of product as well as various other details will be gathered from the internet and will be discussed in more detail in Chapter \@ref(data-gathering-chapter).
 
 ### Query Parsing {#query-parsing}
 
-To convert the natural language queries to SQL. A variety of methods through a literature review will be gathered and discussed in more detail in the literature review in Chapter \@ref(literature-review) 
+To convert the natural language queries to SQL. A variety of methods through a literature review will be gathered and discussed in more detail in the literature review in Chapter \@ref(literature-review) and details of the actual implementation will be discussed in Chapter \@ref(query-parsing-chapter).
 
 ### Testing parsing methods
 
-To test the parsing methods, a sample mapping of natural language queries and expected SQL query will be made using the test dataset as discussed in Chapter \@ref(data-gathering) and described in more detail in Chapter
+To test the parsing methods, a sample mapping of natural language queries and expected SQL query will be made using the test dataset as discussed in Chapter \@ref(data-gathering) and Chapter \@ref(data-gathering-chapter). The parsing methods will be described in more detail in Chapter \@ref(query-parsing-chapter).
 
 ### Evaluation {#evaluation}
 

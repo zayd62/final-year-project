@@ -1,6 +1,6 @@
 # Testing Parsing Methods {#testing-parsing-methods-chapter}
 
-Since the project is taking part in a retail context as mentioned in Chapter \@ref(aims) and that different techniques will be compared as mentioned in Chapter \@ref(query-parsing), being able to evaluate each technique is important. This chapter discusses the evaluation metrics that will be used in order to determine the better parsing method.
+Since the project is taking part in a retail context as mentioned in Chapter \@ref(aims) and that different techniques will be compared as mentioned in Chapter \@ref(query-parsing), being able to evaluate each technique is important. This chapter discusses the evaluation metrics that will be used in order to determine the better parsing method as well as the results of feeding the test dataset into the parsing methods.
 
 ## Evaluation Metrics {#evaluation-metrics}
 
@@ -10,7 +10,7 @@ This metric is simply a measure of how many SQL queries did the methods generate
 
 #### Query Equivalency {#query-equivalency}
 
-There are some SQL queries that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue. \pagebreak
+There are some **SQL queries** that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue. \pagebreak
 
 ```{r example-table, echo=FALSE}
 sql_table_issue = read.csv("tables/sql-table-issue.csv")
@@ -19,17 +19,16 @@ knitr::kable(
   booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
 )
 ```
-If we want to, for example, run a query that will "select all the products that are in the category drinks", then the following SQL queries will return the same results. Each query also has a short description on what differentiates it from the other queries and is not an exhaustive list of all possible combinations. 
+If we want to, for example, run a query that will *"select all the products that are in the category drinks"*, then the following SQL queries will return the same results. Each query also has a short description on what differentiates it from the other queries and is not an exhaustive list of all possible combinations. 
 
 ```{sql sql-similar, eval=FALSE, attr.source='.numberLines', tidy=TRUE, tidy.opts=list(width.cutoff=80)}
 -- Query 1: Common SQL query
 SELECT * FROM test WHERE category='drinks'
 -- Query 2: Selecting table columns using table_name.column_name
-SELECT test.id, test.product_name, test.size, test.category, 
-    test.brand FROM test WHERE category='drinks'
+SELECT test.id, test.product_name, test.size, test.category, test.brand FROM 
+    test WHERE category='drinks'
 -- Query 3: Selecting table columns using column_name only
-SELECT id, product_name, size, category, brand FROM test 
-    WHERE category='drinks'
+SELECT id, product_name, size, category, brand FROM test WHERE category='drinks'
 -- Query 4: Mixed use of lowercase and UPPERCASE SQL keywords
 select id, product_name, size, category, brand FROM test 
     where test.category='drinks'
@@ -54,20 +53,43 @@ knitr::kable(
 
 ##### Solution
 
-The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results
+The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results \newpage
 
 #### Results Equivalency {#results-equivalency}
 
-According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13 `Data Manipulation` sub-section `<declare cursor>` it states under `General Rules`
+According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13: **Data Manipulation** sub-section **\<declare cursor\>** it states under **General Rules**
 
 > 2) If an \<order by clause\> is not specified, then the table specified by the \<cursor specification\> is T and the ordering of rows in T is implementation-dependent.
 
-Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL) \newpage
+Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL). For example, MySQL might return the items in table \@ref(tab:query-results) with `id=0` first then `id=1` where as SQLite might return `id=1` first then `id=0`. 
 
 ##### Solution
 
-The solution to this is to ensure that each entry in the SQL table has a numberical unique identifier that way, the generated query and its results can be further sorted by its identifier
+The solution to this is to ensure that each entry in the SQL table has a numerical unique identifier that way, the generated query and its results can be further sorted by its identifier in order to ensure that results of the query are equivalent regardless of database as the queries can be sorted and compared by its identifier.
 
-## Evaluation Results {#evaluation-results}
+Another solution is to run all the parsing methods in a single relational database that way, the ordering of the rows are consistent as row ordering is implementation specific. Since SQLite is already being used to store data related to the project (see Appendix) SQLite is the database that all the parsing methods will use. 
 
-here lies the results of each evaluation methods against the test dataset
+SQLAlchemy, according to it [documentation](https://docs.sqlalchemy.org/en/13/dialects/sqlite.html#module-sqlalchemy.dialects.sqlite.pysqlite), uses `pysqlite` which *"is the same driver as the sqlite3 module included with the Python distribution."* In the interest of reproducibility, the sqlite3 driver version is described bellow as well as the python code used to obtain the version:
+
+```{r,echo=FALSE}
+library(reticulate)
+```
+
+```{python sqlite-version, attr.source='.numberLines', tidy=TRUE}
+import sqlite3
+print(sqlite3.sqlite_version)
+```
+
+### Ease of use {#ease-of-use}
+
+Ease of use is defined as
+
+\begin{center}
+\emph{How easy is to use the tool in a production environment}.
+\end{center}
+
+This metric is more subjective in nature as it is difficult to measure ease of use. Instead, various metrics will be discussed for each method and will be left to the reader to decide which methods is the *"easiest"*. The metrics that will be used are:
+
+1. data pre-processing required
+2. specialist hardware/software required
+3. setup process

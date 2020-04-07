@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+skinparam shadowing false
+agent Seq2SQL
+database Database
+agent Reward
+agent "Generated SQL" as gs
+agent "Question, Schema" as qs
+agent "Ground Truth Results" as gtr
+qs --> Seq2SQL
+gtr --> Seq2SQL
+Seq2SQL --> gs
+gs --> Database
+Database --> Reward
+Reward --> Seq2SQL
+@enduml

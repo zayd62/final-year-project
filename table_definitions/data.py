@@ -3,7 +3,7 @@ from .base import Base
 
 
 class Data(Base):
-    __tablename__ = "data"
+    __tablename__ = "products"
 
     id = Column(Integer, primary_key=True)
     category = Column(String)

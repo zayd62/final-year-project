@@ -1,3 +1,6 @@
+# code used to generate the products table BEFORE MANUAL CLEANING
+# this will be used as the test dataset
+
 from table_definitions.base import Base, Session, engine
 from table_definitions.category import Category
 from table_definitions.data import Data
@@ -22,4 +25,3 @@ def create_data_table(session):
             except Exception:
                 pass
         session.commit() 
-        

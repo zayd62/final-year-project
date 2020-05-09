@@ -1,0 +1,1606 @@
+id,category,price,brand,item name,size,unit
+1,Large Bottled Drinks,2.15,Coca-Cola,Coca-Cola Original Taste 1.5L PM £2.15 or 2 for £3.30,1.5,Ltr
+2,Large Bottled Drinks,1.15,Evian,Evian Natural Mineral Water 1.5L,1.5,Ltr
+3,Large Bottled Drinks,1.99,Coca-Cola,Diet Coke 1.75L PM £1.99 or 2 for £3,1.75,Ltr
+4,Large Bottled Drinks,2.15,Coca-Cola,Coca-Cola Cherry 1.5L PM £2.15 or 2 for £3.30,1.5,Ltr
+5,Large Bottled Drinks,1.89,Dr Pepper,Dr Pepper 2L PM £1.89,2,Ltr
+6,Large Bottled Drinks,1.89,Fanta,Fanta Orange 2L PM £1.89,2,Ltr
+7,Large Bottled Drinks,1.89,Fanta,Fanta Fruit Twist 2L PM £1.89,2,Ltr
+8,Large Bottled Drinks,1.69,Sprite,Sprite 2L PM £1.69,2,Ltr
+9,Large Bottled Drinks,0.59,Best-One,Best-One Soda Water 1 Litre,1,Ltr
+10,Large Bottled Drinks,0.59,Best-One,Best-One Indian Tonic Water 1 Litre,1,Ltr
+11,Large Bottled Drinks,0.59,Best-One,Best-One Indian Tonic Water Low Calorie 1 Litre,1,Ltr
+12,Large Bottled Drinks,1.39,R.White's,R.White's Premium Lemonade 2L,2,Ltr
+13,Large Bottled Drinks,1.5,Coca-Cola,Coca-Cola Original Taste 1L PM £1.50,1,Ltr
+14,Large Bottled Drinks,1.39,S.Pellegrino,San Pellegrino Sparkling Natural Mineral Water 1L,1,Ltr
+15,Large Bottled Drinks,2.59,Pepsi,Pepsi 1.5L,1.5,Ltr
+16,Large Bottled Drinks,3.19,Grace,Grace Say Aloe Vera Drink Original Flavour 1.5L,1.5,Ltr
+17,Large Bottled Drinks,1.79,Lipton,Lipton Ice Tea Peach Flavoured Still Soft Drink 1.25L,1.25,Ltr
+18,Large Bottled Drinks,1.99,Pepsi,Diet Pepsi 1.5L,1.5,Ltr
+19,Large Bottled Drinks,1.79,Lipton,Lipton Ice Tea Lemon Flavoured Still Soft Drink 1.25L,1.25,Ltr
+20,Large Bottled Drinks,2.59,7UP,7UP Regular 1.5 Litres,1.5,Ltr
+21,Large Bottled Drinks,2.25,Coca-Cola,Diet Coke 1.75L,1.75,Ltr
+22,Large Bottled Drinks,2.59,Coca-Cola,Coca-Cola Original Taste 1.5L,1.5,Ltr
+23,Large Bottled Drinks,1.99,Tango,Tango Original Orange 1.5 Litres,1.5,Ltr
+24,Large Bottled Drinks,2.19,7UP,7UP Free 1.5 Litres,1.5,Ltr
+25,Large Bottled Drinks,2.49,Cawston Press,Cawston Press Apple & Ginger 1 Litre,1,Ltr
+26,Large Bottled Drinks,2.49,Cawston Press,Cawston Press Apple & Rhubarb 1 Litre,1,Ltr
+27,Large Bottled Drinks,2.49,Cawston Press,Cawston Press Apple & Elderflower 1 Litre,1,Ltr
+28,Large Bottled Drinks,2.25,Coca-Cola,Coca-Cola Zero Sugar 1.75L,1.75,Ltr
+29,Large Bottled Drinks,1.19,R.White’s,R.White's Premium Lemonade 1.5L,1.5,Ltr
+30,Large Bottled Drinks,1.99,Coca-Cola,Diet Coke 1.5L,1.5,Ltr
+31,Large Bottled Drinks,1.5,Schweppes,Schweppes Original Lemonade 1.5L,1.5,Ltr
+32,Bottled Fruit Juice,1.15,Grace,Grace Say Aloe Vera Drink Original Flavour £1.15 PMP 500ml,500,ml
+33,Bottled Fruit Juice,1.15,Grace,Grace Say Aloe Vera Drink Strawberry Flavour £1.15 PMP 500ml,500,ml
+34,Bottled Fruit Juice,1.15,Grace,Grace Say Aloe Vera Drink Mango Flavour £1.15 PMP 500ml,500,ml
+35,Bottled Fruit Juice,0.79,Robinsons Fruit Shoot,Robinsons Fruit Shoot Apple and Blackcurrant 275ml,275,ml
+36,Bottled Fruit Juice,1.0,Drench,Drench Juicy Spring Water Peach & Mango 12 x 500ml,500,ml
+37,Bottled Fruit Juice,1.15,Grace,Grace Say Aloe Reduced Sugar Drink Original Flavour 500ml,500,ml
+38,Bottled Fruit Juice,1.49,Drench,Drench Tropical 500ml,500,ml
+39,Bottled Fruit Juice,0.79,Robinsons Fruit Shoot,Robinsons Fruit Shoot Orange Juice Drink 275ml,275,ml
+40,Bottled Fruit Juice,2.69,Shloer,Shloer Red Grape Sparkling Juice Drink 750ml,750,ml
+41,Bottled Fruit Juice,1.49,Drench,Drench Berry 500ml,500,ml
+42,Bottled Fruit Juice,1.49,Drench,Drench Citrus 500ml,500,ml
+43,Bottled Fruit Juice,1.99,White Pearl,White Pearl Apple Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+44,Bottled Fruit Juice,1.99,White Pearl,White Pearl White Grape & Peach Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+45,Bottled Fruit Juice,1.99,White Pearl,White Pearl Apple Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+46,Bottled Fruit Juice,0.79,Schweppes,Schweppes Orange Juice 200ml Glass (Case of 24),200,ml
+47,Bottled Fruit Juice,0.79,Schweppes,Schweppes Tomato Juice Mix 24 x 200ml Glass,200,ml
+48,Bottled Fruit Juice,2.69,Shloer,Shloer White Grape Sparkling Juice Drink 750ml,750,ml
+49,Bottled Fruit Juice,1.99,White Pearl,White Pearl White Grape & Peach Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+50,Bottled Fruit Juice,1.99,White Pearl,White Pearl White Grape Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+51,Bottled Fruit Juice,1.99,White Pearl,White Pearl White Grape Non-Alcoholic Sparkling Juice Drink 750ml,750,ml
+52,Bottled Fruit Juice,0.75,Schweppes,Schweppes Pineapple Juice 125ml,125,ml
+53,Bottled Fruit Juice,0.75,Schweppes,Schweppes Tomato Juice 125ml,125,ml
+54,Bottled Fruit Juice,0.75,Schweppes,Schweppes Orange Juice 125ml,125,ml
+55,Energy and Health Drinks,1.35,Monster,Monster Energy 500ml £1.35,500,ml
+56,Energy and Health Drinks,1.29,Red Bull,"Red Bull Energy Drink, PM £1.29, 250ml (24 Pack)",250,ml
+57,Energy and Health Drinks,0.49,Boost,Boost Energy Original 250ml,250,ml
+58,Energy and Health Drinks,1.0,Relentless,Relentless Origin 500ml PMP £1,500,ml
+59,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Orange 380ml PMP £1.09 or 2 for £2,380,ml
+60,Energy and Health Drinks,1.99,Red Bull,"Red Bull Energy Drink, 473ml, PM £1.99 (12 Pack)",473,ml
+61,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Orange 500ml £1.09 or 2 for £2,500,ml
+62,Energy and Health Drinks,1.35,Monster,Monster Mango Loco 500ml PMP £1.35,500,ml
+63,Energy and Health Drinks,1.35,Monster,Monster Pipeline Punch 500ml PMP £1.35,500,ml
+64,Energy and Health Drinks,0.39,Best-One,Best-One Energy Drink 250ml,250,ml
+65,Energy and Health Drinks,1.39,Monster,Monster Energy Pacific Punch 500ml PM £1.39,500,ml
+66,Energy and Health Drinks,0.49,Best-One,Best-One Sport Isotonic Drink Orange 500ml,500,ml
+67,Energy and Health Drinks,0.5,Boost,Boost Sport Mixed Berry 500ml,500,ml
+68,Energy and Health Drinks,0.5,Boost,Boost Sport Orange 500ml,500,ml
+69,Energy and Health Drinks,1.25,Monster,Monster Energy Ultra Zero 500ml PMP £1.25,500,ml
+70,Energy and Health Drinks,1.29,Monster,Monster Energy Ultra 500ml PM £1.29,500,ml
+71,Energy and Health Drinks,0.99,Rockstar,Rockstar Punched Guava 500ml Can,500,ml
+72,Energy and Health Drinks,0.99,Rockstar,"Rockstar Xdurance Blueberry, Pomegranate & Acai Energy Drink 500ml Can, PMP 99p",500,ml
+73,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Original 380ml £1.09 or 2 for £2 PMP,380,ml
+74,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Raspberry 500ml £1.09 or 2 for £2,500,ml
+75,Energy and Health Drinks,1.59,Red Bull,"Red Bull Energy Drink, 355ml, PM £1.59 (24 Pack)",355,ml
+76,Energy and Health Drinks,0.79,Boost,Boost Energy Original 500ml,500,ml
+77,Energy and Health Drinks,1.99,Lucozade,Lucozade Energy Orange 1L £1.99,1,Ltr
+78,Energy and Health Drinks,0.5,Boost,Boost Sport Tropical Berry 500ml,500,ml
+79,Energy and Health Drinks,0.49,Best-One,Best-One Sport Isotonic Berry Blu Drink 500ml,500,ml
+80,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Wild Cherry 380ml PMP £1.09 or 2 for £2,380,ml
+81,Energy and Health Drinks,1.29,Monster,Monster Ultra Paradise Energy Drink 12 x 500ml PM £1.29,500,ml
+82,Energy and Health Drinks,0.5,Boost,Boost Sport Citrus 500ml,500,ml
+83,Energy and Health Drinks,0.95,Powerade,Powerade Berry Tropical 500ml PMP 95p,500,ml
+84,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Caribbean Crush 380ml PMP £1.09 or 2 for £2,380,ml
+85,Energy and Health Drinks,0.49,Best-One,Best-One Sport Isotonic Drink Tropical 500ml,500,ml
+86,Energy and Health Drinks,1.35,Monster,Monster Punch Mixxd 500ml PMP £1.35,500,ml
+87,Energy and Health Drinks,1.0,Relentless,Relentless Cherry 500ml PMP £1,500,ml
+88,Energy and Health Drinks,0.49,Best-One,Best-One Sport Raspberry Isotonic Drink 500ml,500,ml
+89,Energy and Health Drinks,1.25,Red Bull,"Red Bull Energy Drink, Sugar Free, PM £1.25 250ml (24 Pack)",250,ml
+90,Energy and Health Drinks,1.29,Boost,Boost Energy Original 1 Litre,1,Ltr
+91,Energy and Health Drinks,0.49,Best-One,Best-One Sport Isotonic Drink Cherry 500ml,500,ml
+92,Energy and Health Drinks,1.99,Lucozade,Lucozade Energy Original 1L £1.99,1,Ltr
+93,Energy and Health Drinks,1.1,Dunn's River,Dunn's River Nurishment Original Vanilla Flavour PMP 400g,400,g
+94,Energy and Health Drinks,1.35,Monster,Monster Energy The Doctor 500ml PMP £1.35,500,ml
+95,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Apple Blast 380ml PMP £1.09 or 2 for £2,380,ml
+96,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Pink Lemonade 380ml PMP £1.09 or 2 for £2,380,ml
+97,Energy and Health Drinks,0.49,Boost,Boost Energy Cherry Burst 250ml,250,ml
+98,Energy and Health Drinks,1.35,Monster,Monster Energy Ripper 500ml PMP £1.35,500,ml
+99,Energy and Health Drinks,0.49,Boost,Boost Energy Exotic Fruits 250ml,250,ml
+100,Energy and Health Drinks,1.25,Lucozade,Lucozade Revive Orange & Passion Fruit 380ml £1.25 PMP,380,ml
+101,Energy and Health Drinks,0.39,Best-One,Best-One Sugar Free Energy Drink 250ml,250,ml
+102,Energy and Health Drinks,0.99,Rockstar,"Rockstar Juiced Mango, Orange & Passionfruit Energy Drink 500ml, PMP 99p",500,ml
+103,Energy and Health Drinks,0.99,Rockstar,Rockstar Original 500ml Can,500,ml
+104,Energy and Health Drinks,1.0,Relentless,Relentless Mango 500ml PMP £1,500,ml
+105,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Bold Brazilian 380ml PMP £1.09 or 2 for £2,380,ml
+106,Energy and Health Drinks,1.19,Best-One,Best-One Energy Drink 4 x 250ml,250,ml
+107,Energy and Health Drinks,0.99,Rockstar,"Rockstar Supersours Bubbleburst Energy Drink 500ml, PMP 99p",500,ml
+108,Energy and Health Drinks,1.39,Monster,Monster Energy Drink 500ml PM £1.39,500,ml
+109,Energy and Health Drinks,1.25,Monster,Monster Energy Ultra Blue 500ml PMP £1.25,500,ml
+110,Energy and Health Drinks,1.0,Relentless,Relentless Apple and Kiwi 500ml PMP £1,500,ml
+111,Energy and Health Drinks,1.0,Relentless,Relentless Passion Punch 500ml PMP £1,500,ml
+112,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Mango & Passion Fruit £1.09 or 2 for £2 12 X 500ml,500,ml
+113,Energy and Health Drinks,1.09,Lucozade,Lucozade Energy Watermelon and Strawberry £1.09 or 2 for £2 380ml PMP,380,ml
+114,Energy and Health Drinks,1.25,Monster,Monster Energy Absolutely Zero 500ml PMP £1.25,500,ml
+115,Energy and Health Drinks,1.25,Lucozade,Lucozade Revive Lemon & Lime 380ml £1.25 PMP,380,ml
+116,Energy and Health Drinks,0.49,Boost,Boost Energy Red Berry 250ml,250,ml
+117,Energy and Health Drinks,1.25,Monster,Monster Energy LH44 500ml PMP £1.25,500,ml
+118,Energy and Health Drinks,0.99,Rockstar,"Rockstar Supersours Blue Raspberry Energy Drink 500ml, PMP 99p",500,ml
+119,Energy and Health Drinks,1.49,Reign,Reign Melon Mania 500ml Can PM £1.49,500,ml
+120,Energy and Health Drinks,1.49,Reign,Reign Razzle Berry 500ml Can PM £1.49,500,ml
+121,Energy and Health Drinks,0.59,Lucozade,Lucozade Energy Orange 250ml,250,ml
+122,Energy and Health Drinks,0.49,Boost,Boost Energy Citrus Zing 250ml,250,ml
+123,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Caribbean Burst 500ml £1.09 or 2 for £2,500,ml
+124,Energy and Health Drinks,0.99,Irn-Bru,"IRN-BRU Energy Drink 330ml Can, PMP 99p",330,ml
+125,Energy and Health Drinks,0.49,Boost,Boost Energy Sugar Free Punch Power 250ml,250,ml
+126,Energy and Health Drinks,1.25,Monster,Monster Ultra Violet Energy Drink 500ml PMP £1.25,500,ml
+127,Energy and Health Drinks,0.39,Best-One,Best-One Sour Apple Energy Drink 250ml,250,ml
+128,Energy and Health Drinks,0.39,Best-One,Best-One Sour Cherry Energy Drink 250ml,250,ml
+129,Energy and Health Drinks,1.25,Monster,Monster Energy Ultra Red 500ml PMP £1.25,500,ml
+130,Energy and Health Drinks,0.59,Lucozade,Lucozade Energy Original 59p PMP 250ml can,250,ml
+131,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Brazilian Guava 500ml £1.09 or 2 for £2,500,ml
+132,Energy and Health Drinks,1.29,Monster,Monster Ultra Red Energy Drink 12 x 500ml PM £1.29,500,ml
+133,Energy and Health Drinks,1.19,Monster,Monster Ultra Sunrise 500ml PMP £1.19,500,ml
+134,Energy and Health Drinks,1.49,Reign,Reign Sour Apple 12 x 500ml,500,ml
+135,Energy and Health Drinks,1.39,Monster,Monster Mixxd Punch Energy Drink 500ml PM £1.39,500,ml
+136,Energy and Health Drinks,1.09,Lucozade,Lucozade Sport Lemon and Lime 500ml £1.09 or 2 for £2,500,ml
+137,Energy and Health Drinks,1.99,Lucozade,Lucozade Energy Cherry 1L £1.99 PMP,1,Ltr
+138,Energy and Health Drinks,1.65,Purdey's,Purdey's Rejuvenate Natural Energy 330ml,330,ml
+139,Energy and Health Drinks,1.49,Reign,Reign Lemon Hdz 500ml PM £1.49,500,ml
+140,Energy and Health Drinks,4.89,Red Bull,"Red Bull Energy Drink, PM £4.89, 250ml (6x4 Pack)",250,ml
+141,Energy and Health Drinks,0.79,Boost,Boost Energy Exotic Fruits 500ml,500,ml
+142,Energy and Health Drinks,1.85,Red Bull,"Red Bull Energy Drink, Sugar Free 473ml, PM £1.85 (12 Pack)",473,ml
+143,Energy and Health Drinks,1.49,Red Bull,"Red Bull Energy Drink, Sugar Free, 355ml PMC £1.49",355,ml
+144,Energy and Health Drinks,0.75,Boost,Boost Energy Original 250ml,250,ml
+145,Energy and Health Drinks,1.29,Red Bull,"Red Bull Energy Drink, Tropical Edition, 250ml (12 Pack)",250,ml
+146,Energy and Health Drinks,4.59,Monster,Monster Energy 500ml,500,ml
+147,Energy and Health Drinks,0.99,KA,"KA Reload Energy Drink Black Cherry 500ml Bottle, PMP 99p",500,ml
+148,Energy and Health Drinks,0.79,Boost,Boost Energy Red Berry 500ml,500,ml
+149,Energy and Health Drinks,1.49,Red Bull,"Red Bull Energy Drink, Coconut Edition, 250ml (12 Pack)",250,ml
+150,Energy and Health Drinks,1.49,Purdey's,Purdey's Edge Natural Energy 330ml,330,ml
+151,Energy and Health Drinks,1.29,Boost,Boost Protein Strawberry Flavour 310ml,310,ml
+152,Energy and Health Drinks,1.39,Ocean Spray,Ocean Spray Cranberry Blackcurrant 1 Litre,1,Ltr
+153,Energy and Health Drinks,1.55,Grace,Grace Say Aloe Vera Drink Original Flavour 500ml,500,ml
+154,Energy and Health Drinks,0.99,KA,"KA Reload Energy Drink Mango 500ml Bottle, PMP 99p",500,ml
+155,Energy and Health Drinks,0.89,Irn-Bru,"IRN-BRU Energy Drink No Sugar 330ml Can, PMP 89p",330,ml
+156,Energy and Health Drinks,1.59,Monster,Monster Energy 500ml,500,ml
+157,Energy and Health Drinks,1.09,Lucozade,Lucozade Zero Pink Lemonade 380ml PMP £1.09 or 2 for £2,380,ml
+158,Energy and Health Drinks,0.79,Boost,Boost Energy Exotic Fruits 500ml,500,ml
+159,Energy and Health Drinks,1.09,Lucozade,Lucozade Zero Orange 380ml PMP £1.09 or 2 for £2,380,ml
+160,Energy and Health Drinks,0.59,Lucozade,Lucozade Energy Pink Lemonade 59p PMP 250ml can,250,ml
+161,Energy and Health Drinks,0.95,Boost,Boost Energy Original 500ml,500,ml
+162,Energy and Health Drinks,1.99,Monster,Monster Espresso Vanilla 250ml,250,ml
+163,Energy and Health Drinks,3.25,Glacéau,Glacéau Smartwater 6 x 600ml,600,ml
+164,Energy and Health Drinks,1.09,Ribena,Lucozade Zero Original 380ml PMP £1.09 or 2 for £2,380,ml
+165,Energy and Health Drinks,1.39,Ocean Spray,Ocean Spray Cranberry Mango 1 Litre,1,Ltr
+166,Energy and Health Drinks,1.99,Monster,Monster Espresso Cream 250ml,250,ml
+167,Energy and Health Drinks,1.19,Coca-Cola,Coca-Cola No Sugar Energy Drink 250ml PMP £1.19,250,ml
+168,Energy and Health Drinks,1.29,Boost,Boost Protein Chocolate Flavour 310ml,310,ml
+169,Energy and Health Drinks,1.39,Monster,Monster Ripper Juiced Energy Drink 500ml PM £1.39,500,ml
+170,Energy and Health Drinks,1.29,Boost,Boost Energy Original 1 Litre,1,Ltr
+171,Energy and Health Drinks,1.04,Rubicon,Rubicon Spring Strawberry Kiwi Flavoured Sparkling Spring Water 500ml,500,ml
+172,Energy and Health Drinks,1.04,Rubicon,"Rubicon Spring Orange Mango Flavoured Sparkling Spring Water, 500ml",500,ml
+173,Energy and Health Drinks,0.8,Lucozade,Lucozade Energy Orange 250ml Can,250,ml
+174,Energy and Health Drinks,1.59,Glacéau,Glacéau Vitamin Water Zero Defense 500ml,500,ml
+175,Energy and Health Drinks,1.59,Glacéau,Glacéau Vitamin Water Zero Triple XXX 500ml,500,ml
+176,Energy and Health Drinks,1.59,Glacéau,Glacéau Vitamin Water Zero Power C 500ml,500,ml
+177,Energy and Health Drinks,1.99,Red Bull,"Red Bull Energy Drink, 355ml (24 Pack)",355,ml
+178,Energy and Health Drinks,5.49,Lucozade,Lucozade Sport Orange 4 x 500ml,4,pk
+179,Energy and Health Drinks,1.89,Holy,Holy Reload 330ml,330,ml
+180,Energy and Health Drinks,1.49,Monster,Monster Energy Mango Loco 250ml Can,250,ml
+181,Energy and Health Drinks,0.8,Lucozade,Lucozade Energy Original 250ml can,250,ml
+182,Energy and Health Drinks,1.29,Monster,Monster Ultra Violet Energy Drink 12 x 500ml PM £1.29,500,ml
+183,Energy and Health Drinks,1.89,Holy,Holy Reset 330ml,330,ml
+184,Energy and Health Drinks,5.49,Lucozade,Lucozade Sport Raspberry 4 x 500ml,4,pk
+185,Energy and Health Drinks,1.49,Supermalt,Supermalt Original 500ml,330,ml
+186,Energy and Health Drinks,1.49,Monster,Monster Energy 250ml Can,250,ml
+187,Energy and Health Drinks,1.59,Supermalt,Supermalt Original 500ml,500,ml
+188,Energy and Health Drinks,1.49,Monster,Monster Energy Ultra Zero 250ml Can,250,ml
+189,Energy and Health Drinks,1.39,Monster,Monster Energy LH-44 500ml,500,ml
+190,Energy and Health Drinks,1.0,Gatorade,Gatorade Cool Blue 500ml,500,ml
+191,Energy and Health Drinks,1.0,Gatorade,Gatorade Tropical Burst 500ml,500,ml
+192,Energy and Health Drinks,1.0,Gatorade,Gatorade Orange Flavour 500ml,500,ml
+193,Energy and Health Drinks,1.49,Lucozade,Lucozade Energy Original 500ml,500,ml
+194,Energy and Health Drinks,1.35,Powerade,Powerade Berry & Tropical 12 x 500ml,500,ml
+195,Energy and Health Drinks,1.25,Lucozade,Lucozade Energy Cherry 380ml,380,ml
+196,Energy and Health Drinks,2.29,Red Bull,"Red Bull Energy Drink, 473ml, (12 Pack)",473,ml
+197,Energy and Health Drinks,0.75,Lucozade,Lucozade Orange 330ml,330,ml
+198,Energy and Health Drinks,1.85,Relentless,Relentless Origin 500ml,500,ml
+199,Energy and Health Drinks,1.49,Lucozade,Lucozade Sport Raspberry 500ml,500,ml
+200,Energy and Health Drinks,0.49,Boost,Boost Energy Sugar Free Original 250ml,250,ml
+201,Energy and Health Drinks,1.49,Lucozade,Lucozade Sport Orange 500ml,500,ml
+202,Energy and Health Drinks,1.39,Red Bull,"Red Bull Energy Drink, Sugar Free, 250ml (24 Pack)",250,ml
+203,Energy and Health Drinks,1.29,Red Bull,"Red Bull Energy Drink, 250ml (24 Pack)",250,ml
+204,Energy and Health Drinks,1.25,Lucozade,Lucozade Energy Original 380ml,380,ml
+205,Energy and Health Drinks,1.25,Lucozade,Lucozade Energy Orange 380ml,380,ml
+206,Energy and Health Drinks,1.49,Lucozade,Lucozade Energy Orange 500ml,500,ml
+207,Individual cans,0.79,Coca-Cola,Coca-Cola Original Taste 330ml PMP 79p,330,ml
+208,Individual cans,0.59,Pepsi Max,Pepsi Max 330ml,330,ml
+209,Individual cans,0.65,Dr Pepper,Dr Pepper 330ml PMP 65p,330,ml
+210,Individual cans,0.69,Coca-Cola,Diet Coke 330ml PMP 69p,330,ml
+211,Individual cans,0.79,Coca-Cola,Coca-Cola Original Taste Cherry 330ml Can 79p PMP,330,ml
+212,Individual cans,0.59,Coca-Cola,Coca-Cola Zero Sugar 24 x 330ml PMP 59p,330,ml
+213,Individual cans,0.59,Irn-Bru,"IRN-BRU Can 330ml, PMP 59p",330,ml
+214,Individual cans,0.65,Fanta,Fanta Orange 330ml PMP 65p,330,ml
+215,Individual cans,0.59,Pepsi,Pepsi Max Cherry Cola 330ml,330,ml
+216,Individual cans,0.65,Coca-Cola,Coca-Cola Original Taste 250ml PMP 65p,250,ml
+217,Individual cans,0.75,Rio,Rio Tropical 330ml Price Mark 75p,330,ml
+218,Individual cans,0.65,Lilt,Lilt Pineapple & Grapefruit 330ml PMP 65p,330,ml
+219,Individual cans,0.65,Fanta,Fanta Fruit Twist 330ml PMP 65p,330,ml
+220,Individual cans,0.59,Pepsi,Pepsi Diet 330ml,330,ml
+221,Individual cans,0.69,Rubicon,"Rubicon Sparkling Mango Soft Drink 330ml, PMP 69p",330,ml
+222,Individual cans,0.59,Tango,Tango Original Orange 330ml,330,ml
+223,Individual cans,0.49,Barr,"Barr American Cream Soda 330ml Can, PMP 49p",330,ml
+224,Individual cans,0.69,Pepsi,Pepsi 330ml,330,ml
+225,Individual cans,0.65,Sprite,Sprite 330ml PMP 65p,330,ml
+226,Individual cans,0.59,Vimto,Vimto Fizzy 300ml,330,ml
+227,Individual cans,1.99,Costa Coffee,Costa Coffee Latte 250ml Can,250,ml
+228,Individual cans,1.0,Boost,Boost Iced Coffee Caffè Latte 250ml,250,ml
+229,Individual cans,0.59,KA,"KA Sparkling Black Grape 330ml Can, PMP 59p",330,ml
+230,Individual cans,0.69,Rubicon,Rubicon Sparkling Passion Fruit Soft Drink 330ml Can PMP 69p,330,ml
+231,Individual cans,0.59,KA,"KA Sparkling Fruit Punch 330ml Can, PMP 59p",330,ml
+232,Individual cans,0.69,Coca-Cola,Diet Coke Sublime Lime 330ml PM 69p,330,ml
+233,Individual cans,0.49,Barr,"Barr Shandy 330ml Can, PMP 49p",330,ml
+234,Individual cans,0.69,Rubicon,"Rubicon Sparkling Guava Juice Drink 330ml, PMP 69p",330,ml
+235,Individual cans,0.49,Barr,"Barr Bubblegum 330ml Can, PMP 49p",330,ml
+236,Individual cans,0.65,Old Jamaica,Old Jamaica Ginger Beer Regular 330ml,330,ml
+237,Individual cans,0.69,Appletiser,Appletiser 250ml PMP 69p,250,ml
+238,Individual cans,0.49,Barr,"Barr Lemonade 330ml Can, PMP 49p",330,ml
+239,Individual cans,0.59,Coca-Cola,Coca-Cola Zero Sugar Vanilla 330ml PMP 59p,330,ml
+240,Individual cans,0.49,Barr,"Barr Raspberryade 330ml Can, PMP 49p",330,ml
+241,Individual cans,0.59,KA,"KA Sparkling Pineapple 330ml Can, PMP 59p",330,ml
+242,Individual cans,0.55,Barr,"Tizer 330ml Can, PMP 55p",330,ml
+243,Individual cans,0.59,Pepsi,Pepsi Max Raspberry Cola 330ml,330,ml
+244,Individual cans,1.0,Boost,Boost Iced Coffee Double Espresso 250ml,250,ml
+245,Individual cans,0.49,Barr,"Barr Pineapple 330ml Can, PMP 49p",330,ml
+246,Individual cans,0.59,Tango,Tango Sugar Free Tropical 330ml,330,ml
+247,Individual cans,0.69,Rubicon,"Rubicon Sparkling Lychee Juice Drink 330ml Can, PMP 69p",330,ml
+248,Individual cans,0.49,Barr,"Barr Limeade 330ml Can, PMP 49p",330,ml
+249,Individual cans,0.59,7UP,7Up Free Lemon and Lime 330ml,330,ml
+250,Individual cans,0.59,Tango,Tango Strawberry Watermelon 330ml,330,ml
+251,Individual cans,0.59,Irn-Bru,"IRN-BRU Xtra 330ml Can, PMP 59p",330,ml
+252,Individual cans,0.69,Coca-Cola,Coca-Cola Zero Sugar Cherry 330ml,330,ml
+253,Individual cans,0.59,Coca-Cola,Diet Coke 250ml PMP 59p,250,ml
+254,Individual cans,0.59,KA,"KA Sparkling Strawberry 330ml Can, PMP 59p",330,ml
+255,Individual cans,0.49,Barr,"Barr Cherryade 330ml Can, PMP 49p",330,ml
+256,Individual cans,0.65,Fanta,Fanta Zero Grape 330ml PMP 65p,330,ml
+257,Individual cans,0.59,Sun Exotic,"Sun Exotic Sparkling Tropical Fruit 330ml, PMP 59p",330,ml
+258,Individual cans,0.49,Barr,"Barr Orangeade 330ml Can, PMP 49p",330,ml
+259,Individual cans,0.59,KA,"KA Sparkling Karibbean Kola 330ml Can, PMP 59p",330,ml
+260,Individual cans,1.65,Appletiser,Appletiser 250ml Can,250,ml
+261,Individual cans,0.67,Pepsi,Pepsi Max Cherry Cola 330ml,330,ml
+262,Individual cans,0.69,Tango,Tango Strawberry Watermelon 330ml,330,ml
+263,Individual cans,0.49,Barr,"Barr Ginger Beer 330ml Can, PMP 49p",330,ml
+264,Individual cans,0.59,Vimto,Vimto Zero Fizzy 330ml,330,ml
+265,Individual cans,0.69,7UP,7UP Regular 330ml,330,ml
+266,Individual cans,0.69,Tango,Tango Sugar Free Tropical 330ml,330,ml
+267,Individual cans,0.69,Rubicon,"Rubicon Sparkling Pomegranate Juice Drink 330ml Can, PMP 69p",330,ml
+268,Individual cans,0.66,Barr,Barr American Cream Soda 330ml Can,330,ml
+269,Individual cans,0.65,Rio,Rio Tropical Light 330ml Price Mark 65p,330,ml
+270,Individual cans,1.25,Thums Up,Thums Up 24 x 300ml,300,ml
+271,Individual cans,0.69,Coca-Cola,Diet Coke Sublime Lime 330ml,330,ml
+272,Individual cans,0.99,Cawston Press,Cawston Press Cloudy Apple 330ml,330,ml
+273,Individual cans,0.99,Cawston Press,Cawston Press Elderflower Lemonade 330ml,330,ml
+274,Individual cans,0.69,Sprite,Sprite 150ml Can,150,ml
+275,Individual cans,0.67,Pepsi,Pepsi Max Raspberry 330ml,330,ml
+276,Individual cans,0.99,Cawston Press,Cawston Press Rhubarb 330ml,330,ml
+277,Individual cans,1.0,San Benedetto,San Benedetto Prima Spremitura Clementina 330ml Cans,330,ml
+278,Individual cans,0.99,Cawston Press,Cawston Press Ginger Beer 330ml,330,ml
+279,Individual cans,0.99,San Pellegrino,San Pellegrino Clementine 4x6x330ml,330,ml
+280,Individual cans,1.0,San Benedetto,San Benedetto Prima Spremitura Limone 330ml Cans,330,ml
+281,Individual cans,1.2,Sanpellegrino,San Pellegrino Organic Sparkling Peach Tea 24x250ml,250,ml
+282,Individual cans,0.99,Aqua Libra,Aqua Libra Raspberry & Apple Infused Fruit Flavoured Sparkling Water 330ml,330,ml
+283,Individual cans,1.39,Fentimans,Fentimans Curiosity Cola 250ml,250,ml
+284,Individual cans,0.99,Aqua Libra,Aqua Libra Grapefruit & Pineapple Infused Fruit Flavoured Sparkling Water 330ml,330,ml
+285,Individual cans,1.39,Fentimans,Fentimans Cherry Cola 250ml,250,ml
+286,Individual cans,1.39,Fentimans,Fentimans Gently Sparkling Elderflower 250ml,250,ml
+287,Individual cans,0.99,Aqua Libra,Aqua Libra Cucumber Mint & Lime Infused Fruit Flavoured Sparkling Water 330ml,330,ml
+288,Individual cans,0.75,Ting,Ting Sparkling Grapefruit Flavoured Beverage 330ml,330,ml
+289,Individual cans,0.95,Coca-Cola,Coca-Cola Original Taste 330ml,330,ml
+290,Individual cans,0.85,Fanta,Fanta Orange 330ml,330,ml
+291,Individual cans,0.85,Lilt,Lilt 24 x 330ml,330,ml
+292,Individual cans,0.89,Rio,Rio Tropical 330ml,330,ml
+293,Individual cans,0.85,Sprite,Sprite 24 x 330ml,330,ml
+294,Individual cans,0.69,Coca-Cola,Diet Coke 24 x 330ml,330,ml
+295,Individual cans,0.67,Tango,Tango Original Orange 330ml,330,ml
+296,Individual cans,0.79,7UP,7UP Sparkling Lemon & Lime Drink Cans 24 x 330ml,330,ml
+297,Individual cans,0.75,Vimto,Vimto Fizzy 330ml,330,ml
+298,Individual cans,0.85,Fanta,Fanta Lemon 24 x 330ml,330,ml
+299,Individual cans,1.2,Sanpellegrino,San Pellegrino Organic Sparkling Lemon Tea 24x250ml,250,ml
+300,Individual cans,0.95,Coca-Cola,Coca-Cola Original Taste Cherry 330ml Can,330,ml
+301,Individual cans,0.79,Pepsi,Pepsi Cans 24 x 330ml,330,ml
+302,Individual cans,0.59,Ben Shaws,Ben Shaws Bitter Shandy 330ml,330,ml
+303,Individual cans,0.85,Fanta,Fanta Fruit Twist 24 x 330ml,330,ml
+304,Individual cans,0.99,San Pellegrino,San Pellegrino Blood Orange 4x6x330ml,330,ml
+305,Individual cans,0.86,Irn-Bru,IRN-BRU Can 330ml,330,ml
+306,Individual cans,0.67,Pepsi Max,Pepsi Max 330ml,330,ml
+307,Individual cans,0.75,Vimto,Vimto Fizzy Zero 330ml,330,ml
+308,Individual cans,1.39,Fentimans,Fentimans Rose Lemonade 250ml,250,ml
+309,Individual cans,0.67,Pepsi,Diet Pepsi Cans 24 x 330ml,330,ml
+310,Individual cans,0.89,Schweppes,Schweppes Lemonade 330ml,330,ml
+311,Individual cans,0.69,Coca-Cola,Coca-Cola Zero Sugar 330ml,330,ml
+312,Individual cans,0.67,7UP,7UP Free Sparkling Lemon & Lime Drink Cans 24x330ml,330,ml
+313,Individual cans,0.89,Rubicon,Rubicon Sparkling Mango 330ml,330,ml
+314,Individual cans,0.89,Rubicon,Rubicon Sparkling Passion 330ml,330,ml
+315,Individual cans,0.85,Dr Pepper,Dr Pepper Zero 24 x 330ml,330,ml
+316,Individual cans,0.85,Fanta,Fanta Zero Orange 24 x 330ml,330,ml
+317,Individual cans,0.65,Old Jamaica,Old Jamaica Ginger Beer Regular 330ml,330,ml
+318,Individual cans,0.85,Dr Pepper,Dr Pepper 24 x 330ml,330,ml
+319,Individual cans,0.67,R.White's,R.White's Lemonade Cans 24 x 330ml,330,ml
+320,Multi Pack Cans,4.35,Coca-Cola,Coca-Cola Original Taste 8 x 330ml Cans PM £4.35,330,ml
+321,Multi Pack Cans,3.99,Pepsi,Pepsi Max Cans 10 x 330ml,330,ml
+322,Multi Pack Cans,4.35,Coca-Cola,Diet Coke 10 x 330ml PM £4.35,330,ml
+323,Multi Pack Cans,2.69,Coca-Cola,Coca-Cola Original Taste 4 x 330ml PM £2.69,330,ml
+324,Multi Pack Cans,2.29,Coca-Cola,Diet Coke 4 x 330ml PM £2.29,330,ml
+325,Multi Pack Cans,1.29,Rockstar,Rockstar XD Power Blue Raz Energy Drink 500ml Can,500,ml
+326,Multi Pack Cans,4.35,Coca-Cola,Coca-Cola Zero Sugar 10 x 330ml PM £4.35,330,ml
+327,Multi Pack Cans,1.29,Rockstar,Rockstar Baja Juiced Mango Energy Drink 500ml Can,500,ml
+328,Multi Pack Cans,1.29,Rockstar,"Rockstar Baja Juiced Passion Frutas Energy Drink Can 500ml, PMP £1.29",500,ml
+329,Multi Pack Cans,1.29,Rockstar,"Rockstar Xdurance Fully Loaded Blueberry, Pomegranate & Acai Energy Drink 500ml, PMP £1.29",500,ml
+330,Multi Pack Cans,1.29,Rockstar,Rockstar XD Power Hardcore Apple Energy Drink 500ml Can,500,ml
+331,Multi Pack Cans,3.99,Pepsi,Pepsi Diet 10 x 330ml,330,ml
+332,Multi Pack Cans,1.29,Barr,"Barr Bubblegum 4 x 330ml Cans, PMP £1.29",330,ml
+333,Multi Pack Cans,1.29,Barr,"Barr American Cream Soda 4 x 330ml Cans, PMP £1.29",330,ml
+334,Multi Pack Cans,1.29,Barr,"Barr Cherryade 4 x 330ml Cans, PMP £1.29",330,ml
+335,Multi Pack Cans,4.19,Coca-Cola,Coca-Cola Zero Sugar 10 x 330ml PMP £4.19,330,ml
+336,Multi Pack Cans,1.29,Barr,"Barr Cola 4 x 330ml Cans, PMP £1.29",330,ml
+337,Multi Pack Cans,2.19,Coca-Cola,Diet Coke 4 x 330ml PMP £2.19,330,ml
+338,Multi Pack Cans,2.75,Perrier & Juice,Perrier & Juice Sparkling Pineapple & Mango Water 6x4x250ml,250,ml
+339,Multi Pack Cans,2.75,Perrier & Juice,Perrier & Juice Sparkling Strawberry & Kiwi Water 6x4x250ml,250,ml
+340,Multi Pack Cans,4.49,Rubicon,Rubicon Sparkling Mango Juice Drink 8x330ml,330,ml
+341,Multi Pack Cans,2.75,Perrier & Juice,Perrier & Juice Sparkling Peach & Cherry Water 6x4x250ml,250,ml
+342,Sparkling Water,0.99,Volvic,Volvic Sparkling Carbonated Natural Mineral Water 1.5L,1.5,Ltr
+343,Sparkling Water,0.79,Best-One,Best-One Sparkling Natural Mineral Water 1.5L,1.5,Ltr
+344,Sparkling Water,1.39,San Pellegrino,San Pellegrino Sparkling Natural Mineral Water Glass 12x750ml,750,ml
+345,Sparkling Water,0.89,Glacéau,Glacéau Smartwater Sparkling 600ml,600,ml
+346,Sparkling Water,0.68,Buxton,Buxton Sparkling Natural Mineral Water 24x500ml,500,ml
+347,Sparkling Water,0.5,Harrogate,Harrogate Spring Water Sparkling 500ml,500,ml
+348,Sparkling Water,0.95,Perrier,Perrier Lemon Sparkling Natural Mineral Water 24x500ml,500,ml
+349,Sparkling Water,0.75,Perrier,Perrier Sparkling Natural Mineral Water 24x500ml,500,ml
+350,Sparkling Water,1.04,Strathmore,Strathmore Sparkling Spring Water 750ml Glass Bottle,750,ml
+351,Sparkling Water,1.49,Perrier,Perrier Sparkling Natural Mineral Water 750ml,750,ml
+352,Sparkling Water,1.0,Highland Spring,Highland Spring Sparkling Spring Water 1.5 Litre,1.5,Ltr
+353,Sparkling Water,0.79,Perrier,Perrier Sparkling Natural Mineral Water Glass 4x330ml,330,ml
+354,Sparkling Water,0.55,Highland Spring,Highland Spring Sparkling Spring Water 500ml,500,ml
+355,Sparkling Water,0.62,Highland Spring,Highland Spring Sparkling Spring Water 330ml,330,ml
+356,Sparkling Water,0.95,Highland Spring,Highland Spring Sparkling Spring Water 1L,1,Ltr
+357,Still Water,1.49,Best-One,Best-One Still Natural Mineral Water 6 x 500ml,500,ml
+358,Still Water,0.56,Buxton,Buxton Still Natural Mineral Water Promo Pack 24x500ml,500,ml
+359,Bottled Water,1.29,Highland Spring,Highland Spring Still Spring Water 2L,2,Ltr
+360,Still Water,0.89,Buxton,Buxton Still Natural Mineral Water Sports Cap 15x750ml,750,ml
+361,Bottled Water,0.82,Pure Life,Nestle Pure Life Still Spring Water 1.5L,1.5,Ltr
+362,Still Water,0.75,Glacéau,Glacéau Smartwater 600ml,600,ml
+363,Still Water,0.85,Highland Spring,Highland Spring Still Spring Water 750ml,750,ml
+364,Still Water,1.15,Glacéau,Glacéau Smartwater with Sportscap 850ml,850,ml
+365,Bottled Water,0.85,Highland Spring,Highland Spring Still Spring Water 12 x 1 Litre,1,Ltr
+366,Bottled Water,0.75,Best-One,Best-One Still Natural Mineral Water 1.5L,1.5,Ltr
+367,Bottled Water,0.79,Buxton,Buxton Still Natural Mineral Water Sports Cap 1L,1,Ltr
+368,Still Water,0.99,Lucozade,Lucozade Sport Fitwater,600,ml
+369,Bottled Water,0.75,Pure Life,Nestle Pure Life Still Spring Water 12x1L,1,Ltr
+370,Still Water,0.59,Best-One,Best-One Still Natural Mineral Water 500ml,500,ml
+371,Bottled Water,1.19,AQUA Carpatica,AQUA Carpatica Natural Still Mineral Water 1.5L,1.5,Ltr
+372,Bottled Water,0.99,AQUA Carpatica,AQUA Carpatica Natural Still Mineral Water 1L,1,Ltr
+373,Still Water,0.5,Strathmore,"Strathmore Still Spring Water 500ml Bottle, PMP £3.49",500,ml
+374,Still Water,1.65,Evian,evian Still Natural Mineral Water 750ml Glass,750,ml
+375,Still Water,3.99,Pure Life,Nestle Pure Life Still Spring Water 12x500ml,500,ml
+376,Still Water,0.39,Mount Aqua,Mount Aqua Still Spring Water 500ml,500,ml
+377,Still Water,3.25,Buxton,Buxton Still Natural Mineral Water 8x500ml,500,ml
+378,Still Water,0.59,Strathmore,Strathmore Still Spring Water 500ml,500,ml
+379,Still Water,0.45,Harrogate,Harrogate Spring Water Still 500ml,500,ml
+380,Still Water,0.65,AQUA Carpatica,AQUA Carpatica Natural Still Mineral Water 500ml,500,ml
+381,Still Water,0.49,Mount Aqua,Mount Aqua Still Spring Water 500ml,500,ml
+382,Still Water,0.35,Hydr8,Hydr8 Naturally Sourced British Water 50cl,500,ml
+383,Still Water,0.99,AQUA Carpatica,AQUA Carpatica Natural Still Mineral Water Sports Cap 6 x 750ml,750,ml
+384,Still Water,1.99,Volvic,Volvic Natural Mineral Water 6 x 500ml,500,ml
+385,Still Water,1.04,Strathmore,Strathmore Still Spring Water 750ml Glass Bottle,750,ml
+386,Still Water,0.6,Volvic,Volvic Natural Mineral Water 24 x 50cl,500,ml
+387,Bottled Water,0.99,Highland Spring,Highland Spring Still Spring Water 1L,1,Ltr
+388,Bottled Water,0.95,Highland Spring,Highland Spring Still Spring Water 1.5Litre,1.5,Ltr
+389,Bottled Water,1.15,Volvic,Volvic Natural Mineral Water 1.5L,1.5,Ltr
+390,Still Water,1.0,Evian,evian Still Natural Mineral Water 12 x 750ml,750,ml
+391,Bottled Water,1.99,Aqua Pura,Aqua Pura Still Natural Mineral Water 5 Litre,5,Ltr
+392,Still Water,0.62,Highland Spring,Highland Spring Still Spring Water 330ml,330,ml
+393,Bottled Water,1.0,Volvic,Volvic Natural Mineral Water 1L,1,Ltr
+394,Bottled Water,1.0,Buxton,Buxton Still Natural Mineral Water 6x1.5L,1.5,Ltr
+395,Still Water,0.49,Pure Life,Nestle Pure Life Still Spring Water 24x500ml,500,ml
+396,Still Water,1.13,Strathmore,Strathmore Still Spring Water 330ml Glass Bottle,330,ml
+397,Still Water,0.6,Evian,evian Natural Mineral Water 50cl,500,ml
+398,Still Water,0.45,Evian,evian Natural Mineral Water 24 x 330ml,330,ml
+399,Baby Products,1.0,Huggies,"Huggies® Pure Baby Wipes PMP - 6 Pack (56 Wipes/Pack, 336 Wipes Total)",6,pk
+400,Baby Products,4.99,Pampers,"Pampers Baby-Dry Size 6, 19 Nappies, 13-18kg, Carry Pack",19,s
+401,Baby Products,4.99,Pampers,"Pampers Baby-Dry Size 5, 23 Nappies, 11-16kg, Carry Pack",23,s
+402,Baby Products,9.29,Cow & Gate,Cow & Gate 1 First Infant Milk Formula 800g,800,g
+403,Baby Products,4.99,Pampers,"Pampers Baby-Dry Size 4, 25 Nappies, 9-14kg, Carry Pack",25,s
+404,Baby Products,9.29,Cow & Gate,Cow & Gate Hungry First Infant Milk Formula 800g,800,g
+405,Baby Products,9.29,Cow & Gate,Cow & Gate 2 Follow-On Milk from 6-12 Months 800g,800,g
+406,Baby Products,11.99,Aptamil,Aptamil 2 Follow On Baby Milk Formula 800g,800,g
+407,Baby Products,4.99,Pampers,"Pampers Baby-Dry Nappy Pants Size 6, 19 Nappies, 15kg+, Carry Pack",19,s
+408,Baby Products,0.75,Cow & Gate,Cow & Gate Rice Pudding Jar 125g,125,g
+409,Baby Products,8.79,Cow & Gate,Cow & Gate 3 Growing-Up Milk Formula 800g,800,g
+410,Baby Products,0.75,Cow & Gate,Cow & Gate Egg Custard Jar 125g,125,g
+411,Baby Products,0.85,Cow & Gate,Cow & Gate 1 First Infant Milk from Birth 200ml,200,ml
+412,Baby Products,1.09,Aptamil,Aptamil 1 First Baby Milk Formula From Birth 200ml,200,ml
+413,Baby Products,1.09,Aptamil,Aptamil 2 Follow On Baby Milk Formula 200ml,200,ml
+414,Baby Products,0.89,Cow & Gate,Cow & Gate Rice Pudding Jar 200g,200,g
+415,Baby Products,10.99,Aptamil,Aptamil 3 Growing Up Milk Formula 800g,800,g
+416,Baby Products,0.85,Cow & Gate,Cow & Gate 2 Follow On Baby Milk Formula 200ml,200,ml
+417,Baby Products,11.99,Aptamil,Aptamil Hungry First Infant Milk 800g,800,g
+418,Baby Products,1.59,Farley's,Farley's All Ages 4-6 Months Onwards Farley's Rusks Original 150g,150,g
+419,Baby Products,1.0,Cherubs,Cherubs Baby Bottle 250ml,250,ml
+420,Baby Products,0.89,Cow & Gate,Cow & Gate Banana Crumble Jar 200g,200,g
+421,Baby Products,0.75,Cow & Gate,Cow & Gate My First Bolognese Jar 125g,125,g
+422,Baby Products,0.85,Cow & Gate,Cow & Gate Hungry First Infant Milk from Birth 200ml,200,ml
+423,Baby Products,0.75,Cow & Gate,Cow & Gate Mini Beef Casserole Jar 125g,125,g
+424,Baby Products,0.75,Cow & Gate,Cow & Gate Bursting Apple Banana & Berries Fruit Puree Jar 125g,125,g
+425,Baby Products,9.29,Cow & Gate,Cow & Gate 1 First Infant Milk Formula 800g,800,g
+426,Baby Products,0.75,Cow & Gate,Cow & Gate Carrot & Lamb HotpotJar 125g,125,g
+427,Baby Products,0.75,Cow & Gate,Cow & Gate Chicken Sunday Lunch Jar 125g,125,g
+428,Baby Products,0.75,Cow & Gate,Cow & Gate Creamed Carrot & Potato Jar 125g,125,g
+429,Baby Products,0.89,Cow & Gate,Cow & Gate Apple Crumble Jar 200g,200,g
+430,Baby Products,0.75,Cow & Gate,Cow & Gate Carrot & Chicken Risotto Jar 125g,125,g
+431,Baby Products,0.89,Cow & Gate,Cow & Gate Potato & Turkey Roast Jar 200g,200,g
+432,Baby Products,1.19,Cow & Gate,Cow & Gate Spaghetti Bolognese Jar 250g,250,g
+433,Baby Products,0.75,Cow & Gate,Cow & Gate Juicy Apple & Mango Fruit Puree Jar 125g,125,g
+434,Baby Products,0.89,Cow & Gate,Cow & Gate Tasty Cottage Pie Jar 200g,200,g
+435,Baby Products,10.99,SMA,SMA® PRO Follow-on Milk 6 mth+ 800g,800,g
+436,Baby Products,0.75,Cow & Gate,Cow & Gate Cauliflower Cheese Jar 125g,125,g
+437,Baby Products,9.29,Cow & Gate,Cow & Gate 2 Follow-On Milk from 6-12 Months 800g,800,g
+438,Baby Products,0.89,Cow & Gate,Cow & Gate Butternut Squash Chicken & Pasta Jar 200g,200,g
+439,Baby Products,0.89,Cow & Gate,Cow & Gate Yummy Harvest Chicken Jar 200g,200,g
+440,Baby Products,0.89,Cow & Gate,Cow & Gate Scrummy Spaghetti Bolognese Jar 200g,200,g
+441,Baby Products,11.99,Aptamil,Aptamil 2 Follow On Baby Milk Formula 800g,800,g
+442,Baby Products,10.49,Cow & Gate,Cow & Gate 4 Growing Up Milk Formula 800g,800,g
+443,Baby Products,1.79,Baby Dove,Baby Dove Rich Moisture Shampoo 200ml,200,ml
+444,Baby Products,9.29,Cow & Gate,Cow & Gate Hungry First Infant Milk Formula 800g,800,g
+445,Baby Products,0.89,Cow & Gate,Cow & Gate Cauliflower Cheese Jar 200g,200,g
+446,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Boy 4-7 Years (17-30kgs) 10 Pants,10,s
+447,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Boy 3-5 Years (16-23g) 10 Pants,10,s
+448,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Girl 3-5 Years (16-23g) 10 Pants,10,s
+449,Baby Products,2.19,Cow & Gate,Cow & Gate Banana Porridge Baby Cereal 125g,125,g
+450,Baby Products,10.99,Aptamil,Aptamil 3 Growing Up Milk Formula 800g,800,g
+451,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Boy 3-5 Years (16-23g) 10 Pants,10,s
+452,Baby Products,1.79,Baby Dove,Baby Dove Rich Moisture Lotion 200ml,200,ml
+453,Baby Products,3.99,Huggies,"Huggies Pull Ups Day Time Potty Training Pants Girls Size Large, 14 Pants",14,s
+454,Baby Products,2.19,Cow & Gate,Cow & Gate Fruity Wholegrain Porridge Baby Cereal 125g,125,g
+455,Baby Products,8.79,Cow & Gate,Cow & Gate 3 Growing-Up Milk Formula 800g,800,g
+456,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Girl 4-7 Years (17-30kgs) 10 Pants,10,s
+457,Baby Products,1.79,Cow & Gate,Cow & Gate Baby Rice Cereal 100g,100,g
+458,Baby Products,3.29,Heinz,Heinz 4+ Months First Steps Creamy Banana Porridge 240g,240,g
+459,Baby Products,3.29,Heinz,Heinz 4+ Months First Steps Creamy Peach & Apricot Porridge 240g,240,g
+460,Baby Products,3.99,Huggies,"Huggies Pull Ups Day Time Potty Training Pants Girls Size Large, 14 Pants",14,s
+461,Baby Products,3.29,Heinz,Heinz 7+ Months First Steps Oaty Banana Porridge 240g,240,g
+462,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Boy 4-7 Years (17-30kgs) 10 Pants,10,s
+463,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Girl 3-5 Years (16-23g) 10 Pants,10,s
+464,Baby Products,5.5,Huggies,Huggies DryNites Pyjama Pants Girl 4-7 Years (17-30kgs) 10 Pants,10,s
+465,Baby Products,0.79,Heinz,Heinz 4+ Months By Nature Beef & Sweet Potato Mash 120g,120,g
+466,Baby Products,10.99,SMA,SMA® PRO Follow-on Milk 6 mth+ 800g,800,g
+467,Baby Products,1.0,Ella's Kitchen,Ella's Kitchen Organic The Red One Pouch 6+ Months 90g,90,g
+468,Baby Products,11.99,Aptamil,Aptamil Hungry First Infant Milk 800g,800,g
+469,Baby Products,16.29,Aptamil,Aptamil ProFutura 1 First Baby Milk Formula From Birth 800g,800,g
+470,Baby Products,10.49,Cow & Gate,Cow & Gate 4 Growing Up Milk Formula 800g,800,g
+471,Baby Products,3.29,Heinz,Heinz 7+ Months First Steps Blueberry Porridge 240g,240,g
+472,Baby Products,3.29,Heinz,Heinz 7+ Months First Steps Peachy Porridge 240g,240,g
+473,Baby Products,0.99,Heinz,"Heinz 4+ Months By Nature Butternut Squash, Carrot & Mango 100g",100,g
+474,Baby Products,1.2,Ella's Kitchen,Ella's Kitchen Apples Carrots + Parsnips from 4 Months 120g,120,g
+475,Baby Products,16.29,Aptamil,Aptamil ProFutura 1 First Baby Milk Formula From Birth 800g,800,g
+476,Baby Products,0.89,Heinz,"Heinz 4+ Months By Nature Apple, Pear & Banana 100g",100,g
+477,Baby Products,0.79,Aptamil,Aptamil 3 Growing Up Milk Formula 200ml,200,ml
+478,Baby Products,2.69,Farley's,Farley's All Ages 4-6 Months Onwards Farley's Rusks Original 300g,18,s
+479,Baby Products,1.59,Farley's,Farley's All Ages 4-6 Months Onwards Farley's Rusks Original 300g,300,g
+480,Baby Products,1.0,Cherubs,Cherubs Baby Bottle 250ml,250,ml
+481,Biscuits,0.79,Oreo,Oreo Original Sandwich Biscuits 79p 154g,154,g
+482,Biscuits,1.65,McVitie's,McVitie's Digestives Milk Chocolate 266g £1.65 PMP,266,g
+483,Biscuits,0.55,Mikado,Mikado Milk Chocolate Biscuits 55p 39g,48,g
+484,Biscuits,0.49,Best-One,Best-One Bourbon Creams 150g,150,g
+485,Biscuits,0.49,Best-One,Best-One Custard Creams 150g,150,g
+486,Biscuits,1.0,McVitie's,McVitie's Cookies White Choc Chip 150g,150,g
+487,Biscuits,1.39,Jacob's,Jacob's Cream Crackers 300g,300,g
+488,Biscuits,1.29,McVitie's,McVitie's 10 Jaffa Cakes The Original,122,g
+489,Biscuits,1.0,McVitie's,McVitie's Choc Chip Cookies 150g,150,g
+490,Biscuits,1.65,McVitie's,McVitie's Hobnob Milk Choc PMP 262g,262,g
+491,Biscuits,1.0,McVitie's,McVitie's Bourbon Creams 300g,300,g
+492,Biscuits,0.5,Fox's,Fox's Sports Shortcake Biscuits 200g,200,g
+493,Biscuits,1.29,Cadbury,Cadbury Fingers £1.29 114g,114,g
+494,Biscuits,0.89,Jammie Dodgers,Jammie Dodgers 8 Raspberry Flavour 140g,140,g
+495,Biscuits,1.0,Cadbury,Cadbury Choc Chip Cookies Biscuits 6 Pack 150g,150,g
+496,Biscuits,1.39,McVitie's,McVitie's Digestives The Original PMP 400g,400,g
+497,Biscuits,1.19,Bahlsen,Bahlsen Hit Cocoa Crème 220g,220,g
+498,Biscuits,1.39,Ritz,Ritz Original £1.39 Crackers 200g,200,g
+499,Biscuits,1.0,McVitie's,McVitie's Custard Creams 300g,300,g
+500,Biscuits,0.79,Oreo,Oreo Double Creme Sandwich Biscuit 79p 157g,157,g
+501,Biscuits,1.65,McVitie's,McVitie's Digestives Dark Chocolate 266g £1.65 PMP,266,g
+502,Biscuits,1.29,McVitie's,McVitie's Ginger Nuts 250g,250,g
+503,Biscuits,1.29,McVitie's,McVitie's Hobnobs 300g,300,g
+504,Biscuits,1.0,McVitie's,McVitie's 6 Gold Bars 106g,106,g
+505,Biscuits,1.0,Fox's,Fox's Viennese Milk Chocolate 120g,120,g
+506,Biscuits,1.0,Fox's,Fox's Golden Crunch Creams 230g,230,g
+507,Biscuits,1.0,Wagon Wheels,Wagon Wheels 6 Individually Wrapped Jammie,200,g
+508,Biscuits,1.65,McVitie's,McVitie's Digestives Classic Caramel 267g,267,g
+509,Biscuits,0.55,Best-One,Best-One Pink Wafers 100g,100,g
+510,Biscuits,0.49,Best-One,Best-One Ginger Nuts 150g,150,g
+511,Biscuits,0.49,Best-One,Best-One Orange Creams 150g,150,g
+512,Biscuits,1.39,McVitie's,McVitie's Rich Tea Classic PMP 300g,300,g
+513,Biscuits,0.89,Fox's,Fox's Jam 'n Cream Raspberry & Vanilla Flavour 150g,150,g
+514,Biscuits,0.79,Oreo,Oreo Golden Sandwich Biscuits 79p 154g,154,g
+515,Biscuits,0.89,Fox's,Fox's Party Rings 125g,125,g
+516,Biscuits,0.49,Best-One,Best-One Digestive Creams Smooth Vanilla Flavour Filling 150g,150,g
+517,Biscuits,1.0,Wagon Wheels,Wagon Wheels 6 Individually Wrapped,200,g
+518,Biscuits,1.19,Bahlsen,Bahlsen Hit Vanilla Flavour 220g,220,g
+519,Biscuits,0.59,Best-One,Best-One Digestives 300g,300,g
+520,Biscuits,0.49,Best-One,Best-One Coconut Creams 150g,150,g
+521,Biscuits,1.0,McVitie's,McVitie's 6 Gold Bars 106g,106,g
+522,Biscuits,1.39,Tuc,Jacob's TUC Cheese Sandwich 150g,150,g
+523,Biscuits,0.49,Best-One,Best-One Fruit Shorties 150g,150,g
+524,Biscuits,1.65,McVitie's,McVitie's Digestives Double Chocolate 267g,267,g
+525,Biscuits,1.19,Bahlsen,Bahlsen Hit Caramel Brownie 220g,220,g
+526,Biscuits,1.0,Breakaway,Breakaway Milk Chocolate Biscuit Bar 6 Pack £1,6,pk
+527,Biscuits,0.49,Best-One,Best-One Shorties Rich Shortcake Flavour 150g,150,g
+528,Biscuits,0.49,Best-One,Best-One Bourbon Finger Creams 150g,150,g
+529,Biscuits,0.5,Cadbury,Cadbury Roundie Milk Chocolate Biscuit 50p 30g,30,g
+530,Biscuits,0.4,Barny,Barny Chocolate Sponge Bear 40p 30g,30,g
+531,Biscuits,1.0,McVitie's,McVitie's Shorties 300g,300,g
+532,Biscuits,1.0,Breakaway,Breakaway Milk Chocolate Biscuit Bar 6 Pack £1,6,pk
+533,Biscuits,1.0,Lyons,Lyons' Biscuits Toffypops 120g,120,g
+534,Biscuits,1.39,Jacobs,Jacobs Baked Cheddars Cheese Biscuits 150g,150,g
+535,Biscuits,1.0,Fox's,Fox's Ginger Crunch Creams 230g,230,g
+536,Biscuits,1.39,Fox's,Fox's Chunkie Cookies White Chocolate 180g,180,g
+537,Biscuits,0.69,Best-One,Best-One Custard Creams 300g,300,g
+538,Biscuits,1.0,McVitie's,McVitie's Nice 250g,250,g
+539,Biscuits,1.0,Ryvita,Ryvita Crackerbread Original 200g,125,g
+540,Biscuits,0.55,Oreo,Oreo Original Sandwich Biscuit 55p Snack Pack 66g,66,g
+541,Biscuits,1.49,Galaxy,Galaxy Chocolate Chunk Cookies 144g,144,g
+542,Biscuits,0.69,Best-One,Best-One Bourbon Creams 300g,300,g
+543,Biscuits,0.69,Best-One,Best-One Coconut Rings 250g,250,g
+544,Biscuits,0.69,Best-One,Best-One Oaties 300g,300,g
+545,Biscuits,1.0,Twix,Twix Chocolate Fingers 6 x 23g,6,pk
+546,Biscuits,1.29,Cadbury,Cadbury Mini Fingers Biscuits Snack Packs £1.29 110g (5x22g),110,g
+547,Biscuits,0.55,Cadbury,Cadbury Snack Shortcake 55p Chocolate Biscuit 40g,40,g
+548,Biscuits,1.49,Bahlsen,Bahlsen Dark Choco Leibniz 125g,125,g
+549,Biscuits,1.0,Fox's,Fox's 8 Rocky Chocolate Bars 159.0g,159,g
+550,Biscuits,1.29,Bahlsen,Bahlsen Leibniz Butter Biscuits 200g,200,g
+551,Biscuits,1.0,Fox's,Fox's 8 Rocky Caramel Bars 159.0g,159,g
+552,Biscuits,1.39,Cadbury,Cadbury Fabulous Fingers Chocolate Biscuits £1.39 110g,110,g
+553,Biscuits,1.49,M&M's,M&M's Double Chocolate Cookies 144g,144,g
+554,Biscuits,1.79,Askeys,Askeys 21 Classic Cones with Sweetener,21,s
+555,Biscuits,1.29,McVitie's,McVitie's Digestives Twists Chocolate Chip & Caramel Bits 276g,276,g
+556,Biscuits,1.09,Oreo,Oreo Brownie Batter Sandwich Biscuit 154g,154,g
+557,Biscuits,1.19,Oreo,Oreo Double Stuff Chocolate Sandwich Biscuit 157g,157,g
+558,Biscuits,1.39,Cadbury,Cadbury Wispa Chocolate Biscuits 124g,124,g
+559,Biscuits,1.29,Bahlsen,Bahlsen Pick Up! Milk Chocolate 4 x 28g (112g),112,g
+560,Biscuits,0.69,Crawford's,Crawford's Jam Rings 125g,125,g
+561,Biscuits,1.29,Walkers,Walkers Pure Butter Shortbread 100g,100,g
+562,Biscuits,1.0,Crawford's,Crawford's Teatime 275g,275,g
+563,Biscuits,0.79,Crawford's,Crawford's Pink Wafers 100g,100,g
+564,Biscuits,1.39,Cadbury,Cadbury Fabulous Fingers Chocolicious Biscuits 110g,110,g
+565,Biscuits,1.49,Bahlsen,Bahlsen White Choco Leibniz 125g,125,g
+566,Biscuits,1.29,McVitie's,McVitie's Digestives Twists Chocolate Chip & Coconut 276g,276,g
+567,Biscuits,1.19,Bahlsen,Bahlsen Redcurrant Deloba 100g,100,g
+568,Biscuits,1.0,Cadbury,Cadbury Choc Chip Cookies Biscuits 6 Pack 150g,150,g
+569,Biscuits,1.09,Oreo,Oreo Strawberry Cheesecake Sandwich Biscuits 154g,154,g
+570,Biscuits,1.99,Oreo,Oreo Cadbury Coated Biscuits 164g,164,g
+571,Biscuits,1.0,Twix,Twix Chocolate Fingers 6 x 23g,6,pk
+572,Biscuits,1.0,Fox's,Fox's Party Rings Minis 6 x 21g,6,pk
+573,Biscuits,1.0,Bahlsen,Bahlsen Leibniz Minis Chocolate Biscuit 125g,125,g
+574,Biscuits,1.19,Bahlsen,Bahlsen Dark Luxury Jaffa Cakes 125g,125,g
+575,Biscuits,2.99,Royal Dansk,Royal Dansk Danish Butter Cookies 340g,340,g
+576,Biscuits,1.09,Oreo,Oreo Birthday Party Sandwich Biscuit 154g,154,g
+577,Biscuits,1.49,Bahlsen,Bahlsen Waffeletten Milk 100g,100,g
+578,Biscuits,1.49,Oreo,Oreo Vanilla Pillows 75g,75,g
+579,Biscuits,0.69,Crawford's,Crawford's Shortcake 150g,150,g
+580,Biscuits,1.09,Oreo,Oreo Mint Sandwich Biscuits 154g,154,g
+581,Biscuits,1.0,Bahlsen,Bahlsen Zoo Original Butter Biscuits 100g,100,g
+582,Biscuits,1.29,Cadbury,Cadbury Dairy Milk Freddo Chocolate Biscuits 167g,167,g
+583,Biscuits,0.95,Granforno,Granforno Grissini Traditional Italian Breadsticks 125g,125,g
+584,Biscuits,1.49,Ritz,Ritz Cheese Crackers 200g,200,g
+585,Biscuits,1.29,Bahlsen,Bahlsen Pick Up! Minis Milk Chocolate 10 x 10.6g (106g),120,g
+586,Biscuits,1.49,Bahlsen,Bahlsen Choco Moments Crunchy Hazelnut 120g,120,g
+587,Biscuits,0.55,Oreo,Oreo Original Sandwich Biscuit Snack Pack 66g,66,g
+588,Biscuits,3.49,Jacobs,Jacobs Selection 300g,300,g
+589,Biscuits,1.69,Oreo,Oreo Original Vanilla Chocolate Sandwich Biscuit 132g,132,g
+590,Biscuits,0.4,Bahlsen,Bahlsen Pick Up! Choco 28g,28,g
+591,Biscuits,1.49,Cadbury,Cadbury Chocolate Pillows 75g,75,g
+592,Biscuits,6.59,McVitie's,McVitie's Family Circle 620g,620,g
+593,Biscuits,1.09,Oreo,Oreo Golden Biscuits 154g,154,g
+594,Biscuits,1.49,Bahlsen,Bahlsen Choco Moments Crunchy Mint 120g,120,g
+595,Biscuits,2.99,Royal Dansk,Royal Dansk Danish Butter Cookies 340g,340,g
+596,Biscuits,1.99,McVitie's,McVitie's Jaffa Cakes Nibbles 100g,100,g
+597,Biscuits,1.69,Oreo,Oreo Double Creme Chocolate Sandwich Biscuit 170g,170,g
+598,Biscuits,3.49,Jacobs,Jacobs Selection 300g,300,g
+599,Biscuits,1.79,Askeys,Askeys 21 Classic Cones with Sweetener,21,s
+600,Biscuits,8.49,Jacob's,Jacob's The Selection 900g,900,g
+601,Biscuits,8.49,Jacob's,Jacob's The Selection 900g,900,g
+602,Biscuits,6.59,McVitie's,McVitie's Family Circle 620g,620,g
+603,Biscuits,1.59,McVitie's,McVitie's All Butter Shortbread 200g,200,g
+604,Biscuits,1.69,McVitie's,McVitie's Digestives The Original 400g,400,g
+605,Biscuits,0.79,Askeys,Askeys 48 Wafers with Sweetener,48,s
+606,Biscuits,0.79,Askeys,Askeys 48 Wafers with Sweetener,48,s
+608,Biscuits,0.39,Balocco,Ballocco Snack Cocoa Wafers Cocoa Cream 45g,45,g
+609,Biscuits,0.39,Balocco,Balocco Snack Milk Vanilla Wafers 30 x 45g (1350g),45,g
+610,Biscuits,1.0,McVitie's,McVitie's Club Orange 6 x 22g (132g),6,pk
+611,Biscuits,1.0,McVitie's,McVitie's Club Orange 6 x 22g (132g),6,pk
+612,Biscuits,1.89,Balocco,Balocco Cubes Hazelnut Wafers 250g,250,g
+613,Biscuits,0.95,Jacquet,Jacquet Toast Français 200g,200,g
+614,Biscuits,0.95,Jacquet,Jacquet Toast Français 200g,200,g
+615,Biscuits,1.89,Balocco,Balocco Cubes Cocoa Wafers 250g,250,g
+616,Biscuits,1.89,Balocco,Balocco Cubes Milk Vanilla Wafers 250g,250,g
+617,Cereals,2.99,Weetabix,Weetabix Cereal Case 6 x 24 PMP £2.99,24,pk
+618,Cereals,2.99,Coco Pops,Kellogg's Coco Pops Cereal 480g,480,g
+619,Cereals,2.99,Kellogg's,Kellogg's Corn Flakes 550g,550,g
+620,Cereals,2.99,Frosties,Kellogg's Frosties Cereal 500g,500,g
+621,Cereals,2.99,Kellogg's,Kellogg's Crunchy Nut 500g,500,g
+622,Cereals,1.6,Weetabix,Weetabix Cereal Case 10 x 12 PM £1.60,12,Bisc
+623,Cereals,2.99,Krave,Kellogg's Krave Chocolate Hazelnut Cereal 375g,375,g
+624,Cereals,2.49,Kellogg's,Kellogg's Variety 191g,191,g
+625,Cereals,2.99,Rice Krispies,Kellogg's Rice Krispies Cereal 510g,510,g
+626,Cereals,1.0,Best-One,Best-One Cereal Variety Packs 10 x 25g (250g),10,pk
+627,Cereals,0.49,Kellogg's,Kellogg's Rice Krispies Squares Chocolate 30 x 36g (1080g),28,g
+628,Cereals,2.99,Kellogg's,Kellogg's Fruit 'n Fibre 750g,750,g
+629,Cereals,0.49,Kellogg's,Kellogg's Nutri-Grain Bars Strawberry 25 x 37g,37,g
+630,Cereals,0.49,Kellogg's,Kellogg's Rice Krispies Squares Marshmallow 30 x 28g (840g),28,g
+631,Cereals,2.99,Special K,Kellogg's Special K Original Cereal 500g,500,g
+632,Cereals,2.69,Cheerios,Cheerios Multigrain 375g,375,g
+633,Cereals,0.49,Kellogg's,Kellogg's Rice Krispies Squares Caramel & Chocolate 36g,36,g
+634,Cereals,2.49,Weetos,Weetos Chocolatey Hoops 8 x 350g PMP £2.49,350,g
+635,Cereals,2.69,Cheerios,Cheerios Honey Cereal 375g,375,g
+636,Cereals,2.39,Cookie Crisp,Cookie Crisp Chocolatey Chip Cookie Cereal 375g,375,g
+637,Cereals,1.0,Kellogg's,Kellogg's Rice Krispies Squares Bars 4 x 26g,4,pk
+638,Cereals,2.49,Weetabix,Weetabix Minis Chocolate Cereal Case 10 x 450g PMP £2.49,450,g
+639,Cereals,1.0,Kellogg's,Kellogg's Rice Krispies Squares Chewy-Tastic Marshmallow! 4 x 20g,4,pk
+640,Cereals,0.6,Belvita,Belvita Breakfast Biscuits Soft Bakes Choc Chip 60p 50g,50,g
+641,Cereals,2.99,Kellogg's,Kellogg's Bran Flakes 750g,750,g
+642,Cereals,2.29,Quaker,Quaker Oat So Simple Original Porridge £2.29 PMP 8x27g,216,g
+643,Cereals,0.49,Kellogg's,Kellogg's Crunchy Nut Choc & Peanut Bar 35g,35,g
+644,Cereals,2.99,Special K,Kellogg's Special K Red Berries Cereal 360g,360,g
+645,Cereals,0.49,Kellogg's,Kellogg's Coco Pops 20g,20,g
+646,Cereals,2.69,Alpen,Alpen Original Muesli Case 6 x 625g PMP £2.69,625,g
+647,Cereals,2.49,Ready Brek,Ready Brek Smooth Porridge Original Case 6 x 450g PMP £2.49,450,g
+648,Cereals,2.99,Crunchy Nut,Kellogg's Crunchy Nut Granola Hazelnut & Chocolate 380g,380,g
+649,Cereals,0.59,Nature Valley,Nature Valley Crunchy Oats & Honey Cereal Bar 42g,42,g
+650,Cereals,0.49,Kellogg's,Kellogg's Nutri-Grain Bars Apple 25 x 37g,37,g
+651,Cereals,1.25,Quaker,Quaker Porridge Oats £1.25 PMP 500g,500,g
+652,Cereals,1.49,Weetabix,Weetabix Food Company Fruit and Fibre Case 10 x 500g PMP £1.49,500,g
+653,Cereals,1.49,Weetabix,Weetabix Food Company Weetaflakes Case 10 x 375g PMP £1.49,375,g
+654,Cereals,2.69,Jordans,Jordans Country Crisp with Sun-Ripe Strawberries 400g,400,g
+655,Cereals,0.55,Belvita,Belvita Breakfast Biscuits Honey and Nuts 55p 50g,50,g
+656,Cereals,0.49,Kellogg's,Kellogg's Nutri-Grain Bakes Raisin 24 x 45g,45,g
+657,Cereals,2.69,Alpen,Alpen No Added Sugar Muesli Case 6 x 500g PMP £2.69,500,g
+658,Cereals,2.99,Honey Monster,Honey Monster Wheat Puffs PMP £2.99 520g,520,g
+659,Cereals,1.0,Kellogg's,Kellogg's Frosties Cereal Bar 4 x 25g,4,pk
+660,Cereals,2.99,Kellogg's,Kellogg's Rice Krispies Multigrain Shapes 350g,375,g
+661,Cereals,1.49,Weetabix,Weetabix Food Company Crunchy Weeties Case 10 x 400g PMP £1.49,400,g
+662,Cereals,0.85,Nature Valley,Nature Valley Protein Peanut & Chocolate Cereal Bar 40g,40,g
+663,Cereals,2.89,Nesquik,NESTLE NESQUIK Cereal 375g Box,375,g
+664,Cereals,0.55,Tracker,Tracker Peanut & Caramel 37g,37,g
+665,Cereals,2.69,Curiously Cinnamon,Curiously Cinnamon 375g,375,g
+666,Cereals,1.49,Weetabix,Weetabix Food Company Branflakes Case 10 x 500g PMP £1.49,500,g
+667,Cereals,0.59,Nature Valley,Nature Valley Crunchy Canadian Maple Syrup Cereal Bar 42g,42,g
+668,Cereals,0.59,Nature Valley,Nature Valley Crunchy Oats & Dark Chocolate Cereal Bar 42g,42,g
+669,Cereals,1.99,Jordans,Jordans Crunchy Oat Granola Raisin & Almond 450g,450,g
+670,Cereals,0.49,Alpen,Alpen Cereal Bars Strawberry and Yoghurt 24 x 29g PM 49p,29,g
+671,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Almond & Apricot with a Yoghurt Coating 50g,50,g
+672,Cereals,0.89,Kellogg's,Kellogg's Crunchy Nut Chocolate & Nuts Granola Cereal Bar 45g,45,g
+673,Cereals,0.85,Nature Valley,Nature Valley Protein Salted Caramel Nut Cereal Bar 40g,40,g
+674,Cereals,0.69,Fibre One,Fibre One 90 Calorie Chocolate Fudge Brownie 24g,24,g
+675,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Protein Packed with Salted Caramel and Peanuts 45g,45,g
+676,Cereals,2.89,Golden Nuggets,Nestlé Golden Nuggets Cereal 375g,375,g
+677,Cereals,0.95,Eat Natural,Eat Natural Protein Packed Crunchy Nut Bar with Peanuts and Chocolate 45g,45,g
+678,Cereals,0.49,Alpen,Alpen Cereal Bars Fruit & Nut & Chocolate 24 x 29g PM 49p,29,g
+679,Cereals,0.89,Kellogg's,"Kellogg's Special K Protein Bars Coconut, Cocoa & Cashew 35g",35,g
+680,Cereals,0.49,Kellogg's,Kellogg's Special K Juicy Red Berry 27g,21.5,g
+681,Cereals,2.69,Shreddies,Shreddies Coco Cereal 500g,500,g
+682,Cereals,1.39,Quaker,Quaker Porridge To Go Mixed Berries Breakfast Bars 2x55g,110,g
+683,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Brazil & Sultana 50g,50,g
+684,Cereals,1.99,Nestlé,Nestlé Box Bowls Cereal 210g,6,s
+685,Cereals,0.55,Cadbury,Cadbury Choc Chip Brunch Bar 32g,32,g
+686,Cereals,1.39,Quaker,Quaker Porridge To Go Golden Syrup Breakfast Bars 2x55g,110,g
+687,Cereals,3.39,Quaker,Quaker Oat Honey & Almond Granola 500g,500,g
+688,Cereals,1.39,Quaker,Quaker Porridge To Go Cinnamon Breakfast Bars 2x55g,110,g
+689,Cereals,3.39,Quaker,Quaker Oat Raisin Granola 500g,500,g
+690,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Dark Chocolate with Cranberries and Macadamias 45g,50,g
+691,Cereals,0.49,Alpen,Alpen Light Cereal Bars Salted Caramel 24 x 19g PM 49p,19,g
+692,Cereals,0.89,Kellogg's,Kellogg's Special K Protein Bars Blackcurrant & Pumpkin Seeds 35g,35,g
+693,Cereals,0.79,Quaker,Quaker Porridge To Go Golden Syrup Breakfast Bar 55g,55,g
+694,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Darker Chocolate with Almonds and Apricots 45g,45,g
+695,Cereals,0.49,Alpen,Alpen Cereal Bars Coconut and Chocolate 24 x 29g PM 49p,29,g
+696,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Protein Packed with Chocolate and Orange 45g,45,g
+697,Cereals,0.69,Fibre One,Fibre One 90 Calorie Peanut Butter Popcorn Bar 21g,21,g
+698,Cereals,1.99,Cadbury,Cadbury Brunch Bar Choc Chip 6 Pack 192g,192,g
+699,Cereals,0.49,Alpen,Alpen Light Cereal Bars Jaffa Cake 24 x 19g PM 49p,19,g
+700,Cereals,0.95,Trek,Trek Cocoa Oat Protein Flapjack Chocolate Flavour Topped 50g,50,g
+701,Cereals,2.59,Kellogg's,Kellogg's Sultana Bran 500g,500,g
+702,Cereals,0.49,Alpen,Alpen Light Cereal Bars Double Chocolate 24 x 19g PM 49p,19,g
+703,Cereals,0.89,Kellogg's,Kellogg's Crunchy Nut Cranberries & Nuts Granola Cereal Bar 45g,45,g
+704,Cereals,2.79,Belvita,Belvita Breakfast Biscuits Soft Bakes Choc Chip 250g,250,g
+705,Cereals,0.6,Kellogg's,Kellogg's Nutri-Grain Bars Apple 37g,37,g
+706,Cereals,0.79,Quaker,Quaker Porridge To Go Mixed Berries Breakfast Bar 55g,55,g
+707,Cereals,1.2,Yes!,"YES!® Dark Chocolate, Banana & Pecan Fruit & Nut Snack Bar 35g",35,g
+708,Cereals,0.95,Trek,Trek Cocoa Coconut Protein Flapjack Chocolate Flavour Topped 50g,50,g
+709,Cereals,0.85,Nakd,Nakd Bakewell Tart Fruit & Nut Bar 35g,35,g
+710,Cereals,1.2,Yes!,"YES!® Dark Choc, Sea Salt and Almond Nut Snack Bar 35g",35,g
+711,Cereals,1.0,Quaker Oats,Quaker Oat So Simple Porridge Pots and Sachets Stacker,45,g
+712,Cereals,0.6,Kellogg's,Kellogg's Nutri-Grain Bars Blueberry 37g,37,g
+713,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Almond & Apricot with a Yoghurt Coating 50g,50,g
+714,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Brazil & Sultana 50g,50,g
+715,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Dark Chocolate with Cranberries and Macadamias 45g,50,g
+716,Cereals,0.95,Eat Natural,Eat Natural Protein Packed Crunchy Nut Bar with Peanuts and Chocolate 45g,45,g
+717,Cereals,0.4,Kellogg's,Kellogg's Rice Krispies Snack Bar 20g,20,g
+718,Cereals,0.4,Kellogg's,Kellogg's Frosties Cereal & Milk Snack Bar 25g,25,g
+719,Cereals,0.55,Kellogg's,Kellogg's Nutri-Grain Elevenses Raisin Bakes 45g,45,g
+720,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Protein Packed with Salted Caramel and Peanuts 45g,45,g
+721,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Protein Packed with Chocolate and Orange 45g,45,g
+722,Cereals,0.95,Eat Natural,Eat Natural Fruit & Nut Bar Darker Chocolate with Almonds and Apricots 45g,45,g
+723,Cereals,2.49,Cadbury,Cadbury Protein Brunch Bar Cranberry & Nut 5 Pack 160g,160,g
+724,Crisps,1.0,Sensations,Sensations Thai Sweet Chilli Crisps £1 PMP 73g,73,g
+725,Crisps,1.0,Hula Hoops,Hula Hoops Big Hoops BBQ Beef Flavour Potato Rings 80g,80,g
+726,Crisps,2.49,Pringles,Pringles Sour Cream & Onion 200g,200,g
+727,Crisps,0.69,Pringles,Pringles Sour Cream & Onion Crisps 40g,40,g
+728,Crisps,2.49,Pringles,Pringles Texas BBQ Sauce Crisps 200g,200,g
+729,Crisps,1.0,Skips,Skips Prawn Cocktail Flavour 45g,45,g
+730,Crisps,1.0,Walkers,Walkers Ready Salted Crisps £1 PMP 75g,75,g
+731,Crisps,2.49,Pringles,Pringles Original Crisps 200g,200,g
+732,Crisps,2.49,Pringles,Pringles Salt & Vinegar 200g,200,g
+733,Crisps,1.0,Wotsits,Walkers Wotsits Sizzling Steak Snacks £1 PMP 40g,50,g
+734,Crisps,1.0,McCoy's,McCoy's Flame Grilled Steak Flavour Ridge Cut Potato Crisps 65g,65,g
+735,Crisps,0.69,Pringles,Pringles Original Crisps 40g,40,g
+736,Crisps,1.0,Nik Naks,Nik Naks Nice 'N' Spicy Flavour 85g,85,g
+737,Crisps,1.0,Monster Munch,Walkers Monster Munch Flamin' Hot Snacks £1 PMP 60g,60,g
+738,Crisps,1.0,Monster Munch,Walkers Monster Munch Pickled Onion Snacks £1 PMP 60g,60,g
+739,Crisps,1.0,Wotsits,Walkers Wotsits Flamin' Hot Snacks £1 PMP 50g,50,g
+740,Crisps,0.65,Walkers,Walkers Cheese & Onion Crisps 65p PMP 32.5g,32.5,g
+741,Crisps,2.49,Pringles,Pringles Prawn Cocktail Flavour 200g,200,g
+742,Crisps,1.0,Jacobs,Jacobs Baked Crinklys Cheese & Onion Flavour 105g,105,g
+743,Crisps,0.69,Pringles,Pringles Salt & Vinegar Crisps 40g,40,g
+744,Crisps,1.0,Monster Munch,Walkers Monster Munch Roast Beef Snacks £1 PMP 60g,60,g
+745,Crisps,1.0,Hula Hoops,Hula Hoops Big Hoops Salted Potato Rings 80g,80,g
+746,Crisps,1.0,Nik Naks,Nik Naks Rib 'N' Saucy Flavour 85g,85,g
+747,Crisps,0.39,Cheetos,Cheetos Twisted Flamin' Hot Snacks 39p PMP 30g,30,g
+748,Crisps,1.0,Walkers,Walkers Max Punchy Paprika Crisps £1 PMP 70g,70,g
+749,Crisps,0.65,Walkers,Walkers Ready Salted Crisps 65p PMP 32.5g,32.5,g
+750,Crisps,1.0,McCoy's,McCoy's Cheddar & Onion Flavour Ridge Cut Potato Crisps 65g,65,g
+751,Crisps,1.0,Wheat Crunchies,Wheat Crunchies Crispy Bacon Flavour Wheaty Tubes with a Serious Crunch 78g,78,g
+752,Crisps,0.39,Cheetos,Cheetos Crunchy Cheese Snacks 39p PMP 30g,30,g
+753,Crisps,0.3,Space Raiders,Space Raiders Beef Flavour Cosmic Corn Snacks 25g,25,g
+754,Crisps,2.49,Pringles,Pringles Cheese & Onion 200g,200,g
+755,Crisps,1.0,Jacob's,Jacob's Mini Cheddars Original 105g,105,g
+756,Crisps,1.0,Walkers,Walkers Salt & Vinegar Crisps £1 PMP 75g,75,g
+757,Crisps,1.0,McCoy's,McCoy's Thai Sweet Chicken Flavour Ridge Cut Potato Crisps 65g,65,g
+758,Crisps,1.0,McCoy's,McCoy's Salt & Malt Vinegar Flavour Ridge Cut Potato Crisps 65g,65,g
+759,Crisps,1.0,Quavers,Walkers Quavers Cheese Snacks £1 PMP 45g,45,g
+760,Crisps,0.39,Smiths,Smiths Snaps Spicy Tomato Snacks 39p PMP 21g,21,g
+761,Crisps,0.99,Best-One,Best-One Roasted & Salted Pistachios 65g,65,g
+762,Crisps,0.3,Space Raiders,Space Raiders Pickled Onion Flavour Cosmic Corn Snacks 25g,25,g
+763,Crisps,0.39,Smiths,Smiths Frazzles Crispy Bacon Snacks 39p PMP 34g,34,g
+764,Crisps,1.0,McCoy's,McCoy's Fiery Steak Flavour Ridge Cut Potato Crisps 65g,65,g
+765,Crisps,0.39,Golden Wonder,Golden Wonder Transform-A-Snack Saucy BBQ Flavour Snacks 30g,30,g
+766,Crisps,1.0,Space Raiders,Space Raiders Beef Flavour Cosmic Corn Snacks 78g,78,g
+767,Crisps,1.65,Walkers,Walkers Classic Variety Crisps 6x25g,6,pk
+768,Crisps,0.69,Pringles,"Pringles Hot & Spicy Crisps, 40g",40,g
+769,Crisps,0.39,Smiths,Smiths Chipsticks Salt & Vinegar Snacks 39p PMP 37g,37,g
+770,Crisps,1.0,Golden Wonder,Golden Wonder Ringos Cheese & Onion 55g,55,g
+771,Crisps,0.65,Walkers,Walkers Prawn Cocktail Crisps 65p PMP 32.5g,32.5,g
+772,Crisps,0.39,Golden Wonder,Golden Wonder Transform-A-Snack Spicy Flavour Snacks 30g,30,g
+773,Crisps,0.59,Wotsits,Walkers Wotsits Really Cheesy Snacks 59p PMP 22.5g,23,g
+774,Crisps,0.65,Walkers,Walkers Salt & Vinegar Crisps 65p PMP 32.5g,32.5,g
+775,Crisps,1.0,Walkers,Walkers Max Strong Hot Chicken Wings Crisps £1 PMP 70g,70,g
+776,Crisps,0.39,Discos,Discos Salt & Vinegar Flavour 34g,34,g
+777,Crisps,1.0,Pringles,Pringles Texas BBQ Sauce Crisps 70g,70,g
+778,Crisps,1.0,Space Raiders,Space Raiders Pickled Onion Flavour Cosmic Corn Snacks 78g,78,g
+779,Crisps,1.0,Sensations,Sensations Chicken & Thyme Crisps £1 PMP 73g,73,g
+780,Crisps,0.39,Golden Wonder,Golden Wonder Transform-A-Snack Cheese & Onion Flavour Snacks 30g,30,g
+781,Crisps,1.0,Golden Wonder,Golden Wonder Transform-A-Snack Heroic Saucy BBQ Flavour Snacks 90g,90,g
+782,Crisps,1.0,Smiths,Smiths Frazzles Crispy Bacon Snacks £1 PMP 75g,75,g
+783,Crisps,1.0,Hula Hoops,Hula Hoops Big Hoops Spicy Chilli Flavour Potato Rings 80g,80,g
+784,Crisps,0.71,Walkers,Walkers Roast Chicken Crisps 32.5g,32.5,g
+785,Crisps,1.0,Roysters,Roysters Bubbled Chips T-Bone Steak Flavour 65g,65,g
+786,Crisps,0.3,Golden Wonder,Golden Wonder Tangy Toms Tomato Flavour Corn Snacks 25g,25,g
+787,Crisps,1.0,Doritos,Doritos Flame Grilled Steak Tortilla Chips £1 PMP 80g,80,g
+788,Crisps,1.0,Walkers,Walkers Max Double Crunch Loaded Cheddar & Onion Crisps £1 PMP 65g,65,g
+789,Crisps,1.0,Smiths,Smiths Chipsticks Salt 'n' Vinegar Snacks £1 PMP 82g,75,g
+790,Crisps,1.0,Walkers,Walkers Max Double Crunch Bold BBQ Ribs Crisps £1 PMP 65g,65,g
+791,Crisps,0.71,Walkers,Walkers Squares Cheese & Onion Snacks 27.5g,27.5,g
+792,Crisps,0.39,Wheat Crunchies,Wheat Crunchies Crispy Bacon Flavour Wheaty Tubes with a Serious Crunch 36g,36,g
+793,Crisps,1.0,Golden Wonder,Golden Wonder Transform-A-Snack Spicy Flavour Snacks 90g,90,g
+794,Crisps,0.39,Skips,Skips Tingly Prawn Cocktail Flavour 17g,17,g
+795,Crisps,1.0,Golden Wonder,Golden Wonder Tangy Toms Tomato Flavour Corn Snacks 110g,110,g
+796,Crisps,3.46,Wotsits,Walkers Wotsits Really Cheesy Snacks 12x16.5g,12,pk
+797,Crisps,0.3,Golden Wonder,Golden Wonder Spicy Bikers Spicy Flavour Corn Snacks 25g,25,g
+798,Crisps,1.0,Pringles,Pringles Original Crisps 70g,70,g
+799,Crisps,1.0,Cheetos,Cheetos Twisted Flamin' Hot Snacks £1 PMP 65g,65,g
+800,Crisps,1.0,Walkers,Walkers Max Strong Jalapeño & Cheese Crisps £1 PMP 70g,70,g
+801,Crisps,1.0,Walkers,Walkers Cheese & Onion Crisps £1 PMP 65g,65,g
+802,Crisps,0.3,Golden Wonder,Golden Wonder Quarter Backs Cheeseburger Flavour Corn Snacks 25g,25,g
+803,Crisps,0.59,Squares,Walkers Squares Salt & Vinegar Snacks 59p PMP 27.5g,27.5,g
+804,Crisps,10.0,Walkers,Walkers Variety Crisps Box 36x25g,36,pk
+805,Crisps,1.49,Best-One,Best-One Salted Cashews 70g,70,g
+806,Crisps,0.69,Jacob's,Jacob's Mini Cheddars Branston Pickle Flavour 50g,50,g
+807,Crisps,0.59,Doritos,Doritos Chilli Heatwave Tortilla Chips 59p PMP 40g,40,g
+808,Crisps,1.0,Golden Wonder,Golden Wonder Ringos Salt & Vinegar 55g,55,g
+809,Crisps,1.0,Jacob's,Jacob's Twiglets Original 105g,105,g
+810,Crisps,0.63,Hula Hoops,Hula Hoops BBQ Beef Flavour Potato Rings 34g,34,g
+811,Crisps,1.65,Walkers,Walkers Meaty Variety Crisps 6x25g,6,pk
+812,Crisps,0.59,Doritos,Doritos Tangy Cheese Tortilla Chips 59p PMP 40g,40,g
+813,Crisps,0.39,Frisps,Frisps Cheese & Onion Flavour Snacks 34g,34,g
+814,Crisps,0.65,Walkers,Walkers Smoky Bacon Crisps 65p PMP 32.5g,32.5,g
+815,Crisps,0.3,Golden Wonder,Golden Wonder Awesome Oinks Bacon Flavour Corn Snacks 25g,25,g
+816,Crisps,0.71,Walkers,Walkers Pickled Onion Crisps 32.5g,32.5,g
+817,Crisps,1.0,Golden Wonder,Golden Wonder Saucers Barbecue Flavour Snacks 75g,75,g
+818,Crisps,0.63,Hula Hoops,Hula Hoops Original Potato Rings 34g,34,g
+819,Crisps,1.0,Cofresh,Cofresh Bombay Mix 400g,400,g
+820,Crisps,0.39,Golden Wonder,Golden Wonder Ringos Salt & Vinegar 18g,18,g
+821,Crisps,1.0,Pringles,Pringles Original Crisps 70g,70,g
+822,Crisps,0.59,Discos,Discos Cheese & Onion Flavour 25.5g,25.5,g
+823,Crisps,0.71,Walkers,Walkers Cheese & Onion Crisps 32.5g,32.5,g
+824,Crisps,1.0,Jacob's,Jacob's Baked Crinklys Chilli Beef Flavour 105g,105,g
+825,Crisps,1.0,Cofresh,Cofresh Monkey Nuts 300g,300,g
+826,Crisps,3.46,Quavers,Walkers Quavers Cheese Snacks 12x16g,16.4,g
+827,Crisps,0.3,Space Raiders,Space Raiders Spicy Flavour Cosmic Corn Snacks 25g,25,g
+828,Crisps,0.71,French Fries,Walkers French Fries Worcester Sauce Snacks 21g,21,g
+829,Crisps,1.65,Walkers,Walkers Salt & Vinegar Crisps 6x25g,25,g
+830,Crisps,1.65,Walkers,Walkers Prawn Cocktail Crisps 6x25g,6,pk
+831,Crisps,1.29,Best-One,Best-One Bombay Mix 450g,450,g
+832,Crisps,0.71,French Fries,Walkers French Fries Ready Salted Snacks 21g,21,g
+833,Crisps,0.71,Walkers,Walkers Tomato Ketchup Crisps 32.5g,32.5,g
+834,Crisps,0.69,Jacobs,Jacobs Baked Crinklys Cheese & Onion Flavour 50g,50,g
+835,Crisps,1.0,Kettle,KETTLE® Mature Cheddar & Red Onion British Potato Chips 80g,80,g
+836,Crisps,1.0,Cofresh,Cofresh Gujarati Mix 350g,350,g
+837,Crisps,0.89,McCoy's,The Real McCoy's Flame Grilled Steak Ridge Cut Potato Crisps 47.5g,47.5,g
+838,Crisps,0.89,McCoy's,The Real McCoy's Ridge Cut Thai Sweet Chicken Potato Crisps 47.5g,48,g
+839,Crisps,0.89,Best-One,Best-One Fruit & Nut Mix 75g,75,g
+840,Crisps,1.0,Cofresh,Cofresh Chilli & Lemon Corn Nuts 350g,350,g
+841,Crisps,1.0,Kettle,KETTLE® Sweet Chilli & Sour Cream 80g,80,g
+842,Crisps,1.0,McCoy's,McCoy's Chip Shop Salt & Vinegar Flavour Potato Snack 70g,70,g
+843,Crisps,1.0,Kettle,KETTLE® Lightly Salted 80g,80,g
+844,Crisps,1.49,Best-One,Best-One Spicy Cashews 70g,70,g
+845,Crisps,1.0,Kettle,KETTLE® Sea Salt & Balsamic Vinegar of Modena 80g,80,g
+846,Crisps,0.71,Squares,Walkers Squares Salt & Vinegar Snacks 27.5g,27.5,g
+847,Crisps,0.89,McCoy's,The Real McCoy's Salt & Malt Vinegar Flavour Ridge Cut Potato Crisps 47.5g,48,g
+848,Crisps,1.0,Nando's,Nando's Peri-Peri Grooves Spicy Chicken Groove Cut Potato Chips 90g,90,g
+849,Crisps,0.8,Pringles,"Pringles Paprika Crisps, 40g",40,g
+850,Crisps,0.85,Walkers,Walkers Max Punchy Paprika Crisps 50g,50,g
+851,Crisps,1.0,Walkers,Walkers Salt & Vinegar Crisps £1 PMP 65g,65,g
+852,Crisps,0.9,Brannigans,Brannigans Roast Beef & Mustard Flavour Potato Crisps 40g,40,g
+853,Crisps,0.89,McCoy's,McCoy's Cheddar & Onion Flavour Ridge Cut Potato Crisps 47.5g,48,g
+854,Crisps,0.71,Quavers,Walkers Quavers Cheese Snacks 20g,20,g
+855,Crisps,1.0,McCoy's,McCoy's Chip Shop Curry Sauce Flavour Potato Snack 70g,70,g
+856,Crisps,0.85,Monster Munch,Walkers Monster Munch Pickled Onion Snacks 40g,40,g
+857,Crisps,1.0,Cofresh,Cofresh Sweet & Spicy Corn Flake Mix 380g,380,g
+858,Crisps,1.0,Walkers,Walkers Ready Salted Crisps £1 PMP 65g,65,g
+859,Crisps,0.71,Walkers,Walkers Salt & Vinegar Crisps 32.5g,32.5,g
+860,Crisps,1.99,Pringles,Pringles Rice Fusions Crisps Peking Duck with Hoisin Sauce Flavour 160g,160,g
+861,Crisps,0.9,Brannigans,Brannigans Smoked Ham & Pickle Flavour Potato Crisps 40g,40,g
+862,Crisps,3.73,Walkers,Walkers Cheese & Onion Crisps 12x25g,12,pk
+863,Crisps,1.19,Best-One,Best-One Raw Cashews 70g,70,g
+864,Crisps,0.68,Baked,Walkers Baked Cheese & Onion Snacks 37.5g,37.5,g
+865,Crisps,0.71,Walkers,Walkers Prawn Cocktail Crisps 32.5g,32.5,g
+866,Crisps,0.67,Hula Hoops,Hula Hoops Cheese & Onion Flavour Potato Rings 34g,34,g
+867,Crisps,0.59,Best-One,Best-One Roasted Monkey Nuts 120g,120,g
+868,Crisps,0.59,Doritos,Doritos Cool Original Tortilla Chips 59p PMP 40g,40,g
+869,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Sea Salt & Cider Vinegar Crisps 150g,150,g
+870,Crisps,1.0,Kettle,KETTLE® Sea Salt & Crushed Black Peppercorns 80g,80,g
+871,Crisps,0.85,Monster Munch,Walkers Monster Munch Roast Beef Snacks 40g,40,g
+872,Crisps,1.0,Cofresh,Cofresh Green Peas & Peanuts 350g,350,g
+873,Crisps,0.71,Walkers,Walkers Worcester Sauce Crisps 32.5g,32.5,g
+874,Crisps,1.0,Cofresh,Cofresh Chevda 380g,380,g
+875,Crisps,0.69,Best-One,Best-One Salted Peanuts 75g,75,g
+876,Crisps,0.71,Walkers,Walkers Marmite Crisps 32.5g,32.5,g
+877,Crisps,1.0,Cofresh,Cofresh Gujarati Thin Sev 300g,300,g
+878,Crisps,0.85,Monster Munch,Walkers Monster Munch Flamin' Hot Snacks 40g,40,g
+879,Crisps,0.69,Jacob's,Jacob's Mini Cheddars Red Leicester Flavour 50g,50,g
+880,Crisps,1.0,Golden Wonder,Golden Wonder Ringos Sweet Chilli 55g,55,g
+881,Crisps,1.65,Walkers,Walkers Classic Variety Crisps 6x25g,6,pk
+882,Crisps,0.71,Wotsits,Walkers Wotsits Really Cheesy Snacks 22.5g,22.5,g
+883,Crisps,0.85,Walkers,Walkers Ready Salted Grab Bag Crisps 50g,50,g
+884,Crisps,3.46,Quavers,Walkers Quavers Cheese Snacks 12x16g,16.4,g
+885,Crisps,0.71,Walkers,Walkers Smoky Bacon Crisps 32.5g,32.5,g
+886,Crisps,0.59,Best-One,Best-One Onion Rings 75g,75,g
+887,Crisps,0.89,Eat Real,Eat Real Hummus Chips Sea Salt Flavour 45g,45,g
+888,Crisps,0.79,Walkers,Walkers Max Double Crunch Bold BBQ Ribs Crisps 50g,50,g
+889,Crisps,0.67,Hula Hoops,Hula Hoops Salt & Vinegar Flavour Potato Rings 34g,34,g
+890,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Sea Salt Crisps 150g,150,g
+891,Crisps,0.67,Hula Hoops,Hula Hoops BBQ Beef Flavour Potato Rings 34g,34,g
+892,Crisps,0.69,Best-One,Best-One Snack Mix 75g,75,g
+893,Crisps,0.85,Walkers,Walkers Max Fiercely Flamin' Hot Crisps 50g,50,g
+894,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Mature Cheddar & Caramelised Red Onion Crisps 150g,150,g
+895,Crisps,0.85,Walkers,Walkers Max Sizzling Flame Grilled Steak Crisps 50g,50,g
+896,Crisps,0.39,Golden Wonder,Golden Wonder Transform-A-Snack Flamin' Hot Chilli 30g,30,g
+897,Crisps,1.0,McCoy's,McCoy's Muchos Folded Crispy Tortilla Snacks Smoky Chilli Chicken Flavour 80g,80,g
+898,Crisps,0.85,Walkers,Walkers Prawn Cocktail Grab Bag Crisps 50g,50,g
+899,Crisps,1.0,Crunchips,Crunchips Paprika X-Cut 85g,85,g
+900,Crisps,0.67,Nik Naks,Nik Naks Nice 'N' Spicy Flavour 30g,30,g
+901,Crisps,0.67,Hula Hoops,Hula Hoops Original Potato Rings 34g,34,g
+902,Crisps,2.85,Pringles,"Pringles Texas BBQ Sauce Crisps, 200g",200,g
+903,Crisps,0.85,Walkers,Walkers Max Chunky Cheese & Onion Crisps 50g,50,g
+904,Crisps,0.89,Eat Real,Eat Real Veggie Straws Kale Tomato Spinach 45g,45,g
+905,Crisps,0.6,Eat Real,Eat Real Lentil Chips Chilli & Lemon Flavour 40g,40,g
+906,Crisps,0.99,Cofresh,Cofresh Roasted & Salted Pistachio Nuts 60g,60,g
+907,Crisps,1.0,Sensations,Sensations Thai Sweet Chilli Crisps £1 PMP 65g,65,g
+908,Crisps,0.85,Walkers,Walkers Salt & Vinegar Grab Bag Crisps 50g,50,g
+909,Crisps,0.89,Eat Real,Eat Real Quinoa Chips Sour Cream & Chives Flavour 30g,30,g
+910,Crisps,0.89,Eat Real,Eat Real Lentil Chips Tomato & Basil Flavour 40g,40,g
+911,Crisps,2.85,Pringles,"Pringles Sour Cream & Onion Crisps, 200g",200,g
+912,Crisps,0.79,Walkers,Walkers Max Double Crunch Loaded Cheddar & Onion Crisps 50g,50,g
+913,Crisps,1.0,Golden Wonder,Golden Wonder Chippies Ready Salted Potato Sticks 100g,100,g
+914,Crisps,1.0,Cofresh,Cofresh Bombay Mix 400g,400,g
+915,Crisps,1.0,Hula Hoops,Hula Hoops Flavarings Tangy Cheese Flavour 55g,55,g
+916,Crisps,0.89,Kettle,KETTLE® Sea Salt & Balsamic Vinegar of Modena 40g,40,g
+917,Crisps,0.69,Kettle,KETTLE® Lightly Salted 40g,40,g
+918,Crisps,0.67,Nik Naks,Nik Naks Rib 'n' Saucy Flavour 30g,30,g
+919,Crisps,0.5,Pom-Bear,Pom-Bear Original Potato Snacks 19g,19,g
+920,Crisps,0.85,Snack A Jacks,Snack A Jacks Salt & Vinegar Rice Cakes 23g,23,g
+921,Crisps,0.59,Best-One,Best-One Bacon Rashers 75g,75,g
+922,Crisps,0.89,McCoy's,The Real McCoy's Salted Flavour Ridge Cut Potato Crisps 47.5g,48,g
+923,Crisps,0.89,McCoy's,The Real McCoy's Ridge Cut Sizzling King Prawn Flavour Potato Crisps 47.5g,48,g
+924,Crisps,0.89,Kettle,KETTLE® Chips Lightly Salted 40g,40,g
+925,Crisps,0.49,Cofresh,Cofresh Balti Mix Savoury Indian Snack 80g,80,g
+926,Crisps,1.0,Cofresh,Cofresh Monkey Nuts 300g,300,g
+927,Crisps,1.65,Walkers,Walkers Prawn Cocktail Crisps 6x25g,6,pk
+928,Crisps,0.89,Kettle,KETTLE® Chips Sea Salt & Crushed Black Peppercorns 40g,40,g
+929,Crisps,0.69,Doritos,Doritos Tangy Cheese Tortilla Chips 40g,40,g
+930,Crisps,1.84,Wotsits,Walkers Wotsits Really Cheesy Snacks 6x16.5g,6,pk
+931,Crisps,3.46,Wotsits,Walkers Wotsits Really Cheesy Snacks 12x16.5g,12,pk
+932,Crisps,2.85,Pringles,Pringles Original Crisps 200g,200,g
+933,Crisps,1.6,Kettle,KETTLE® Chips Lightly Salted 150g,150,g
+934,Crisps,0.85,Walkers,Walkers Max Strong Hot Chicken Wings Crisps 50g,50,g
+935,Crisps,1.49,Best-One,Best-One Salt 'n' Vinegar Cashews 70g,75,g
+936,Crisps,0.85,Walkers,Walkers Max Strong Jalapeño & Cheese Crisps 50g,50,g
+937,Crisps,0.89,Kettle,KETTLE® Mature Cheddar & Red Onion British Potato Chips 40g,40,g
+938,Crisps,0.69,Kettle,KETTLE® Sea Salt & Balsamic Vinegar of Modena 40g,40,g
+939,Crisps,1.65,Walkers,Walkers Salt & Vinegar Crisps 6x25g,25,g
+940,Crisps,1.0,Cofresh,Cofresh Green Peas & Peanuts 350g,350,g
+941,Crisps,0.69,Kettle,KETTLE® Mature Cheddar & Red Onion British Potato Chips 40g,40,g
+942,Crisps,0.85,Quavers,Walkers Quavers Cheese Snacks 34g,34,g
+943,Crisps,0.69,Doritos,Doritos Chilli Heatwave Tortilla Chips 40g,40,g
+944,Crisps,0.89,Kettle,KETTLE® Sweet Chilli & Sour Cream 40g,40,g
+945,Crisps,0.69,Kettle,KETTLE® Sweet Chilli & Sour Cream 40g,40,g
+946,Crisps,0.69,Sunbites,Sunbites Sweet Chilli Flavour Multigrain Snacks 28g,28,g
+947,Crisps,1.65,Walkers,Walkers Meaty Variety Crisps 6x25g,6,pk
+948,Crisps,1.6,Kettle,KETTLE® Chips Lightly Salted 150g,150,g
+949,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Sea Salt & Cider Vinegar Crisps 150g,150,g
+950,Crisps,1.0,Cofresh,Cofresh Gujarati Thin Sev 300g,300,g
+951,Crisps,2.09,Baked,Walkers Baked Cheese & Onion Snacks 6x25g,6,pk
+952,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Mature Cheddar & Caramelised Red Onion Crisps 150g,150,g
+953,Crisps,1.0,Cofresh,Cofresh Chevda 380g,380,g
+954,Crisps,0.48,Golden Wonder,Golden Wonder Bacon Flavour Bites 25g,25,g
+955,Crisps,1.0,Walkers,Walkers Turkey & Stuffing Crisps £1 PMP 75g,75,g
+956,Crisps,1.6,Kettle,KETTLE® Chips Sea Salt & Crushed Black Peppercorns 150g,150,g
+957,Crisps,0.69,Doritos,Doritos Cool Original Tortilla Chips 40g,40,g
+958,Crisps,1.0,Cofresh,Cofresh Gujarati Mix 350g,350,g
+959,Crisps,0.59,Best-One,Best-One Salt 'n' Vinegar Sticks 75g,75,g
+960,Crisps,1.6,Kettle,KETTLE® Chips Sour Cream & Sweet Onion 150g,150,g
+961,Crisps,3.73,Walkers,Walkers Ready Salted Crisps 12x25g,12,pk
+962,Crisps,1.0,Best-One,Best-One Inspired Hand Cooked Sea Salt Crisps 150g,150,g
+963,Crisps,0.85,Doritos,Doritos Chilli Heatwave Tortilla Chips 55g,55,g
+964,Crisps,1.6,Kettle,KETTLE® Chips Sea Salt & Crushed Black Peppercorns 150g,150,g
+965,Crisps,1.0,Cofresh,Cofresh Sweet & Spicy Corn Flake Mix 380g,380,g
+966,Crisps,1.0,Cofresh,Cofresh Chilli & Lemon Corn Nuts 350g,350,g
+967,Crisps,3.73,Walkers,Walkers Ready Salted Crisps 12x25g,12,pk
+968,Crisps,3.73,Walkers,Walkers Cheese & Onion Crisps 12x25g,12,pk
+969,Crisps,1.84,Wotsits,Walkers Wotsits Really Cheesy Snacks 6x16.5g,6,pk
+970,Crisps,0.61,Pom-Bear,Pom-Bear Original Potato Snacks 19g,19,g
+971,Crisps,0.69,Jacob's,Jacob's Mini Cheddars Original 50g,50,g
+972,Crisps,1.6,Kettle,KETTLE® Chips Sweet Chilli & Sour Cream 150g,150,g
+973,Crisps,1.6,Kettle,KETTLE® Chips Sweet Chilli & Sour Cream 150g,150,g
+974,Crisps,0.48,Golden Wonder,Golden Wonder Bacon Flavour Bites 25g,25,g
+975,Crisps,0.89,Metcalfe's,Metcalfe's Ricecakes Dark Chocolate 34g,34,g
+976,Crisps,0.69,Smiths,Smiths Scampi & Lemon Snacks 27g,27,g
+977,Crisps,0.69,Jacob's,Jacob's Mini Cheddars Smoky BBQ Flavour 50g,50,g
+978,Crisps,0.8,Pringles,Pringles Salt & Vinegar Crisps 40g,40,g
+979,Crisps,0.8,Pringles,Pringles Sour Cream & Onion Crisps 40g,40,g
+980,Crisps,0.8,Pringles,Pringles BBQ Crisps 40g,40,g
+981,Crisps,0.8,Pringles,Pringles Original Crisps 40g,40,g
+982,Crisps,0.83,Sensations,Sensations Thai Sweet Chilli Crisps 40g,40,g
+983,Crisps,1.6,Kettle,KETTLE® Sea Salt & Balsamic Vinegar of Modena 150g,150,g
+984,Crisps,1.6,Kettle,KETTLE® Sea Salt & Balsamic Vinegar of Modena 150g,150,g
+985,Crisps,2.09,Baked,Walkers Baked Cheese & Onion Snacks 6x25g,6,pk
+986,Hot Drinks,1.59,Taylors of Harrogate,Taylors of Harrogate Yorkshire Tea 40 Tea Bags 125g,40,s
+987,Hot Drinks,1.0,Tetley,Tetley Original PMP Tea Bags x40,40,s
+988,Hot Drinks,1.0,Nescafé,NESCAFÉ Original 3 in 1 6 x 17g (102g),17,g
+989,Hot Drinks,2.65,PG Tips,PG tips Original 80 Tea Bags,80,s
+990,Hot Drinks,1.19,Best-One,Best-One Instant Coffee Granules Medium Roast 100g,100,g
+991,Hot Drinks,2.0,Tetley,Tetley Original Tea Bags PMP x80,80,s
+992,Hot Drinks,3.49,Kenco,Kenco Smooth Instant Coffee 100g £3.49 PMP,100,g
+993,Hot Drinks,2.19,Nescafé,NESCAFÉ Original Instant Coffee 50g,50,g
+994,Hot Drinks,2.65,Tetley,Tetley Original Tea Bags PMP x80,80,s
+995,Hot Drinks,1.99,Cadbury,Cadbury Drinking Hot Chocolate £1.99 250g,250,g
+996,Hot Drinks,1.0,Best-One,Best-One Coffee Creamer 250g,250,g
+997,Hot Drinks,1.0,Nescafé,"NESCAFÉ Original 3in1 Caramel Instant Coffee, 6 Sachets x 17g",17,g
+998,Hot Drinks,3.49,Kenco,Kenco Rich Instant Coffee 100g £3.49 PMP,100,g
+999,Hot Drinks,1.0,Nescafé,NESCAFÉ Original 2 in 1 6 x 10g (60g),10,g
+1000,Hot Drinks,1.99,Best-One,Best-One Hot Chocolate 400g,400,g
+1001,Hot Drinks,3.99,L'OR,L'OR Classique Instant Coffee 100g,100,g
+1002,Hot Drinks,1.5,Fresh Brew,Fresh Brew 80 Round Tea Bags 232g,80,s
+1003,Hot Drinks,2.0,Typhoo,Typhoo 80 Tea Foil Fresh Teabags 232g,80,s
+1004,Hot Drinks,1.0,Typhoo,Typhoo 40 Foil Fresh Teabags 116g,40,s
+1005,Hot Drinks,3.0,Nescafé,"NESCAFÉ GOLD Cappuccino Coffee, 8 Sachets x 17g",17,g
+1006,Hot Drinks,2.69,Mellow Bird's,Mellow Bird's Instant Coffee Powder 100g,100,g
+1007,Hot Drinks,1.49,Weetabix,Weetabix On The Go Strawberry Breakfast Drinks Case 8 x 250ml PMP £1.49,250,ml
+1008,Hot Drinks,3.79,Kenco,Kenco Decaf Instant Coffee 100g £3.79 PMP,100,g
+1009,Hot Drinks,1.75,Tetley,Tetley Original Decaf Tea Bags PMP x40,40,s
+1010,Hot Drinks,1.49,Weetabix,Weetabix On The Go Chocolate Breakfast Drinks Case 8 x 250ml PMP £1.49,250,ml
+1011,Hot Drinks,1.49,Weetabix,Weetabix On The Go Banana Breakfast Drinks Case 8 x 250ml PMP £1.49,250,ml
+1012,Hot Drinks,2.09,Twinings,Twinings Lemon & Ginger 20 Single Tea Bags 30g,20,s
+1013,Hot Drinks,3.49,Nescafé,NESCAFÉ Original Decaff Instant Coffee 100g,100,g
+1014,Hot Drinks,1.99,Best-One,Best-One Rich Roast Coffee 100g,100,g
+1015,Hot Drinks,3.89,Douwe Egberts,Douwe Egberts Pure Indulgence Dark Roast Instant Coffee 95g,95,g
+1016,Hot Drinks,1.49,Weetabix,Weetabix On The Go Vanilla Breakfast Drinks Case 8 x 250ml PMP £1.49,250,ml
+1017,Hot Drinks,2.19,Best-One,Best-One Gold Roast Instant Coffee 100g,100,g
+1018,Hot Drinks,1.49,Tetley,Tetley Pure Green Tea Bags PMP x20,20,s
+1019,Hot Drinks,2.39,Twinings,Twinings Pure Green Tea 20 Single Tea Bags 50g,20,s
+1020,Hot Drinks,3.59,Twinings,Twinings The Earl Grey 50 Tea Bags 125g,50,s
+1021,Hot Drinks,3.59,Twinings,Twinings English Breakfast 50 Tea Bags 125g,50,s
+1022,Hot Drinks,1.99,Taylors of Harrogate,Taylors of Harrogate Yorkshire Gold 40 Tea Bags 125g,40,s
+1023,Hot Drinks,1.49,Tetley,Tetley Original Tea Bags PMP x40,40,s
+1024,Hot Drinks,1.0,Kenco,Kenco 3 in 1 Smooth White Instant Coffee with Sugar £1 PMP Sachets x5,5,pk
+1025,Hot Drinks,1.0,Kenco,Kenco 2 in 1 Smooth White Instant Coffee £1 PMP Sachets x5,5,pk
+1026,Hot Drinks,1.5,Kenco,Kenco Latte Instant Coffee £1.50 PMP Sachets x5,5,pk
+1027,Hot Drinks,5.99,Nido,Nido® Instant Full Cream Milk Powder 400g,400,g
+1028,Hot Drinks,1.49,Tetley,Tetley Lemon Green Tea Bags PMP x20,20,s
+1029,Hot Drinks,3.0,Nescafé,"NESCAFÉ GOLD Cappuccino Unsweetened Taste Coffee, 8 Sachets x 14.2g",14.2,g
+1030,Hot Drinks,2.79,Ovaltine,Ovaltine Original 300g,200,g
+1031,Hot Drinks,1.5,Kenco,Kenco Cappuccino Instant Coffee £1.50 PMP Sachets x5,5,pk
+1032,Hot Drinks,5.49,Nescafé,Nescafé Azera Americano Instant Coffee with Ground Beans 100g,100,g
+1033,Hot Drinks,3.89,Nescafé,Nescafé Azera Americano Barista Style Instant Coffee with Finely Ground Coffee 60g,60,g
+1034,Hot Drinks,4.85,Nescafé,NESCAFÉ GOLD Decaff Instant Coffee 100g,100,g
+1035,Hot Drinks,2.0,Tetley,Tetley Original Tea Bags PMP x80,80,s
+1036,Hot Drinks,3.0,Nescafé,"NESCAFÉ GOLD Latte Coffee, 8 Sachets x 19.5g",19.5,g
+1037,Hot Drinks,4.49,Milo,Milo Powder 400g Tin (Asian),400,g
+1038,Hot Drinks,1.79,Tetley,Tetley Super Fruits Immune Lemon & Ginger Tea Bags x20,20,s
+1039,Hot Drinks,1.79,Tetley,Tetley Super Green Tea Immune Tropical Tea Bags x20,20,s
+1040,Hot Drinks,1.79,Tetley,Tetley Super Fruits Boost Blueberry & Raspberry Tea Bags x20,20,s
+1041,Hot Drinks,1.69,Galaxy,Galaxy Instant Hot Chocolate 200g,200,g
+1042,Hot Drinks,1.65,Coffee Mate,Coffee Mate Light 200g,200,g
+1043,Hot Drinks,0.35,Cadbury,Cadbury Instant Hot Chocolate 28g,28,g
+1044,Hot Drinks,3.0,Nescafé,"NESCAFÉ GOLD Mocha Coffee, 8 Sachets x 22g",22,g
+1045,Hot Drinks,2.69,Horlicks,Horlicks Original 300g,200,g
+1046,Hot Drinks,2.09,Twinings,Twinings Cranberry & Raspberry 20 Single Tea Bags 40g,20,s
+1047,Hot Drinks,2.69,Twinings,Twinings Jasmine Green Tea 20 Single Tea Bags 50g,20,s
+1048,Hot Drinks,1.79,Tetley,Tetley Super Green Tea Boost Strawberry & Raspberry Tea Bags x20,20,s
+1049,Hot Drinks,2.99,Best-One,Best-One Inspired Colombian Roast & Ground Coffee 227g,227,g
+1050,Hot Drinks,2.09,Twinings,Twinings Cherry & Cinnamon 20 Single Tea Bags 40g,20,s
+1051,Hot Drinks,2.39,Unik,Unik Sweetened Badshahi Chai Premium Masala Premix 10 x 22g,220,g
+1052,Hot Drinks,2.99,Cadbury,Cadbury Oreo Instant Hot Chocolate 260g,260,g
+1053,Hot Drinks,3.99,Kenco,Kenco Millicano Americano Original Instant Coffee 100g,100,g
+1054,Hot Drinks,2.39,Unik,Unik Sweetened Instant Ginger Tea Pre Mix 10 x 22g,220,g
+1055,Hot Drinks,7.0,Kenco,Kenco Smooth Instant Coffee 200g,200,g
+1056,Hot Drinks,2.29,Best-One,Best-One Rich Roast Fresh Ground Coffee 227g,227,g
+1057,Hot Drinks,2.69,Twinings,Twinings Lemon Green Tea 20 Single Tea Bags 40g,20,s
+1058,Hot Drinks,0.4,Cadbury,Cadbury Wispa Frothy Instant Hot Chocolate 27g,27,g
+1059,Hot Drinks,3.19,Tetley,Tetley Extra Strong Tea Bags x75,75,s
+1060,Hot Drinks,4.49,Milo,Milo Powder 400g Tin (Asian),400,g
+1061,Hot Drinks,2.49,Best-One,Best-One Barista Premium Americano Instant Coffee 100g,100,g
+1062,Hot Drinks,2.29,Best-One,Best-One French Style Fresh Ground Coffee 227g,227,g
+1063,Hot Drinks,2.69,Horlicks,Horlicks Chocolate 300g,300,g
+1064,Hot Drinks,2.09,Twinings,Twinings Pure Fennel 20 Single Tea Bags 40g,20,s
+1065,Hot Drinks,2.99,Cadbury,Cadbury Wispa Frothy Instant Hot Chocolate 246g,246,g
+1066,Hot Drinks,1.49,Azera,NESCAFÉ AZERA Nitro Latte,192,ml
+1067,Hot Drinks,2.99,Best-One,Best-One Inspired Guatemalan Roast & Ground Coffee 227g,227,g
+1068,Hot Drinks,3.49,Twinings,Twinings Assam 40 Tea Bags 100g,40,s
+1069,Hot Drinks,1.55,Tetley,Tetley Original Easy Squeeze Tea Bags x40,40,s
+1070,Hot Drinks,2.29,Tetley,Tetley Pure Green Tea Bags x50,50,s
+1071,Hot Drinks,7.59,Nescafé,NESCAFÉ Original Instant Coffee 300g,300,g
+1072,Hot Drinks,1.99,Maltesers,Maltesers Hot Chocolate 180g,180,g
+1073,Hot Drinks,0.5,Horlicks,Horlicks The Original Malted Milk Drink Light 32g,32,g
+1074,Hot Drinks,3.69,Horlicks,Horlicks Original 500g,500,g
+1075,Hot Drinks,5.19,Twinings,Twinings Organic The Earl Grey 50 Tea Bags 125g,50,s
+1076,Hot Drinks,2.35,Nescafé,Nescafé Gold Blend Instant Coffee 50g,50,g
+1077,Hot Drinks,4.49,Nescafé,Nescafé Gold Espresso Italian Style 100g,100,g
+1078,Hot Drinks,5.69,Kenco,Kenco Smooth Instant Coffee Refill 150g,150,g
+1079,Hot Drinks,2.35,Nescafé,NESCAFÉ Original Instant Coffee 50g,50,g
+1080,Hot Drinks,1.99,Cadbury,Cadbury Bournville Cocoa 125g,125,g
+1081,Hot Drinks,5.69,Dolce Gusto,NESCAFE Dolce Gusto Americano Coffee Pods 16 Capsules Per Box,160,g
+1082,Hot Drinks,3.85,Nescafé,NESCAFÉ Original Instant Coffee 100g,100,g
+1083,Hot Drinks,5.29,Nescafé,Nescafé Gold Origins Alta Rica 100g,100,g
+1084,Hot Drinks,4.59,Nescafe,NESCAFE BLEND 37 Instant Coffee 100g,100,g
+1085,Hot Drinks,2.49,Nesquik,Nesquik® Chocolate Milkshake Powder 300g Tub,300,g
+1086,Hot Drinks,2.49,Nesquik,Nesquik® Strawberry Milkshake Powder 300g Tub,300,g
+1087,Hot Drinks,2.49,Nesquik,Nesquik® Banana Milkshake Powder 300g Tub,300,g
+1088,Hot Drinks,0.79,Tetley,Tetley On the Go Tea Bags,100,s
+1089,Hot Drinks,2.09,Twinings,Twinings Pure Peppermint 20 Single Tea Bags 40g,20,s
+1090,Hot Drinks,2.09,Twinings,Twinings Pure Camomile 20 Single Tea Bags 30g,20,s
+1091,Hot Drinks,2.19,Lift,Lift Instant Lemon Flavour Tea Reduced Sweetness 150g,150,g
+1092,Hot Drinks,2.19,Lift,Lift Instant Lemon Flavour Tea 150g,150,g
+1093,Hot Drinks,5.19,Nescafé,Nescafé Gold Blend Instant Coffee 100g,100,g
+1094,Hot Drinks,3.95,Lavazza,Lavazza Qualità Rossa Ground Coffee 250g,250,g
+1095,Chocolate,1.0,Cadbury,Cadbury Dairy Milk £1 Chocolate Bar 95g,95,g
+1096,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Caramel £1 Chocolate Bar 120g,120,g
+1097,Chocolate,1.0,Cadbury,Cadbury Dairy Milk £1 Caramel Nibbles Bag 95g,95,g
+1098,Chocolate,1.0,Cadbury,Cadbury Dairy Milk with Daim £1 Chocolate Bar 120g,120,g
+1099,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Fruit and Nut Chopped £1 Chocolate Bar 95g,95,g
+1100,Chocolate,1.0,Cadbury,Cadbury Twirl Bites £1 Chocolate Bag 95g,95,g
+1101,Chocolate,1.0,Cadbury,Cadbury Dairy Milk with Oreo £1 Chocolate Bar 120g,120,g
+1102,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Chopped Nut £1 Chocolate Bar 95g,95,g
+1103,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Chocolate Oreo Sandwich £1 96g,96,g
+1104,Chocolate,1.0,Cadbury,Cadbury Bitsa Wispa £1 Chocolate Bag 95g,95,g
+1105,Chocolate,1.0,Cadbury,Cadbury Wispa £1 Chocolate Bar 4 Pack 102g,4,pk
+1106,Chocolate,1.0,Cadbury,Cadbury Eclairs Classic £1 Chocolate Bag 130g,130,g
+1107,Chocolate,1.0,Cadbury,Cadbury Double Decker £1 Chocolate Bar 4 Pack 160g,4,pk
+1108,Chocolate,1.0,Cadbury,Cadbury Boost Chocolate Bar 4 Pack £1 136g,136,g
+1109,Chocolate,1.0,Cadbury,Cadbury Crunchie £1 Chocolate Bar 4 Pack 104.4g,4,pk
+1110,Chocolate,1.0,Cadbury,Cadbury Twirl £1 Chocolate Bar 5 Pack 107.5g,5,pk
+1111,Chocolate,0.55,Cadbury,Cadbury Twirl 55p Chocolate Bar 43g,43,g
+1112,Chocolate,1.0,Cadbury,Cadbury Picnic Chocolate Bar 4 Pack £1 128g,4,pk
+1113,Chocolate,0.55,Cadbury,Cadbury Starbar 55p Chocolate Bar 49g,50,g
+1114,Chocolate,1.15,Cadbury,Cadbury Mini Eggs Bag 80g,80,g
+1115,Chocolate,0.25,Cadbury,Cadbury Dairy Milk Freddo 25p Chocolate Bar 18g,18,g
+1116,Chocolate,0.25,Cadbury,Cadbury Fudge 25p Chocolate Bar 25.5g,25.5,g
+1117,Chocolate,1.0,Cadbury,Cadbury Dairy Milk With Oreo Mint £1 Chocolate Bar 120g,120,g
+1118,Chocolate,1.0,Cadbury,Cadbury Bournville Classic Dark Chocolate Bar £1 100g,100,g
+1119,Chocolate,0.55,Cadbury,Cadbury Wispa 55p Chocolate Bar 36g,36,g
+1120,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Medley Fudge £1 Chocolate Bar 93g,93,g
+1121,Chocolate,1.0,Cadbury,Cadbury Bournville Dark Chocolate Giant Buttons Bag £1 95g,95,g
+1122,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Choca-Latte Coffee Chocolate Bar £1 122.5g,122.5,g
+1123,Chocolate,1.0,Cadbury,Cadbury Bournville Old Jamaica Dark Chocolate Bar £1 100g,100,g
+1124,Chocolate,1.0,Maynards Bassetts,Maynards Bassetts Fizzy Fish £1 Sweets Bag 160g,160,g
+1125,Chocolate,1.0,Cadbury,Cadbury Flake Chocolate Bar 4 Pack 80g,4,pk
+1126,Chocolate,0.55,Cadbury,Cadbury Boost 55p Chocolate Bar 48.5g,48.5,g
+1127,Chocolate,0.55,Cadbury,Cadbury Dairy Milk 55p Chocolate Bar 45g,45,g
+1128,Chocolate,0.55,Cadbury,Cadbury Picnic 55p Chocolate Bar 48.4g,48.4,g
+1129,Chocolate,0.55,Cadbury,Cadbury Crunchie 55p Chocolate Bar 40g,40,g
+1130,Chocolate,0.35,Cadbury,Cadbury Timeout 35p Chocolate Bar 21.2g,21,g
+1131,Chocolate,0.25,Cadbury,Cadbury Dairy Milk Freddo Caramel 25p Chocolate Bar 19.5g,19.5,g
+1132,Chocolate,0.65,Cadbury,Cadbury Dairy Milk Whole Nut Chocolate Bar 45g,45,g
+1133,Chocolate,1.0,Cadbury,Cadbury Bournville Orange Dark Chocolate Bar £1 100g,100,g
+1134,Chocolate,0.65,Cadbury,Cadbury Picnic Chocolate Bar 48.4g,48.4,g
+1135,Chocolate,0.55,Cadbury,Cadbury Dairy Milk Marvellous Creations Jelly Popping Candy 55p 47g,48,g
+1136,Chocolate,0.65,Cadbury,Cadbury Wispa Gold Chocolate Bar 48g,48,g
+1137,Chocolate,0.63,Cadbury,Cadbury Starbar Chocolate Bar 49g,49,g
+1138,Chocolate,8.49,Cadbury,Cadbury Milk Tray Chocolate Box 360g,360,g
+1139,Chocolate,0.65,Cadbury,Cadbury Wispa Chocolate Bar 36g,36,g
+1140,Chocolate,0.25,Cadbury,Cadbury Chomp 25p Chocolate Bar 23.5g,23.5,g
+1141,Chocolate,1.0,Cadbury,Cadbury Dairy Milk Chocolate Bar 4 Pack 130g,4,pk
+1142,Chocolate,0.55,Cadbury,Cadbury Double Decker 55p Chocolate Bar 54.5g,54.5,g
+1143,Chocolate,0.65,Cadbury,Cadbury Dairy Milk Marvellous Creations Jelly Popping Candy Shells 47g,47,g
+1144,Chocolate,0.85,Cadbury,Cadbury Wispa Duo Chocolate Bar 51g,51,g
+1145,Chocolate,0.25,Cadbury,Cadbury Dairy Milk Buttons 25p Chocolate Bag 14.4g,14.4,g
+1146,Chocolate,0.65,Cadbury,Cadbury Dairy Milk Fruit and Nut Chocolate Bar 49g,49,g
+1147,Chocolate,0.85,Cadbury,Cadbury Boost Duo Chocolate Bar 68g,68,g
+1148,Chocolate,3.09,Cadbury,Cadbury Roses Chocolate Carton 186g,187,g
+1149,Chocolate,0.3,Cadbury,Cadbury Curly Wurly Chocolate Bar 26g,27,g
+1150,Chocolate,4.79,Cadbury,Cadbury Roses Chocolate Carton 290g,290,g
+1151,Chocolate,0.85,Cadbury,Cadbury Double Decker Duo Chocolate Bar 80g,80,g
+1152,Chocolate,4.59,Cadbury,Cadbury Heroes Chocolate Carton 290g,290,g
+1153,Chocolate,0.58,Cadbury,Cadbury Oreo Easter Egg 31g,31,g
+1154,Chocolate,0.35,Cadbury,Cadbury Dairy Milk Little Bar 18g,18,g
+1155,Chocolate,1.0,Maynards Bassetts,Maynards Bassetts Soft Jellies Wild Safari Sweets Bag £1 160g,160,g
+1156,Chocolate,0.55,Cadbury,Cadbury Darkmilk 55p Chocolate Bar 35g,35,g
+1157,Chocolate,0.55,Cadbury,Cadbury Dairy Milk 55p Oreo Chocolate Bar 41g,42,g
+1158,Chocolate,8.49,Cadbury,Cadbury Milk Tray Chocolate Box 360g,360,g
+1159,Chocolate,0.9,Cadbury,Cadbury Dairy Milk Freddo Treasures Chocolate with Toy 14.4g,14.4,g
+1160,Chocolate,1.49,Cadbury,Cadbury Dairy Milk Miniature Oreo Chocolate Egg Bag 82g,82,g
+1161,Chocolate,0.65,Cadbury,Cadbury Dairy Milk with Oreo Chocolate Bar 41g,41,g
+1162,Chocolate,0.57,Cadbury,Cadbury Dairy Milk Freddo Faces Chocolate Bag 35g,35,g
+1163,Chocolate,0.75,Cadbury,Cadbury Darkmilk Chocolate Bar 35g,35,g
+1164,Chocolate,0.89,Cadbury,Cadbury Dairy Milk Duo Chocolate Bar 58.6g,58.6,g
+1165,Chocolate,4.59,Cadbury,Cadbury Heroes Chocolate Carton 290g,290,g
+1166,Chocolate,4.79,Cadbury,Cadbury Roses Chocolate Carton 290g,290,g
+1167,Chocolate,1.35,Maynards Bassetts,Maynards Bassetts Soft Jellies Happinest Sweets Bag 160g,160,g
+1168,Chocolate,2.0,Cadbury,Cadbury Twirl Bites Chocolate Bag 109g,109,g
+1169,Chocolate,0.75,Cadbury,Cadbury Dairy Milk 30% Less Sugar Chocolate Bar 35g,35,g
+1170,Chocolate,1.45,Hershey's,Hershey's Cookies 'n' Creme King Size Bar 73g,73,g
+1171,Chocolate,3.09,Cadbury,Cadbury Roses Chocolate Carton 186g,187,g
+1172,Chocolate,1.49,Cadbury,Cadbury Dairy Milk Chocolate Bar 95g,95,g
+1173,Chocolate,1.49,Cadbury,Cadbury Milk Tray Chocolate Box 78g,78,g
+1174,Chocolate,1.15,Cadbury,Cadbury Mini Eggs Bag 80g,192,s
+1175,Chocolate,1.49,Cadbury,Cadbury Boost Protein Chocolate Bar 49g,49,g
+1176,Chocolate,2.99,Cadbury,Cadbury Wispa Chocolate Bar 9 Pack 229.5g,229.5,g
+1177,Chocolate,1.99,Cadbury,Cadbury Boost Bites Chocolate Bag 108g,108,g
+1178,Chocolate,0.65,Cadbury,Cadbury Snack Shortcake Chocolate Biscuit 40g,40,g
+1180,Chocolate,2.29,Cadbury,Cadbury Bournville Classic Dark Chocolate Bar 180g,180,g
+1181,Chocolate,0.63,Cadbury,Cadbury Double Decker Chocolate Bar 54.5g,55,g
+1182,Chocolate,0.63,Cadbury,Cadbury Crunchie Chocolate Bar 40g,40,g
+1183,Chocolate,0.75,Fry's,Fry's Chocolate Cream Bar 49g,49,g
+1184,Chocolate,0.75,Fry's,Fry's Turkish Delight 51g,51,g
+1185,Chocolate,0.65,Cadbury,Cadbury Flake Chocolate Bar 32g,32,g
+1186,Chocolate,1.65,Maynards Bassetts,Maynards Bassetts Murray Mints Bag 193g,193,g
+1187,Chocolate,4.19,Cadbury,Cadbury Dairy Milk Chocolate Bar 360g,360,g
+1188,Chocolate,4.19,Cadbury,Cadbury Dairy Milk Chocolate Bar 360g,360,g
+1189,Chocolate,0.65,Cadbury,Cadbury Bournville Classic Dark Chocolate Bar 45g,45,g
+1190,Chocolate,0.65,Cadbury,Cadbury Dairy Milk Chocolate Bar 45g,45,g
+1191,Chocolate,0.68,Cadbury,Cadbury Dairy Milk Giant Buttons Chocolate Bag,40,g
+1192,Chocolate,0.63,Cadbury,Cadbury Boost Chocolate Bar 48.5g,48.5,g
+1193,Chocolate,0.75,Fry's,Fry's Peppermint Cream Chocolate Bar 49g,49,g
+1194,Chocolate,0.65,Cadbury,Cadbury Twirl Chocolate Bar 43g,43,g
+1195,Chocolate,0.65,Cadbury,Cadbury Dairy Milk Caramel Chocolate Bar 45g,45,g
+1196,Chocolate,0.58,Cadbury,Cadbury Caramel Egg Single 39g,41,g
+1197,Chocolate,1.0,KitKat,KITKAT 2 Finger Milk Chocolate Biscuit Bar 20.7g 5 Pack £1,5,pk
+1198,Chocolate,1.0,Haribo,HARIBO Eggs Galore! Bag 180g £1 PM,180,g
+1199,Chocolate,1.0,KitKat,KITKAT 2 Finger Milk Chocolate Biscuit Bar 20.7g 5 Pack £1,5,pk
+1201,Chocolate,0.89,Hershey's,Hershey's Cookies 'N' Creme 40g,40,g
+1202,Chocolate,1.5,Ritter Sport,Ritter Sport Whole Hazelnuts 100g,100,g
+1203,Chocolate,0.94,Lindt,Lindt Lindor Milk Chocolate Bar 38g,38,g
+1204,Chocolate,1.85,Cadbury,Cadbury Dairy Milk Buttons Easter Egg & Chocolate Bag 74g,74,g
+1205,Chocolate,1.5,Ritter Sport,Ritter Sport White Whole Hazelnuts 100g,100,g
+1206,Chocolate,0.69,Reese's,Reese's 2 Peanut Butter Cups 42g,42,g
+1207,Chocolate,1.5,Ritter Sport,Ritter Sport Dark Whole Hazelnuts 100g,100,g
+1208,Chocolate,1.5,Ritter Sport,Ritter Sport Marzipan 100g,100,g
+1209,Chocolate,1.5,Ritter Sport,Ritter Sport Honey Salt Almonds 100g,100,g
+1210,Chocolate,1.0,Reese's,Reese's Peanut Butter Cups Miniatures 72g,72,g
+1211,Chocolate,1.0,KitKat,Kit Kat Chunky Milk Chocolate Bar 32g 4 Pack £1,4,pk
+1212,Chocolate,4.99,Lindt,Lindt Lindor Hazelnut Truffles Chocolate Truffles 200g,200,g
+1213,Chocolate,4.99,Lindt,Lindt Lindor Strawberries & Cream Chocolate Truffles Box 200g,200,g
+1214,Chocolate,1.5,Ritter Sport,Ritter Sport Butter Biscuit 100g,100,g
+1215,Chocolate,1.49,Cadbury,Cadbury Creme Egg Minis Bag 89g,92,g
+1216,Chocolate,1.5,Ritter Sport,Ritter Sport Peppermint 100g,100,g
+1217,Chocolate,0.65,Maltesers,Maltesers Bunny Chocolate Easter Treat 29g,29,g
+1218,Chocolate,0.89,Reese's,Reeses's Peanut Butter Sticks 42g,42,g
+1219,Chocolate,0.99,Hershey's,Hershey's Gold Peanuts & Pretzels 39g,39,g
+1220,Chocolate,1.5,Ritter Sport,Ritter Sport Rum Raisins Hazelnuts 100g,100,g
+1221,Chocolate,1.19,M&M's,M&M's Eggs Easter Chocolate Treat Bag 80g,80,g
+1222,Chocolate,1.69,Toblerone,Toblerone Milk Chocolate Bar 100g,100,g
+1223,Chocolate,0.89,Reese's,Reese's White 2 Peanut Butter Cups 39g,39,g
+1224,Chocolate,0.59,Best-One,Best-One Milk Chocolate 100g,100,g
+1225,Chocolate,1.5,Ritter Sport,Ritter Sport Coconut 100g,100,g
+1226,Chocolate,0.89,Hershey's,Hershey's Cookies 'n' Chocolate 40g,40,g
+1227,Chocolate,1.65,Flipz,Flipz Salted Caramel Flavour Coated Pretzels 90g,90,g
+1228,Chocolate,1.19,M&M's,M&M's Eggs Easter Chocolate Treat Bag 80g,80,g
+1229,Chocolate,1.65,Flipz,Flipz Milk Chocolate Covered Pretzels 100g,100,g
+1230,Chocolate,0.59,Best-One,Best-One Milk Chocolate Giant Buttons 70g,70,g
+1231,Chocolate,0.49,Knoppers,Knoppers Milk Wafers 25g,25,g
+1232,Chocolate,0.59,Best-One,Best-One White Chocolate 100g,100,g
+1233,Chocolate,1.99,Lindt,Lindt Excellence Milk Extra Creamy Chocolate Bar 100g,100,g
+1234,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Chocolate Chip Cookie Dough 60g,60,g
+1235,Chocolate,0.72,Reese's,Reese's Peanut Butter Big Cup 39g,40,g
+1236,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar White Chocolate Salted Peanut 30g,60,g
+1237,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Peanut Nutter 12 x 60g,60,g
+1238,Chocolate,1.85,Cadbury,Cadbury Dairy Milk Buttons Easter Egg & Chocolate Bag 74g,74,g
+1239,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar White Chocolate Cookie 12 x 60g,60,g
+1240,Chocolate,1.49,Ritter Sport,Ritter Sport Cocoa Selection 74% Intense from Peru 100g,100,g
+1241,Chocolate,0.59,Best-One,Best-One White Chocolate Buttons 70g,70,g
+1242,Chocolate,5.99,Thorntons,Thorntons Classic Collection Chocolate Gift Box 150g,150,g
+1243,Chocolate,1.49,Kind,Kind Dark Chocolate Nuts & Sea Salt 40g,40,g
+1244,Chocolate,1.25,Maltesers,Maltesers Bunny Chocolate Easter Mini Bunnies Bag 58g,58,g
+1245,Chocolate,4.29,M&M's,M&M's Peanut Egg 175g,175,g
+1246,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Dark Chocolate Raspberry 60g,60,g
+1247,Chocolate,1.49,Kind,Kind Caramel Almond & Sea Salt 40g,40,g
+1248,Chocolate,1.49,Ritter Sport,Ritter Sport Cocoa Selection 55% Smooth from Ghana with Milk 100g,100,g
+1250,Chocolate,1.49,Kind,Kind Peanut Butter Dark Chocolate 40g,40,g
+1251,Chocolate,0.89,Lindt,Lindt Lindor Orange Milk Chocolate Bar 38g,38,g
+1252,Chocolate,0.89,Lindt,Lindt Lindor Mint Milk Chocolate Bar 38g,38,g
+1253,Chocolate,7.99,Thorntons,Thorntons Classic Assorted Gift Box Chocolates 262g,262,g
+1254,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Birthday Cake 12 x 60g,60,g
+1255,Chocolate,3.99,Cadbury,Cadbury Dairy Milk Egg 'n' Spoon with Oreo 136g,136,g
+1256,Chocolate,1.49,Ritter Sport,Ritter Sport Cocoa Selection 61% Fine from Nicaragua 100g,100,g
+1257,Chocolate,3.99,Cadbury,Cadbury Dairy Milk Egg 'n' Spoon with Oreo 136g,136,g
+1258,Chocolate,1.69,Reese's,Reese's Snack Mix 56g,56,g
+1259,Chocolate,1.99,Kind,Kind Protein Crunchy Peanut Butter 50g,50,g
+1260,Chocolate,3.45,Guylian,Guylian Artisanal Belgian 16 Chocolates 168g,168,g
+1261,Chocolate,1.99,Kind,Kind Protein Toasted Caramel Nut 50g,50,g
+1262,Chocolate,7.99,Guylian,Guylian 32 Belgian Chocolates Original Praliné 336g,336,g
+1263,Chocolate,1.99,Lindt,Lindt Excellence Milk Extra Creamy Chocolate Bar 100g,100,g
+1264,Chocolate,1.99,Kind,Kind Protein Double Dark Chocolate Nut 50g,50,g
+1265,Chocolate,4.99,Lindt,Lindt Lindor Strawberries & Cream Chocolate Truffles Box 200g,200,g
+1266,Chocolate,1.49,Kind,Kind Almond & Coconut 40g,40,g
+1267,Chocolate,2.49,Ritter Sport,Ritter Sport Mini Nut Selection 7 x 16.67g (116g),116,g
+1268,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates Opus Luxury Assortment 180g,180,g
+1269,Chocolate,4.99,Lindt,Lindt Lindor Hazelnut Truffles Chocolate Truffles 200g,200,g
+1270,Chocolate,0.85,Nakd,Nakd Peanut Delight Fruit & Peanut Bar 35g,35,g
+1271,Chocolate,4.29,M&M's,M&M's Peanut Egg 175g,175,g
+1272,Chocolate,5.99,Thorntons,Thorntons Classic Collection Chocolate Gift Box 150g,150,g
+1273,Chocolate,1.49,Cadbury,Cadbury Peanut Protein Bar 49g,49,g
+1274,Chocolate,7.99,Thorntons,Thorntons Classic Assorted Gift Box Chocolates 262g,262,g
+1275,Chocolate,0.6,Guylian,Guylian Belgian Chocolate Original Praliné 35g,35,g
+1276,Chocolate,0.99,Trek,TREK Dark Chocolate and Orange Protein Nut Bar 40g,40,g
+1277,Chocolate,2.79,Guylian,Guylian Belgian Chocolates Sea Horses Original Praliné 115g,115,g
+1278,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates Perlines 180g,180,g
+1279,Chocolate,1.49,Reese's,Reese's Peanut Butter Cups Miniatures 80g,80,g
+1280,Chocolate,3.45,Guylian,Guylian 16 Belgian Chocolates Sea Horse Selection 154g,154,g
+1281,Chocolate,0.69,Flipz,Flipz Milk Chocolate Covered Pretzels 37g,37,g
+1282,Chocolate,0.99,Trek,TREK Dark Chocolate and Sea Salt Protein Nut Bar 40g,40,g
+1283,Chocolate,0.85,Nakd,Nakd Salted Caramel Fruit & Nut Bar 35g,35,g
+1284,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Blueberry & White Choc 60g,60,g
+1285,Chocolate,2.79,Guylian,Guylian Belgian Chocolates 6 Sea Horses Mixed Flavours 124g,124,g
+1286,Chocolate,6.99,Guylian,Guylian Belgian Chocolates Master's Selection 174g,174,g
+1287,Chocolate,3.45,Guylian,Guylian Artisanal Belgian 16 Chocolates 168g,168,g
+1288,Chocolate,3.45,Guylian,Guylian 16 Belgian Chocolates Sea Horse Selection 154g,154,g
+1289,Chocolate,8.0,Guylian,Guylian Artisanal Belgian Chocolates 30 Master's Selection 200g,200,g
+1290,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Dark Chocolate Raspberry 60g,60,g
+1291,Chocolate,1.99,Kind,Kind Protein Toasted Caramel Nut 50g,50,g
+1292,Chocolate,1.49,Kind,Kind Caramel Almond & Sea Salt 40g,40,g
+1293,Chocolate,1.49,Kind,Kind Peanut Butter Dark Chocolate 40g,40,g
+1294,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Salted Caramel & Milk Chocolate Flavour 60g,60,g
+1295,Chocolate,9.99,Guylian,Guylian Belgian Chocolates Sea Horses 6 Mixed Flavours 496g,496,g
+1296,Chocolate,2.49,Ritter Sport,Ritter Sport Mini Nut Selection 7 x 16.67g (116g),116,g
+1297,Chocolate,7.99,Guylian,Guylian 32 Belgian Chocolates Original Praliné 336g,336,g
+1298,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates Opus Luxury Assortment 180g,180,g
+1299,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates La Trufflina 180g,180,g
+1300,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates La Trufflina 180g,180,g
+1301,Chocolate,1.99,Guylian,Guylian 4 Belgian Chocolates Sea Horses Original 42g,42,g
+1302,Chocolate,1.99,Guylian,Guylian 4 Belgian Chocolates Sea Horses Original 42g,42,g
+1303,Chocolate,0.6,Guylian,Guylian Belgian Chocolate Original Praliné 35g,35,g
+1304,Chocolate,3.5,Terry's,Terry's Chocolate Orange Milk 157g,157,g
+1305,Chocolate,3.5,Terry's,Terry's Chocolate Orange Milk 157g,157,g
+1306,Chocolate,0.99,Reese's,Reese's Peanut Butter Cups 3 Pack 51g,51,g
+1307,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 22 Chocolates 250g,250,g
+1308,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 22 Chocolates 250g,250,g
+1309,Chocolate,0.55,Paynes,Paynes Poppets Chewy Toffee Covered in Milk Chocolate 39g,45,g
+1310,Chocolate,2.99,Lindt,Lindt Gold Bunny Milk Chocolate 100g,100,g
+1311,Chocolate,2.99,Lindt,Lindt Gold Bunny Milk Chocolate 100g,100,g
+1312,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Peanut Nutter 12 x 60g,60,g
+1313,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar White Chocolate Cookie 12 x 60g,60,g
+1314,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Chocolate Chip Cookie Dough 60g,60,g
+1315,Chocolate,1.0,Guylian,Guylian Belgian Chocolate Milk 4 x 30g,30,g
+1316,Chocolate,1.0,Guylian,Guylian Belgian Chocolate Milk 4 x 30g,30,g
+1317,Chocolate,8.0,Guylian,Guylian Artisanal Belgian Chocolates 30 Master's Selection 200g,200,g
+1320,Chocolate,5.99,Guylian,Guylian Belgian Chocolates La Trufflina 180g,180,g
+1321,Chocolate,0.63,Daim,Daim Chocolate Bar 28g,28,g
+1322,Chocolate,1.65,Kinder,Kinder Happy Hippo Milk Chocolate and Hazelnut Biscuits Multipack 5 x 20.7g (103g),20.7,g
+1323,Chocolate,0.55,Paynes,Paynes Poppets Mint Creams Covered in Dark Chocolate 40g,45,g
+1324,Chocolate,0.59,Lindt,Lindt Gold Bunny 100 x 10g,10,g
+1325,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar White Chocolate Salted Peanut 30g,60,g
+1326,Chocolate,1.99,Kind,Kind Protein Double Dark Chocolate Nut 50g,50,g
+1327,Chocolate,1.49,Kind,Kind Almond & Coconut 40g,40,g
+1328,Chocolate,1.49,Kind,Kind Dark Chocolate Nuts & Sea Salt 40g,40,g
+1329,Chocolate,1.99,Kind,Kind Protein Crunchy Peanut Butter 50g,50,g
+1330,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Coconut & Milk Choc 60g,60,g
+1331,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Coconut & Milk Choc 60g,60,g
+1332,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Blueberry & White Choc 60g,60,g
+1333,Chocolate,2.49,PRO 2GO,PRO 2GO Gooey Protein Bar Salted Caramel & Milk Chocolate Flavour 60g,60,g
+1334,Chocolate,9.99,Guylian,Guylian Belgian Chocolates Sea Horses 6 Mixed Flavours 496g,496,g
+1335,Chocolate,2.79,Guylian,Guylian Belgian Chocolates Sea Horses Original Praliné 115g,115,g
+1336,Chocolate,2.79,Guylian,Guylian Belgian Chocolates 6 Sea Horses Mixed Flavours 124g,124,g
+1337,Chocolate,6.99,Guylian,Guylian Belgian Chocolates Master's Selection 174g,174,g
+1338,Chocolate,0.89,Reese's,Reese's Nutrageous Bar 47g,47,g
+1339,Chocolate,2.49,Grenade,Grenade Carb Killa High Protein Bar Birthday Cake 12 x 60g,60,g
+1340,Chocolate,4.99,Lindt,Lindt Lindor Assorted Chocolate Truffles Box 200g,200,g
+1341,Chocolate,4.99,Lindt,Lindt Lindor Assorted Chocolate Truffles Box 200g,200,g
+1342,Chocolate,4.99,Guylian,Guylian Artisanal Belgian 16 Chocolates Perlines 180g,180,g
+1343,Chocolate,0.25,Kinder,Kinder Medium Chocolate Single Bar 21g,21,g
+1344,Chocolate,1.0,Kinder,Kinder Chocolate Small Bars PMP Multipack 8 x 12.5g (100g),12.5,g
+1345,Chocolate,0.99,Kinder,Kinder Surprise Egg 20g,20,g
+1346,Chocolate,0.25,Kinder,Kinder Chocolate with Cereals Single Bar 23.5g,23.5,
+1347,Chocolate,0.99,Ferrero Rocher,Ferrero Rocher Chocolate Pralines Treat Pack 3 Pieces (37.5g),37.5,g
+1348,Chocolate,1.0,Kinder,Kinder Chocolate Mini Pouch 72g,72,g
+1349,Chocolate,1.09,Nutella,Nutella & Go! Hazelnut Spread with Cocoa and Breadsticks Single 48g,48,g
+1350,Chocolate,0.84,Kinder,Kinder Bueno White Milk and Hazelnuts 2 x 19.5g (39g),39,g
+1351,Chocolate,1.0,Kinder,Kinder Chocolate Small Bars PMP Multipack 8 x 12.5g (100g),12.5,g
+1352,Chocolate,1.14,Kinder,Kinder Joy with Surprise Easter Egg 20g,20,g
+1354,Chocolate,6.35,Kinder,Kinder Surprise Easter Egg 100g,100,g
+1356,Chocolate,0.59,Nutella,Nutella B-ready 22g Single Bar PMP,22,g
+1357,Chocolate,6.35,Kinder,Kinder Surprise Easter Egg 100g,100,g
+1358,Chocolate,9.39,Ferrero Rocher,Ferrero Rocher Gift Box of Chocolate 24 Pieces (300g),300,g
+1359,Chocolate,6.0,Ferrero,Ferrero Collection Gift Box of Chocolates 15 Pieces (172g),172,g
+1360,Chocolate,4.99,Raffaello,Raffaello Coconut and Almond Pralines Git Box 15 Pieces (150g),150,g
+1361,Chocolate,0.25,Kinder,Kinder Medium Chocolate Single Bar 21g,21,g
+1362,Chocolate,0.79,Thorntons,Thorntons Milk Chocolate Bunny 29g,29,g
+1364,Chocolate,1.79,Kinder,Kinder Chocolate Small Bars Multipack 10 x 12.5g (125g),125,g
+1365,Chocolate,4.99,Raffaello,Raffaello Coconut and Almond Pralines Git Box 15 Pieces (150g),150,g
+1366,Chocolate,2.99,Ferrero,Ferrero Easter Cocoa Chocolate Mini Easter Eggs 10 Pieces (100g),100,g
+1367,Chocolate,1.79,Kinder,Kinder Chocolate Small Bars Multipack 10 x 12.5g (125g),125,g
+1368,Chocolate,6.0,Ferrero,Ferrero Collection Gift Box of Chocolates 15 Pieces (172g),172,g
+1369,Chocolate,0.99,Raffaello,Raffaello Pralines Treat Pack 3 Pieces (30g),30,g
+1370,Chocolate,6.99,Raffaello,Raffaello Coconut and Almond Pralines Gift Box 24 Pieces (240g),240,g
+1371,Chocolate,6.99,Raffaello,Raffaello Coconut and Almond Pralines Gift Box 24 Pieces (240g),240,g
+1372,Chocolate,5.76,Ferrero Rocher,Ferrero Rocher Chocolate Pralines Gift Box of Chocolate 16 Pieces (200g),200,g
+1373,Chocolate,5.76,Ferrero Rocher,Ferrero Rocher Chocolate Pralines Gift Box of Chocolate 16 Pieces (200g),200,g
+1374,Chocolate,5.76,Ferrero Rocher,Ferrero Rocher Chocolate Pralines Gift Box of Chocolate 16 Pieces (200g),200,g
+1375,Chocolate,1.0,Galaxy,Galaxy Caramel Chocolate Price Marked Block 135g,135,g
+1376,Chocolate,1.0,Galaxy,GALAXY® Cookie Crumble Chocolate Price Marked Block 114g,114,g
+1377,Chocolate,1.0,M&M's,M&M's Crispy Chocolate Price Marked Treat Bag 77g,90,g
+1378,Chocolate,1.0,M&M's,M&M's Peanut Chocolate Price Marked Treat Bag 82g,82,g
+1379,Chocolate,0.79,Snickers,Snickers Duo Chocolate Bar 2 x 41.7g,83.4,g
+1380,Chocolate,1.0,Maltesers,MALTESERS® Teasers Chocolate Block Price Marked Pack 100g,100,g
+1381,Chocolate,1.0,Snickers,SNICKERS® 4 x 35.5g (142g),4,pk
+1382,Chocolate,0.79,Mars,Mars Duo Chocolate Bar 2 x 39.4g,78.8,g
+1383,Chocolate,0.7,Galaxy,Galaxy Smooth Milk Chocolate Bar 42g,42,g
+1384,Chocolate,1.0,Galaxy,GALAXY® Salted Caramel Chocolate Price Marked Block 135g,135,g
+1385,Chocolate,0.6,Bounty,BOUNTY® Milk 2 x 28.5g (57g),57,g
+1386,Chocolate,1.0,Mars,MARS® 4 x 33.8g (135.2g),4,pk
+1387,Chocolate,1.0,Galaxy,GALAXY® Honeycomb Crisp Chocolate Price Marked Block 114g,114,g
+1388,Chocolate,1.0,M&M's,M&M's Chocolate Treat Bag 82g,82,g
+1389,Chocolate,0.6,Milky Way,Milky Way Chocolate Bar 2 x 21.5g,21.5,g
+1390,Chocolate,1.0,Galaxy,GALAXY® Crispy Chocolate Price Marked Block 102g,102,g
+1391,Chocolate,0.65,Bounty,Bounty Coconut Dark Chocolate Twin Bar 57g,57,g
+1392,Chocolate,0.76,Twix,Twix Xtra White Chocolate Biscuit Twin Bars 75g,75,g
+1393,Chocolate,0.6,Snickers,Snickers Chocolate Price Marked Bar 48g,48,g
+1394,Chocolate,0.6,Twix,TWIX® Chocolate Biscuit Price Marked Twin Bars 50g,50,g
+1395,Chocolate,0.6,Mars,MARS® Chocolate Price Marked Bar 51g,51,g
+1396,Chocolate,1.0,Maltesers,Maltesers Buttons Chocolate Price Marked Treat Bag 68g,68,g
+1397,Chocolate,0.61,Twix,TWIX® White 2 x 23g (46g),46,g
+1398,Chocolate,1.0,M&M's,M&M's® Mix Treat Bag 80g,80,g
+1399,Chocolate,0.7,M&M's,M&M's Peanut Chocolate Bag 45g,45,g
+1400,Chocolate,0.6,Maltesers,MALTESERS® Teasers Chocolate Price Marked Bar 35g,35,g
+1401,Chocolate,0.65,Snickers,Snickers Chocolate Bar 48g,48,g
+1402,Chocolate,0.65,Bounty,Bounty Coconut Milk Chocolate Twin Bar 57g,57,g
+1403,Chocolate,0.6,Maltesers,MALTESERS® Fairtrade Chocolate Bag Price Marked Pack 37g,37,g
+1404,Chocolate,1.0,M&M's,M&M's® Salted Caramel Treat Bag 80g,80,g
+1405,Chocolate,1.0,Twix,TWIX® Snacksize 8 x 20g (160g),4,pk
+1406,Chocolate,0.25,Milky Way,MILKY WAY® 21.5g,21.5,g
+1407,Chocolate,0.49,Starburst,Starburst Fruit Chews Original 45g,45,g
+1408,Chocolate,0.65,Mars,Mars Chocolate Bar 51g,51,g
+1409,Chocolate,0.65,Twix,Twix Salted Caramel Chocolate Biscuit Twin Bars 46g,46,g
+1410,Chocolate,0.69,Topic,TOPIC® 47g,47,g
+1411,Chocolate,0.65,Twix,Twix Chocolate Biscuits Twin Bars 50g,50,g
+1412,Chocolate,0.7,M&M's,M&M's Chocolate 45g,45,g
+1413,Chocolate,1.49,Maltesers,Maltesers Mini Bunny Small Chocolate Easter Egg 80g,80,g
+1414,Chocolate,0.8,Twix,Twix Xtra Salted Caramel Chocolate Biscuit Twin Bars 75g,75,g
+1415,Chocolate,0.66,Maltesers,Maltesers Buttons Mint Chocolate Bag 32g,32,g
+1416,Chocolate,0.61,Snickers,Snickers Crisp Chocolate Bar 2 x 20g,40,g
+1417,Chocolate,0.7,Galaxy,Galaxy Cookie Crumble Chocolate Bar 40g,40,g
+1418,Chocolate,0.5,Fruit Chews,Starburst Original Fruit Chews 45g,45,g
+1419,Chocolate,1.29,M&M's,M&M's Peanut Chocolate Extra Free Treat Bag 100g,80,g
+1420,Chocolate,1.0,Skittles,Skittles Dips Sweets Treat Bag 95g,95,g
+1421,Chocolate,1.29,M&M's,M&M's Crispy Chocolate Extra Free Treat Bag 97g,77,g
+1422,Chocolate,0.78,Snickers,SNICKERS® Crisp 3 x 20g (60g),60,g
+1423,Chocolate,0.49,Starburst,Starburst Fruit Chews FaveReds 45g,45,g
+1424,Chocolate,0.5,Starburst,Starburst Chewing Gum Sugar Free Red Berry 5 Sticks,5,pk
+1425,Chocolate,0.5,Starburst,Starburst Fave Reds Fruit Chews 45g,45,g
+1426,Chocolate,1.5,Milky Way,Milky Way Crispy Rolls Chocolate Bar 25g,5,pk
+1427,Chocolate,1.49,Snickers,SNICKERS® Chocolate Protein Bar 47g,47,g
+1428,Chocolate,1.5,Milky Way,Milky Way Crispy Rolls Chocolate Bar 25g,5,pk
+1429,Chocolate,1.49,Mars,MARS® Protein 50g,47,g
+1430,Chocolate,0.15,Skittles,Skittles Fruits 18g,18,g
+1431,Chocolate,0.66,M&M's,M&M's® Salted Caramel 36g,36,g
+1432,Chocolate,0.49,Starburst,Starburst Very Berry Fruit Chews Price Marked Pack 45g,45,g
+1433,Chocolate,1.29,Galaxy,Galaxy Enchanted Eggs Chocolate Bag 80g,80,g
+1434,Chocolate,5.49,Maltesers,Maltesers Truffles Chocolate Medium Gift Box 200g,200,g
+1435,Chocolate,1.49,Maltesers,Maltesers Mini Bunny Small Chocolate Easter Egg 80g,80,g
+1436,Chocolate,0.49,Starburst,Starburst Very Berry Fruit Chews 45g,45,g
+1437,Chocolate,2.19,Starburst,Starburst Fruity Mixies Chewing Gum Sugar Free Bottle 100 Pieces,87,g
+1438,Chocolate,2.49,M&M's,M&M's Crispy Chocolate Block 150g,150,g
+1439,Chocolate,0.66,Maltesers,Maltesers Buttons Chocolate Bag 32g,32,g
+1440,Chocolate,0.6,Twix,TWIX® Chocolate Biscuit Price Marked Twin Bars 50g,50,g
+1441,Chocolate,2.49,M&M's,M&M's Chocolate Block 165g,150,g
+1442,Chocolate,1.99,Maltesers,Maltesers Truffles Chocolate Small Gift Box 54g,54,g
+1443,Chocolate,0.49,Skittles,Skittles Dips Sweets Bag 35g,35,g
+1444,Chocolate,2.49,M&M's,M&M's Peanut Block 165g,165,g
+1445,Chocolate,5.49,Maltesers,Maltesers Truffles Chocolate Medium Gift Box 200g,200,g
+1446,Chocolate,2.49,M&M's,M&M's Hazelnut Chocolate Block 165g,165,g
+1447,Chocolate,1.49,Skittles,Skittles Crazy Sours Sweets Pouch 196g,196,g
+1448,Chocolate,0.65,Twix,Twix Chocolate Biscuits Twin Bars 50g,50,g
+1449,Chocolate,0.65,Bounty,Bounty Coconut Dark Chocolate Twin Bar 57g,57,g
+1450,Chocolate,0.89,Bounty,Bounty Coconut Milk Chocolate Trio Bar 85g,85,g
+1451,Chocolate,0.89,Bounty,Bounty Coconut Milk Chocolate Trio Bar 85g,85,g
+1452,Chocolate,0.5,Starburst,Starburst Chewing Gum Sugar Free Red Berry 5 Sticks,5,pk
+1453,Chocolate,2.19,Starburst,Starburst Fruity Mixies Chewing Gum Sugar Free Bottle 100 Pieces,87,g
+1454,Chocolate,0.5,Milky Way,Milky Way Crispy Rolls Chocolate Bar 25g,25,g
+1455,Chocolate,0.5,Milky Way,Milky Way Crispy Rolls Chocolate Bar 25g,25,g
+1456,Chocolate,0.7,M&M's,M&M's Crispy Chocolate Bag 36g,36,g
+1457,Chocolate,4.89,Celebrations,Celebrations Chocolate Gift Carton 380g,380,g
+1458,Chocolate,4.89,Celebrations,Celebrations Chocolate Gift Carton 380g,380,g
+1459,Chocolate,3.49,Celebrations,Celebrations Chocolate Gift Carton 240g,240,g
+1460,Chocolate,3.49,Celebrations,Celebrations Chocolate Gift Carton 240g,240,g
+1461,Chocolate,0.8,Twix,Twix Xtra Chocolate Biscuit Twin Bars 75g,75,g
+1462,Chocolate,0.7,Galaxy,Galaxy Smooth Caramel Chocolate Bar 48g,48,g
+1463,Chocolate,0.89,Galaxy,Galaxy Smooth Milk Chocolate Kingsize 75g,75,g
+1464,Chocolate,0.89,Maltesers,Maltesers Fairtrade Chocolate Big Bag 58.5g,58.5,g
+1465,Chocolate,0.7,Milky Way,Milky Way Magic Stars Chocolate Bag 33g,33,g
+1466,Chocolate,1.0,Aero,Aero Peppermint Mint Chocolate Sharing Bar 100g £1,100,g
+1467,Chocolate,1.0,Aero,Aero Milk Chocolate Sharing Bar 100g £1,100,g
+1468,Chocolate,1.0,Milkybar,Milkybar White Chocolate Sharing Bag 85g,85,g
+1469,Chocolate,1.0,Rowntree's,ROWNTREE'S Fruit Pastilles Sweets Sharing Bag 120g £1,120,g
+1470,Chocolate,1.0,Aero,Aero Caramel Chocolate Sharing Bar 100g,100,g
+1471,Chocolate,1.0,Aero,Aero Orange Chocolate Sharing Bar 100g £1,100,g
+1472,Chocolate,0.65,KitKat,KITKAT 4 Finger Milk Chocolate Bar 41.5g 2 for £1,41.5,g
+1473,Chocolate,0.65,Aero,Aero Peppermint Mint Chocolate Bar 36g 2 For £1,36,g
+1474,Chocolate,1.0,Nestlé,Smarties Milk Chocolate Sweets Sharing Block 100g,100,g
+1475,Chocolate,0.65,KitKat,Kit Kat Chunky Milk Chocolate Bar 40g 2 For £1,40,g
+1476,Chocolate,0.55,Milkybar,Milkybar White Chocolate 2For£1 Medium Bar 25g,25,g
+1477,Chocolate,1.0,Rowntree's,ROWNTREE'S Randoms Sweets Sharing Bag 120g £1,120,g
+1478,Chocolate,1.0,Crunch,Crunch Milk Chocolate Sharing Bar 100g,100,g
+1479,Chocolate,1.0,Rowntree's,ROWNTREE'S Fruit Gums Sweets Sharing Bag 120g £1,120,g
+1480,Chocolate,1.0,Rowntree's,ROWNTREE'S Pick & Mix Sweets Sharing Bag 120g £1,120,g
+1481,Chocolate,0.65,Aero,Aero Milk Chocolate Bar 36g 2 For £1,36,g
+1482,Chocolate,0.65,Yorkie,Yorkie Milk Chocolate Bar 46g,46,g
+1483,Chocolate,1.0,Aero,Aero Bubbles Peppermint Mint Chocolate Bag 80g,80,g
+1484,Chocolate,1.0,Rolo,Rolo Chocolate Multipack 41.6g 4 Pack £1,4,pk
+1485,Chocolate,0.55,Polo,Polo Original Mint Tube 34g 2 for £1,34,g
+1486,Chocolate,0.5,Rowntree's,ROWNTREE'S Fruit Pastilles Sweets Tube 52.5g 2 for £1,52.5,g
+1487,Chocolate,0.65,KitKat,KITKAT Chunky Peanut Butter Chocolate Bar 42g 2 for £1,42,g
+1488,Chocolate,0.55,Smarties,Smarties Milk Chocolate Sweets Tube 38g,38,g
+1489,Chocolate,0.25,Milkybar,Milkybar White Chocolate Kid Bar 12g 25P,12,g
+1490,Chocolate,0.65,KitKat,KITKAT 4 Finger Milk Chocolate Bar 41.5g,41.5,g
+1491,Chocolate,1.0,Smarties,Smarties Milk Chocolate Sweets Sharing Bag 87g,87,g
+1492,Chocolate,0.65,Toffee Crisp,Toffee Crisp Milk Chocolate Bar 38g 2 For £1,38,g
+1493,Chocolate,1.0,Smarties,SMARTIES Milk Chocolate Buttons £1 Sharing Bag 78g,78,g
+1494,Chocolate,0.65,Yorkie,Yorkie Milk Chocolate Bar With Raisin And Biscuit 44g,44,g
+1495,Chocolate,1.0,Milkybar,Milkybar Mix Ups White and Milk Chocolate Sharing Bag 78g,78,g
+1496,Chocolate,0.5,Polo,Polo Original Mint Tube 34g,34,g
+1497,Chocolate,0.65,KitKat,KITKAT Chunky Salted Caramel Fudge Chocolate Bar 42g,42,g
+1498,Chocolate,0.53,Polo,Polo Spearmint Mint Tube 34g,34,g
+1499,Chocolate,0.55,Rowntree's,ROWNTREE'S Fruit Pastilles Sweets Tube 52.5g,52.5,g
+1500,Chocolate,1.0,Lion,Lion Milk Chocolate Bar Multipack 30g 4 Pack,4,pk
+1501,Chocolate,0.83,KitKat,KITKAT Chunky Duo Milk Chocolate Bar 64g,64,g
+1502,Chocolate,1.0,KitKat,KITKAT 4 Finger Milk Chocolate Bar 41.5g 3 Pack £1,3,pk
+1503,Chocolate,0.65,KitKat,KITKAT Chunky Peanut Butter Chocolate Bar 42g 2 for £1,42,g
+1504,Chocolate,0.65,Lion,Lion Milk Chocolate Bar 50g,50,g
+1505,Chocolate,0.55,Polo,Polo Sugar Free Mint Tube 33.4g 2 for £1,33.4,g
+1506,Chocolate,0.83,Lion,Lion Milk Chocolate Duo Bar 60g,60,g
+1507,Chocolate,0.65,Aero,Aero Peppermint Mint Chocolate Bar 36g,36,g
+1508,Chocolate,2.99,Quality Street,"Quality Street Christmas Chocolate, Toffee and Cremes Box 240g",240,g
+1509,Chocolate,0.83,Lion,Lion White Chocolate Duo Bar 60g,60,g
+1510,Chocolate,0.65,Smarties,SMARTIES Milk Chocolate Buttons Single 32.5g,33,g
+1511,Chocolate,0.25,Milkybar,Milkybar White Chocolate Buttons Bag 12g 25P,12,g
+1512,Chocolate,0.65,Yorkie,Yorkie Milk Chocolate Bar 46g,46,g
+1513,Chocolate,0.65,KitKat,KITKAT Chunky Milk Chocolate Bar 40g,40,g
+1514,Chocolate,0.25,Animal Bar,Animal Bar Milk Chocolate Bar 19g 25p,19,g
+1515,Chocolate,0.55,Milkybar,Milkybar White Chocolate Medium Bar 25g,25,g
+1516,Chocolate,3.99,After Eight,After Eight Delightfully Minty Dark Chocolate Thins 300g,300,g
+1517,Chocolate,0.5,Polo,Polo Sugar Free Mint Tube 33.4g,33.4,g
+1518,Chocolate,1.0,Smarties,Smarties Mini Eggs 80g,80,g
+1519,Chocolate,0.53,Polo,Polo Spearmint Mint Tube 34g,34,g
+1520,Chocolate,1.69,Aero,Aero Peppermint Mint Chocolate Multipack 27g 4 Pack,4,pk
+1521,Chocolate,1.0,Smarties,Smarties Milk Chocolate Sweets Tube Multipack 38g 3 Pack,3,pk
+1522,Chocolate,0.83,Yorkie,Yorkie Milk Chocolate Duo Bar With Raisin And Biscuit 66g,66,g
+1523,Chocolate,0.51,Rowntree's,ROWNTREE'S Randoms Sweets Bag 50g,50,g
+1524,Chocolate,0.65,Aero,Aero Milk Chocolate Bar 36g,36,g
+1525,Chocolate,0.55,Mentos,Mentos Choco and Mint Roll 38g,38,g
+1526,Chocolate,0.25,Rowntree's,ROWNTREE'S Randoms Mini Sweets Bag 20g,20,g
+1527,Chocolate,0.65,Toffee Crisp,Toffee Crisp Milk Chocolate Bar 38g,38,g
+1528,Chocolate,6.49,Dairy Box,Dairy Box Milk Chocolate Box 360g,360,g
+1529,Chocolate,0.55,Mentos,Mentos Choco and Caramel Roll 38g,38,g
+1530,Chocolate,0.25,Smarties,Smarties Mini Milk Chocolate Sweets Bag 15g,15,g
+1531,Chocolate,1.73,Milkybar,Milkybar White Chocolate Egg 65g,65,g
+1532,Chocolate,1.29,KitKat,KITKAT Chunky MORE Chocolate Bar 42g,42,g
+1533,Chocolate,0.65,Milkybar,Milkybar Mix Ups White and Milk Chocolate Bag 32.5g,32.5,g
+1534,Chocolate,1.0,Aero,Aero Milk Chocolate Mini Eggs 70g,70,g
+1535,Chocolate,1.0,Rowntrees,Rowntree's Fruit Pastilles Sweets Multipack 52.5g 3 Pack £1,52.5,g
+1536,Chocolate,1.49,Polo,Polo Original Mint Pot 66g,66,g
+1537,Chocolate,0.85,KitKat,KITKAT Senses Hazelnut Chocolate Bar 30g,30,g
+1538,Chocolate,0.85,KitKat,KITKAT Senses Salted Caramel Chocolate Bar 30g,30,g
+1539,Chocolate,2.99,Quality Street,"Quality Street Christmas Chocolate, Toffee and Cremes Box 240g",240,g
+1540,Chocolate,1.49,Polo,Polo Sugar Free Mint Pot 65g,65,g
+1541,Chocolate,1.29,Yorkie,"Yorkie MORE Milk Chocolate Bar with Oats, Apple and Cinnamon 42g",42,g
+1542,Chocolate,2.24,Quality Street,Quality Street Matchmakers Salted Caramel 120g,120,g
+1543,Chocolate,6.49,Dairy Box,Dairy Box Milk Chocolate Box 360g,360,g
+1544,Chocolate,0.65,Milkybar,Milkybar Farmyard Impulse Friends 19.5g,20,g
+1545,Chocolate,1.73,Milkybar,Milkybar White Chocolate Egg 65g,65,g
+1546,Chocolate,3.99,After Eight,After Eight Delightfully Minty Dark Chocolate Thins 300g,300,g
+1547,Chocolate,0.55,Mentos,Mentos Choco and Caramel Roll 38g,38,g
+1548,Chocolate,0.55,Mentos,Mentos Choco and Mint Roll 38g,38,g
+1549,Chocolate,0.55,Smarties,Smarties Milk Chocolate Sweets Tube 38g,38,g
+1550,Chocolate,0.51,Rowntrees,ROWNTREE'S Jelly Tots Sweets Bag 42g,42,g
+1551,Chocolate,0.5,Polo,Polo Fruits Sweets Tube 37g,37,g
+1552,Chocolate,0.41,KitKat,Kit Kat 2 Finger Chocolate Biscuit Bar 20.7g,20.7,g
+1553,Chocolate,0.85,Munchies,Munchies Milk Chocolate Tube 52g,44,g
+1554,Chocolate,0.57,Caramac,Caramac Bar 30g,30,g
+1555,Chocolate,0.55,Milkybar,Milkybar White Chocolate Buttons Bag 30g,30,g
+1556,Chocolate,2.24,Quality Street,Quality Street Matchmakers Salted Caramel 120g,120,g
+1557,Chocolate,3.49,Black Magic,Black Magic Dark Chocolate Box 174g,174,g
+1558,Chocolate,3.49,Black Magic,Black Magic Dark Chocolate Box 174g,174,g
+1559,Chocolate,6.49,Black Magic,Black Magic Dark Chocolate Box 348g,348,g
+1560,Chocolate,6.49,Black Magic,Black Magic Dark Chocolate Box 348g,348,g
+1561,Chocolate,0.65,KitKat,KITKAT 4 Finger 70% Dark Chocolate Bar 41.5g,41.5,g
+1562,Chocolate,0.85,After Eight,After Eight Bitesize 60g,60,g
+1563,Chocolate,0.65,Rolo,Rolo Chocolate Tube 52g,52,g
+1564,Chocolate,1.0,Milkybar,Milkybar White Chocolate Sharing Block 100g,100,g
+1565,Chocolate,0.85,Aero,AERO® Bliss Milk Chocolate Box 25g,25,g
+1566,Chocolate,0.83,Yorkie,Yorkie Milk Chocolate Duo Bar 72g,72,g
+1567,Large Bottled Drinks,1.89,Pepsi Max,Pepsi Max 2 Litres,2,Ltr
+1568,Large Bottled Drinks,1.99,Coca-Cola,Coca-Cola Zero Sugar 1.75L PM £1.99 or 2 for £3,1.75,Ltr
+1569,Large Bottled Drinks,1.49,Schweppes,Schweppes Lemonade 2L PMP £1.49,2,Ltr
+1570,Large Bottled Drinks,2.39,Pepsi,Pepsi 2 Litres,2,Ltr
+1571,Large Bottled Drinks,1.0,Barr,"Barr Lemonade 2L Bottle, PMP £1",2,Ltr
+1572,Large Bottled Drinks,1.49,Schweppes,Schweppes Slimline Lemonade 2L PMP £1.49,2,Ltr
+1573,Large Bottled Drinks,1.0,Barr,"Barr Cola 2L Bottle, PMP £1",2,Ltr
+1574,Large Bottled Drinks,1.29,Irn-Bru,"IRN-BRU 2 Litre Bottle, PMP £1.29",2,Ltr
+1575,Large Bottled Drinks,1.89,Pepsi,Pepsi Diet 2 Litres,2,Ltr
+1576,Large Bottled Drinks,1.0,Barr,"Barr Cherryade 2L Bottle, PMP £1",2,Ltr
+1577,Large Bottled Drinks,1.89,Pepsi,Pepsi Max Cherry 2 Litres,2,Ltr
+1578,Large Bottled Drinks,1.0,Barr,"Barr Bubblegum 2L Bottle, PMP £1",2,Ltr
+1579,Large Bottled Drinks,1.0,Barr,"Tizer 2L Bottle, PMP £1",2,Ltr
+1580,Large Bottled Drinks,1.0,Barr,"Barr American Cream Soda 2 L Bottle, PMP £1",2,Ltr
+1581,Large Bottled Drinks,1.0,Barr,"DNB 2L Bottle, PMP £1",2,Ltr
+1582,Large Bottled Drinks,1.0,Barr,"Barr Raspberryade 2L Bottle, PMP £1",2,Ltr
+1583,Large Bottled Drinks,0.69,Best-One,Best-One Lemonade 2L,2,Ltr
+1584,Large Bottled Drinks,1.0,Irn-Bru,"IRN-BRU Xtra 2 Litre Bottle, PMP £1",2,Ltr
+1585,Large Bottled Drinks,1.0,Barr,"Barr Limeade 2L Bottle, PMP £1",2,Ltr
+1586,Large Bottled Drinks,2.09,7UP,7UP Regular 2 Litres,2,Ltr
+1587,Large Bottled Drinks,0.39,Best-One,Best-One Sugar Free Lemonade 2L,2,Ltr
+1588,Large Bottled Drinks,0.69,Best-One,Best-One Diet Lemonade 2L,2,Ltr
+1589,Large Bottled Drinks,1.0,Barr,"Barr Shandy 2L Bottle, PMP £1",2,Ltr
+1590,Large Bottled Drinks,0.69,Best-One,Best-One Cola 2L,2,Ltr
+1591,Large Bottled Drinks,1.89,7UP,7UP Free 2 Litres,2,Ltr
+1592,Large Bottled Drinks,1.0,Irn-Bru,"IRN-BRU Sugar Free 2L Bottle, PMP £1",2,Ltr
+1593,Large Bottled Drinks,1.0,Sunkist,Sunkist Orange 2 Litre,2,Ltr
+1594,Large Bottled Drinks,1.0,Vimto,"Vimto Fizzy Remix Watermelon, Strawberry & Peach 2 Litre",2,Ltr
+1595,Large Bottled Drinks,1.0,Vimto,"Vimto Fizzy Remix Raspberry, Orange & Passionfruit 2 Litre",2,Ltr
+1596,Large Bottled Drinks,1.89,Tango,Tango Orange 2L,2,Ltr
+1597,Large Bottled Drinks,2.79,Coca-Cola,Coca-Cola 2.25L,2.25,Ltr
+1598,Large Bottled Drinks,0.69,Best-One,Best-One Cream Soda 2L,2,Ltr
+1599,Large Bottled Drinks,1.79,Rubicon,"Rubicon Sparkling Mango Juice Drink 2L, PMP £1.79",2,Ltr
+1600,Large Bottled Drinks,0.69,Best-One,Best-One Dandelion & Burdock 2L,2,Ltr
+1601,Large Bottled Drinks,1.79,KA,"KA Sparkling Pineapple 2L Bottle, PMP £1.79",2,Ltr
+1602,Large Bottled Drinks,1.79,KA,"KA Sparkling Black Grape 2L Bottle, PMP £1.79",2,Ltr
+1603,Large Bottled Drinks,1.79,KA,"KA Sparkling Fruit Punch 2L Bottle, PMP £1.79",2,Ltr
+1604,Large Bottled Drinks,0.99,Best-One,Best-One Fruit Punch Flavour Sparkling Drink 2 Litre,2,Ltr
+1605,Large Bottled Drinks,1.79,KA,"KA Sparkling Strawberry 2L, PMP £1.79",2,Ltr
+1606,Large Bottled Drinks,1.79,Rubicon,"Rubicon Sparkling Passion Fruit Juice Drink 2L, PMP £1.79",2,Ltr
+1607,Large Bottled Drinks,2.5,Coca-Cola,Diet Coke 3 Litre,3,Ltr
+1608,Large Bottled Drinks,2.99,Fanta,Fanta Orange 3L,3,Ltr
+1609,Large Bottled Drinks,2.75,Fanta,Fanta Orange 2L,2,Ltr
+1610,Large Bottled Drinks,2.75,Sprite,Sprite 2L,2,Ltr
+1611,Large Bottled Drinks,2.75,Fanta,Fanta Icy Lemon 2L,2,Ltr
+1612,Large Bottled Drinks,2.75,Fanta,Fanta Fruit Twist 2L,2,Ltr
+1613,Large Bottled Drinks,2.19,Schweppes,Schweppes Lemonade 2L,2,Ltr
+1614,Large Bottled Drinks,2.75,Lilt,Lilt Pineapple & Grapefruit 2L,2,Ltr

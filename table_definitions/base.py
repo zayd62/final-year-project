@@ -4,7 +4,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-pth = '/media/zayd/Common/University/Year 3/Final Year Project/git-repository/dataset.sqlite3'
+pth = '/Common/University/Year 3/Final Year Project/git-repository/dataset.sqlite3'
 engine = create_engine("sqlite:///" + pth)
 Session = sessionmaker(bind=engine)
 

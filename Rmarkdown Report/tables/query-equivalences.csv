@@ -1,0 +1,7 @@
+Rules,Notable transactions
+NB_KW + TABLE,selection with counting
+TABLE,selection of all the columns of the table
+TABLE + (TABLE) * + and + TABLE,the same request asked on several tables
+COLUMN + TABLE,single column selection
+COLUMN + (COLUMN) * + and + COLUMN + TABLE,multiple column selection
+TABLE + COLUMN + VAL,constrained selection

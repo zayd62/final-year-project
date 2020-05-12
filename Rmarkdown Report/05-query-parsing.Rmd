@@ -37,6 +37,12 @@ This file is an interactive demo of parsing natural language queries to SQL quer
 
 > **Note**: There are hard coded paths in this file. Consult `README.md` on what to change in order for the file to work.
 
+#### ln2sql/demo/test_dataset_explicit.py and ln2sql/demo/test_dataset_generic.py
+
+both of these files are responsible for executing the test for the explicit dataset and the generic dataset respectively. 
+
+> **Note**: There are hard coded paths in this file. Consult `README.md` on what to change in order for the file to work.
+
 ### Using interactive demo
 
 In order to run the interactive demo, it is recommended to create and then activate a Python Virtual Environment (tested on Python 3.7.7).

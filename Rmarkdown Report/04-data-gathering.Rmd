@@ -1,3 +1,5 @@
+# Data Gathering {#data-gathering-chapter}
+
 As mentioned in Chapter \@ref(data-gathering), a test dataset is required in order to evaluate the different parsing methods as discussed in Chapter \@ref(literature-review). 
 
 ```{bash generate-dataset-ERD-plantuml, include=FALSE}
@@ -48,7 +50,6 @@ The scraped data is available in the file **dataset.sqlite3** in this reports as
 
 1. Manually inserting values where the values were null
 2. Making the contents of the database all lowercase
-
 
 The final dataset that will be used to test the data is described in more detail in Appendix \@ref(date-table)
 

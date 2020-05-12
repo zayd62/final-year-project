@@ -1,5 +1,5 @@
 --- 
-title: "Using Domain General models in translating Natural Language Queries into Structured Language"
+title: "Translating Natural Language Queries into SQL"
 author: "Zayd Patel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

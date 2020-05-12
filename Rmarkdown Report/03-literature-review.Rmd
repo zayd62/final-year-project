@@ -14,12 +14,8 @@ This GitHub repository [@ferreroFerreroJeremyLn2sql2020] is based on the paper b
 #### Paper explanation {#ln2sql-model}
 
 
-```{bash generate-ln2sql-plantuml, include=FALSE}
-plantuml figures/plantuml/fr2sql.puml
-```
-
-```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the Seq2SQL paper and translated from French to English"}
-knitr::include_graphics("figures/plantuml/fr2sql.png")
+```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the fr2sql paper and translated from French to English"}
+knitr::include_graphics("figures/fr2sql.png")
 ```
 
 The overview for this paper is in Figure \@ref(fig:fr2sql-diagram) which is extracted and translated from the French paper. The paper breaks down the model into the following steps. Since the paper was translated using Google Translate which is not 100% perfect, I have translated, rewritten and summarised the steps the model takes:
@@ -55,7 +51,7 @@ Breakdown of the sentence is carried out according to Figure \@ref(fig:fr2sql-di
 Depending on the number and the position of the key words in the sentence, output is not the same and therefore will not give the same output. **Note** that if a request contains no word that relates to a table, it will be invalid and will therefore generate an error.
 
 ```{r fr2sql-diagram-breakdown, echo=FALSE, fig.cap=" Diagram representing the division made on the sentence entered by the user in order to know what type of query to generate in output, the white squares representing the tables and the black squares the columns"}
-knitr::include_graphics("figures/drawio/fr2sql-01.png")
+knitr::include_graphics("figures/sql-breakdown.png")
 ```
 
 5. **Determining the structure of the request**
@@ -64,7 +60,7 @@ For each of the segments obtained in Part 4, we analyze the keyword tagged *"unk
 
 ```{r section-five, echo=FALSE}
 library(kableExtra)
-sql_table_issue = read.csv("tables/fr2sql-part5.csv")
+sql_table_issue = read.csv("tables/keyword-operation-pairing.csv")
 knitr::kable(
   head(sql_table_issue, 20), caption = 'None exhaustive list of keywords and their operations',
   booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
@@ -79,7 +75,7 @@ In the case of an explicit join, the table on which we must perform the join is 
 > "Which students have a professor whose the first name is Jean?" 
 
 ```{r explicit-join-erd, echo=FALSE, fig.cap="Entity Relationship diagram for explicit join. Taken directly from the paper. Some French-English translations: [enseigner = teach, matiere = Topic, eleve = student, professeur = professor]"}
-knitr::include_graphics("figures/images/explicit_join_erd.png")
+knitr::include_graphics("figures/paper-erd.png")
 ```
 
 Here we must make a join between the table *eleve* (translates to student) and *professeur* (translates to professor) in order to be able to select all the students constrained on the teachers first names.  The construction of the joins by the application is made possible by part 2 as fr2sql knows the primary and foreign keys of each table and can implicitly deduce the effective links between the tables and therefore knows if a table can be linked to another and if so, by which table(s) to pass. fr2sql can create joins through multiple tables if required (as in Figure \@ref(fig:explicit-join-erd), to access the teacher table from the table high through the table teaching and class ).
@@ -95,7 +91,7 @@ A lax grammar is used to generate the output request. The rules of this grammar 
 Due to the large number of rules where each rule represents the construction of a possible query, each rule is indexed using a hash table for increased performance. To do this, an integer is assigned to each key element of the request. 1 for the elements of *table* type , 2 for *columns*, etc. The natural language query entered gives a series of numbers that are concatenated. The 0 represents that the previous element in the chain can be present 1 to N times within the rule which then leads to an array of indexed rules by integers. To find the rule equivalent to an input request, you find the integer corresponding to the demand structure, which also happens to be the key to value, representing the structure of the request to be produced out, in the table. A visualisation of the hash table is in Figure \@ref(fig:hash-table-diagram)
 
 ```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence."}
-knitr::include_graphics("figures/images/rule-hash-table.png")
+knitr::include_graphics("figures/keyword-hashtable.png")
 ```
 
 Now that we know the structure of the query to generate as output, we just need to replace the variable, table and column by their true value or name. Some examples of equivalences are available in Table \@ref(tab:query-equivalences)
@@ -130,7 +126,7 @@ The original paper used a hash map for query structure generation (Chapter \@ref
 The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query. \newpage
 
 ```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository"}
-knitr::include_graphics("figures/images/ln2sql-github.png")
+knitr::include_graphics("figures/ln2sql-github.png")
 ```
 
 ## Seq2SQL {#seq2sql}

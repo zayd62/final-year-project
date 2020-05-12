@@ -1,0 +1,2 @@
+Explicit,Generic,SQL query
+show me all the products where the category is large bottled drinks,show me all the products in the large bottled drinks category,SELECT * FROM products WHERE category = large bottled drinks

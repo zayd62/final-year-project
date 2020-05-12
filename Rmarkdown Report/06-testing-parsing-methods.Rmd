@@ -97,5 +97,5 @@ Since the end user will receive the SQL query and (possibly), the results of the
 When ran against the test dataset as mentioned in Chapter \@ref(gathering-NLQ), we measured how many queries the method calculated (using the method described in Chapter \@ref(query-equivalency-solution)) correctly and how many incorrectly across both generic and explicit. The results are available in Figure \@ref(fig:ln2sql-graphs)
 
 ```{r ln2sql-graphs, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
-knitr::include_graphics("figures/images/ln2sql-graphs.png")
+knitr::include_graphics("results/ln2sql-results.png")
 ```

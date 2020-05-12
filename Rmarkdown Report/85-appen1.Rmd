@@ -1,5 +1,9 @@
 \newpage
 
+```{=latex}
+%TC:ignore 
+```
+
 # (APPENDIX) Appendix {-}
 
 # Dataset Schema Explained {#dataset-schema-explained}
@@ -42,9 +46,9 @@ Below are the tables used in scraping the raw data. Note that this is an interna
     - **size**: the size of the product
     - **product_id**: used to identify which entry in the product table this entry belongs to 
 
-## Data table {#date-table}
+## Products table {#date-table}
 
-The data table is the final table to be used as the test dataset mentioned in Chapter \@ref(data-gathering).
+The products table is the final table to be used as the test dataset. Note that originally, the size and unit columns where 
 
 - **products**
     - **id**: used as database primary key
@@ -53,7 +57,7 @@ The data table is the final table to be used as the test dataset mentioned in Ch
     - **brand**: the brand of the product
     - **item name**: the name of the product
     - **size**: the size of the product
-    - **product_id**: used to identify which entry in the product table this entry belongs to \newpage
+    - **unit**: the unit of the size (e.g. ml, kg etc) \newpage
 
 ## Question tables {#question-tables}
 
@@ -68,3 +72,8 @@ The purpose of theses tables are discussed in Chapter \@ref(nlq-questions)
     - **id**: used as database primary key
     - **englishQuery**: The natural language query. An alternative to `authorQuestion.englishQuery` 
     - **product_id**: used to identify which entry in the `authorQuestion` table this entry belongs to
+
+
+```{=latex}
+%TC:endignore 
+```

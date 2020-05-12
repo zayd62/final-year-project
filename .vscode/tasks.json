@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "script",
+			"scriptType": "bash",
+			"path": "Rmarkdown Report/",
+			"fileName": "_build.sh",
+			"scriptFile": true,
+			"requiresArgs": false,
+			"uri": {
+				"$mid": 1,
+				"fsPath": "/Common/University/Year 3/Final Year Project/git-repository/Rmarkdown Report/_build.sh",
+				"path": "/Common/University/Year 3/Final Year Project/git-repository/Rmarkdown Report/_build.sh",
+				"scheme": "file"
+			},
+			"problemMatcher": [],
+			"label": "bash: _build.sh",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

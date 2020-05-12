@@ -1,6 +1,4 @@
-# Data Gathering {#data-gathering-chapter}
-
-As mentioned in Chapter \@ref(data-gathering), a test dataset is required in order to evaluate the different parsing methods as discussed in Chapter \@ref(query-parsing-chapter). 
+As mentioned in Chapter \@ref(data-gathering), a test dataset is required in order to evaluate the different parsing methods as discussed in Chapter \@ref(literature-review). 
 
 ```{bash generate-dataset-ERD-plantuml, include=FALSE}
 plantuml figures/plantuml/dataset-ERD.puml
@@ -13,7 +11,8 @@ As discussed is Chapter \@ref(data-gathering), the data we will be gathering is 
 
 ### Scraping {#scraping}
  
-As mentioned in Chapter \@ref(gathering-data), we use scrapy, a python package to iterate through webpages, extracting the information required and storing it in a database. The database we are using is SQLite [@sqliteteamSQLiteHomePage] and SQLAlchemy [@sqlalchemySqlalchemySqlalchemy2019] is used as the ORM (see Chapter \@ref(definitions) for more information on ORMs).
+As mentioned in Chapter \@ref(gathering-data), we use scrapy, a python package to iterate through webpages, extracting the information required and storing it in a database. The database we are using is SQLite [@sqliteteamSQLiteHomePage] and SQLAlchemy [@sqlalchemySqlalchemySqlalchemy2019] is used as the ORM (see Chapter \@ref(definitions) for more information on ORMs). A file called `requirements-dataGathering.txt` contains a list of all the python packages used for data scraping
+
 
 Using [@krebsSQLAlchemyORMTutorial] as guidance on how to use SQLAlchemy, A database schema was designed and is visualised in figure \@ref(fig:dataset-schema-diagram) as an ERD. \newpage
 
@@ -29,27 +28,61 @@ The entities mentioned in figure \@ref(fig:dataset-schema-diagram) are explained
 
 The scraping process involves various files. Below is a description of each file used in the scraping process and their function. The files are given as a path from the root of the GitHub repository that the files are stored in [@patelZayd62Finalyearproject2019] (Note that the files below are **directly** involved in the scraping process).
 
-- **table_definitions/base.py**: Used for defining the database.
-- **table_definitions/category.py**: A class used to create rows in the category table.
-- **table_definitions/page.py**: A class used to create rows in the page table.
-- **table_definitions/product.py**: A class used to create rows in the product table.
-- **table_definitions/productdata.py**: A class used to create rows in the productdata table.
-- **html_parse/page_product.py**: A function which given a category, gets the associated page rows. For each HTMLcontent in page row, find all the products elements and store in the database.
-- **html_parse/productdata.py**: A function which converts a HTML table to a dictionary. Used to extract detailed information about a scraped product. Used by **scrapers.py** (specifically `class crawlProduct(Spider)` found in **scrapers.py**).
-- **database.py**: Used to create the actual database file. Uses **table_definitions/base.py** to help create the database.
-- **scrapers.py**: The code responsible for visiting the web pages and getting the HTML that is going to be parsed.
-- **raw_data_pipeline.py**: The "glue" code that takes all the files mentioned above and performs a complete scrape from a category to scraped products.
+- `table_definitions/base.py`: Used for defining the database.
+    - **Note**: This file contains a hard coded path to the dataset (the file in question is `dataset.sqlite3`) and will have to be modified before interacting with the database using SQLAlchemy. More details available in the repository `README.md` [@patelZayd62Finalyearproject2019]
+- `table_definitions/category.py`: A class used to create rows in the category table.
+- `table_definitions/page.py`: A class used to create rows in the page table.
+- `table_definitions/product.py`: A class used to create rows in the product table.
+- `table_definitions/productdata.py`: A class used to create rows in the productdata table. \newpage
 
-The scraped data is available in the file **dataset.sqlite3** in this reports associated GitHub repository [@patelZayd62Finalyearproject2019]. **Note**:  Some of the data has been manually cleaned.
+- `html_parse/page_product.py`: A function which given a category, gets the associated page rows. For each HTMLcontent in page row, find all the products elements and store in the database.
+- `html_parse/productdata.py`: A function which converts a HTML table to a dictionary. Used to extract detailed information about a scraped product. Used by `scrapers.py` (specifically `class crawlProduct(Spider)`).
+
+- `database.py`: Used to create the actual database file. Uses `table_definitions/base.py` to help create the database.
+- `scrapers.py`: The code responsible for visiting the web pages and getting the HTML that is going to be parsed.
+- `raw_data_pipeline.py`: The "glue" code that takes all the files mentioned above and performs a complete scrape from a category to scraped products.
+
+The scraped data is available in the file **dataset.sqlite3** in this reports associated GitHub repository [@patelZayd62Finalyearproject2019]. 
+
+**Note**:  Some of the data has been manually cleaned. The manual cleaning is included, but not limited to
+
+1. Manually inserting values where the values were null
+2. Making the contents of the database all lowercase
+
+
+The final dataset that will be used to test the data is described in more detail in Appendix \@ref(date-table)
+
+### Other files
+
+- `size_split/split_size.py`: used to separate the size of the products into the size and its unit (e.g. 1.5kg is transformed into 1.5 and kg as two separate values). The script takes the products table as a csv file, split the size and unit into their own table and save the output as a csv, this is then imported into the SQLite database.
+- `lowercase_products.py`: simple script to take each row in the `products` table and make all the letters lowercase
+- `utils.py`: Miscellaneous utility functions such as formatting text in a terminal window 
+
 
 ## Gathering Natural Language Queries {#gathering-NLQ}
 
-In order to test the various methods, a set of natural language queries as well as their corresponding SQL queries will be needed. The questions will be stored in `dataset.sqlite3` in the tables `authorQuestions` and `alternativeQuestions` details of which can be found in Appendix \@ref(question-tables)
+In order to test the various methods, a set of natural language queries as well as their corresponding SQL queries will be needed. The questions will be stored in `dataset.sqlite3` in the tables `author_question_explicit` and `author_question_generic` details of the SQL table can be found in Appendix \@ref(question-tables) \newpage
 
-### Questions {#nlq-questions}
+### Natural Language Queries {#nlq-questions}
 
-One of the aims of the reports is to find out how domain general model performs in a domain specific environment. One way to test this is to have a natural language query which is then mapped to an SQL query; this will be stored in a table called `authorQuestions`. In order to be more thorough in testing, a set of *"alternative questions"* will be written. These are natural language queries that when parsed, should produce the same SQL query as other natural language queries. The reason for doing this is to test the robustness of the domain general models as well as attempting to *simulate* how these models will be used in a production environment as a service like this is likely to be used by different people and different people phrase things differently but yet can mean the same thing when mapped to SQL. This will be stored in a table `alternativeQuestions`.
+One of the aims of the reports is to find out is how different approaches compare to each other. One way to test this is to have a NLQ which is then mapped to an SQL query.
 
+In order to be more thorough in testing, there will be two sets of questions 
 
-## Dependencies {#ch4-dependencies}
-A file called `requirements-dataGathering.txt` contains a list of all the python packages used for data
+1. author_question_explicit 
+2. author_questions_generic
+
+The explicit dataset will have their natural language queries quite *"rigid"*. What this means that the natural language queries will explicitly mention the names of the columns and will attempt to write the natural language queries similar to how the equivalent SQL query will be  written while trying to avoid using words found in the SQL syntax and being written to sound like a natural language query.  The generic dataset will have the exact same SQL queries but will attempt to have natural language queries that sound more natural and less rigid. This will attempt to more closely mimic natural speech.
+
+The reason for doing this is to test the robustness of the models as well as attempting to *simulate* how these models will be used in a production environment as a service like this is likely to be used by different people and different people phrase things differently but yet can mean the same thing when mapped to SQL. 
+
+An example from the explicit and generic questions is shown in table \@ref(tab:explicit-generic-questions) to better illustrate the differences between the questions. Note that explicit and generic both map to the same SQL query but explicits sentence structure is more similar to the SQL query than generic.
+
+```{r explicit-generic-questions, echo=FALSE}
+library(kableExtra)
+sql_table_issue = read.csv("tables/explicit-generic-questions.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'Sample explicit and generic questions',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+) %>% kable_styling(full_width = T) 
+```

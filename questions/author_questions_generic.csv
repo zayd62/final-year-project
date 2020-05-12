@@ -1,0 +1,31 @@
+id,natural_language_query,SQL_query
+1,show me all the products in the large bottled drinks category,"SELECT * FROM products WHERE category = ""large bottled drinks"""
+2,show me all the products in the crisps category,"SELECT * FROM products WHERE category = ""crisps"""
+3,show me all the products in the hot drinks category,"SELECT * FROM products WHERE category = ""hot drinks"""
+4,show me all the products in the biscuits or the hot drinks category,"SELECT * FROM products WHERE category = ""biscuits"" OR category = ""hot drinks"" "
+5,show me all the products where the price is less than 1,SELECT * FROM products WHERE price < 1
+6,show me all the products that has a price more than 1,SELECT * FROM products WHERE price > 1
+7,show me all the products where the price is between 1 and 2,SELECT * FROM products WHERE price > 1 AND price < 2
+8,show me all the products where the price is less than 1 or the price is greater than 2,SELECT * FROM products WHERE price < 1 OR price > 2
+9,show me the brand and itemname from products,"SELECT brand, itemname FROM products"
+10,show me the brand and itemnae from products in the crisps category and the price is greater than 1,"SELECT brand, itemname FROM products WHERE category = ""Crisps"" AND price > 1"
+11,show me the maximum price of products,SELECT MAX(price) FROM products
+12,show me the minimum price of products,SELECT MIN(price) FROM products
+13,show me the average price of the products,SELECT AVG(price) FROM products
+14,show me all the products from the cadbury brand,"SELECT * FROM products WHERE brand = ""cadbury"""
+15,show me all the products from the brand cadbury or evian,"SELECT * FROM products WHERE brand = ""cadbury"" OR brand = “evian”"
+16,show me the brand of all the products,SELECT brand FROM products
+17,show me the brand of all the products from the crisps category,"SELECT brand FROM products WHERE category = ""crisps"""
+18,show me the brand of all the products from the crisps category and from the walkers brand,"SELECT brand FROM products WHERE category = ""crisps"" and brand = “walkers”"
+19,show me the price and itemname of all the products,"SELECT price, itemname FROM products"
+20,show me the price and itemname of all the products from the crisps category,"SELECT price, itemname FROM products WHERE category = ""Crisps"""
+21,show me the products where the size is 1 and the unit is ltr,"SELECT * FROM products WHERE size = 1 AND unit = ""Ltr"""
+22,show me the products where the size greater than 1 and the unit is ltr,"SELECT * FROM products WHERE size > 1 AND unit = ""Ltr"""
+23,show me the products where the size is less than 1 and the unit is ltr,"SELECT * FROM products WHERE size < 1 AND unit = ""Ltr"""
+24,show me the products where the size is 500 and the unit is ml,"SELECT * FROM products WHERE size = 500 AND unit = ""ml"""
+25,show me the products where the size is greater than 500 and the unit is ml,"SELECT * FROM products WHERE size > 500 AND unit = ""ml"""
+26,show me the products where the size less than 500 and the unit is ml,"SELECT * FROM products WHERE size < 500 AND unit = ""ml"""
+27,show me all the products where the size is less than 600 and the size is greater than 200 and the unit is ml,"SELECT * FROM products WHERE size < 600 AND unit = ""ml"" and size > 200 and unit = ""ml"""
+28,show me the brand and itemname of all the products where the size is 1 and the unit is ltr,"SELECT brand, itemname FROM products WHERE size = 1 and unit = “Ltr”"
+29,show me the brand and the itemname of all the products where the size is greater than 10 and the unit is g and in the category is crisps,"SELECT brand, itemname FROM products WHERE size > 10 and unit = ""g"" AND category = ""Crisps"""
+30,show me the unique category from products,SELECT DISTINCT products.category FROM products

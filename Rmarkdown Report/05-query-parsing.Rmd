@@ -1,3 +1,61 @@
 # Query Parsing {#query-parsing-chapter}
 
-This chapter will deal with taking the natural language queries, feeding them into the parsing methods and collecting their results. 
+This chapter will deal with taking the natural language queries, feeding them into the parsing methods and collecting their results. It will also discuss any changes made to the code as well as well as how to execute the programs. 
+
+## FerreroJeremy/ln2sql (fork) {#ln2sql-query-parsing-chapter}
+
+The repository was forked and some modification were made. You can find the forked repository here [@patelZayd62Ln2sql2020] or https://github.com/zayd62/ln2sql. The changes are described under **Modified/Additional Files**.
+
+### Modified/Additional Files
+
+#### ln2sql/demo/CLITable.py
+
+This file was made by [@goldsboroughHowHaveMultirow2015]. Its purpose is to take a nested list and output a table in the terminal with the appropriate layout and formatting
+
+```{python cli-table-example, attr.source='.numberLines', tidy=TRUE, eval=FALSE}
+data = [["col1", "col2"],["row1,col1", "row1,col2"],["row2,col1", "row2,col2"]]
+```
+
+The output of the file is as follows;
+
+```{bash cli-table-output, tidy=TRUE, eval=FALSE}
+|-----------------------------------------------------------------------------|
+|col1                                  |col2                                  |
+|-----------------------------------------------------------------------------|
+|row1,col1                             |row1,col2                             |
+|-----------------------------------------------------------------------------|
+|row2,col1                             |row2,col2                             |
+|-----------------------------------------------------------------------------|
+```
+#### ln2sql/demo/utils.py
+
+This was made by [@hadidaPrintColorsMost2018]. Its purpose is to take a string and convert it so that when text is rendered on a terminal or shell, the text is rendered with certain colours and styles (e.g. **bold**, \underline{underline}, *italic*, etc) 
+
+#### ln2sql/demo/interactive.py
+
+This file is an interactive demo of parsing natural language queries to SQL queries. It takes a natural language query as input and return the generated SQL query. It also executes the query against the test dataset described in more detail in Chapter \@ref(data-gathering-chapter)
+
+> **Note**: There are hard coded paths in this file. Consult `README.md` on what to change in order for the file to work.
+
+### Using interactive demo
+
+In order to run the interactive demo, it is recommended to create and then activate a Python Virtual Environment (tested on Python 3.7.7).
+
+> **Note**: if you don't have Python 3.7.7 available on your system, you can use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html) to not only manage Virtual Environments, but also specify which Python version to install. Instructions for installing specific Pythons are available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#installing-a-different-version-of-python) 
+
+Then download the repository linked in Chapter \@ref(ln2sql-query-parsing-chapter) and before running, there are some hard coded file paths that need to be changed, details of which are available in the file `README.md`. After adjusting the variables, open a terminal in the root of the downloaded repository and run the following command to launch the interactive demo of converting language queries into SQL.
+
+```{bash interactive, tidy=TRUE, eval=FALSE}
+python -m ln2sql.demo.interactive
+```
+
+### Running against the test dataset
+
+There are two test datasets as discussed in Chapter \@ref(nlq-questions). running the following commands bellow will run the tests against both datasets. each command will also print a file path to where the results files are saved to. 
+
+```{bash test, tidy=TRUE, eval=FALSE}
+python -m ln2sql.demo.test_dataset_explicit
+python -m ln2sql.demo.test_dataset_generic
+```
+
+For explicit, the test results will be in a file called `test_results_ln2sql_explicit.csv` and for generic, `test_results_ln2sql_generic.csv`

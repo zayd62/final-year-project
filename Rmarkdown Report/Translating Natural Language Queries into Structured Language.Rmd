@@ -1,0 +1,590 @@
+--- 
+title: "Using Domain General models in translating Natural Language Queries into Structured Language"
+author: "Zayd Patel"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: report
+classoption: openany
+bibliography: [references.bib]
+link-citations: yes
+pagestyle: plain
+colorlinks: true
+geometry: "left=3cm,right=3cm,top=2.9cm,bottom=2.9cm"
+description: "This paper describes the process of taking a natural language query and converting them into a structured language"
+---
+
+# Acknowledgements {#acknowledgements}
+
+- This document is written using bookdown [@rstudioRstudioBookdown2020] as well as various R packages that Bookdown depends on.
+- This document use a CSL style called `Cite Them Right 10th edition - Harvard` which is saved as the file `harvard.csl` [@zoteroZoteroStyleRepository].
+- Project used Python 3.7 [@pythonPythonDocumentation] and various other python packages which will be cited throughout the paper.
+- Diagrams drawn with draw.io [@JgraphDrawio2020] and/or plantuml [@PlantumlPlantuml2020].
+- Program of Study: **BSc (Hons) Computer Science**.
+- Project Supervisor: **Dr Juilan Hough**.
+
+## Abbreviations {#abbreviations}
+
+- **SQL**: Structured Query Language
+- **NLU**: Natural Query Understanding
+- **CLI**: Command Line Interface
+- **HTML**: HyperText Markup Language
+- **ORM**: Object Relational Mapper
+- **ERD**: Entity Relationship Diagram
+
+
+## Definitions {#definitions}
+
+- **Database**: A structured set of data held in a computer that is accessible in various ways.
+- **ORM**: Object/Relational Mapping (ORM) provides a *methodology and mechanism for object-oriented systems to hold their long-term data safely in a database, with transactional control over it, yet have it expressed when needed in program objects* [@oneilObjectRelationalMapping2008]. 
+- **ERD**: An ERD is a *data model used to describe the relationship between different entities including the different attributes of each entity* [@chenEntityrelationshipModelUnified1976].
+- **Reinforcement Learning**: A type of Artificial Intelligence where by artificial agents learn for themselves through trial and error by being rewarded for successful strategies and punished by unsuccessful strategies [@silverDeepReinforcementLearning2016].
+- **Neural Network**: Neural Networks are a way of doing machine learning by analysing hand labeled training examples. Neural Networks are loosely modelled on the human brain as they consist of nodes, usually organised into layers, that feed into other nodes. Each individual node is adjusted until the final layer of nodes, also known as the output layer, correctly outputs data as expected in accordance to the labeled training data. [@hardestyExplainedNeuralNetworks2017].
+- **Relational Database**: A relational Database is type of database where the data is organised into tables which can then be linked or *related* to each other. For example, you can have a table with customer details and a table with order details and you can implement a relationship between those two tables and extract new pieces of information - for example, you can run a query which shows all the customers that have ordered more than 5 products.[@ibmcloudeducationRelationaldatabases2019]
+- **Stop Words**: Stop words are words that appear to be of little value and are excluded from the vocabulary [@manningIntroductionInformationRetrieval2008]. 
+- **Part of Speech tagging**: Part of speech tagging is the process of taking some text and breaking it down into their parts of speech. [@nlpStanfordNaturalLanguage]
+- **Python Virtual Environment**: Python virtual environments are used to create self contained, isolated versions of python that allow you to install external python packages and modules without affecting other python installations. For example, *"If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run."* Each application will have its own virtual environment and can exist simultaneously [@pythonsoftwarefoundation12VirtualEnvironments]. 
+
+<!--chapter:end:index.Rmd-->
+
+# Introduction {#intro}
+
+## Background {#background}
+
+According to [db-engines.com](db-engines.com), 7 of the top 10 databases are relational databases [@db-engines.comDBEnginesRanking]. One method of extracting data from a relational database is the use of a language called SQL. Like all languages, SQL has certain syntax and rules that needs to be learned. 
+
+While quantifying the difficulty of learning the SQL syntax is difficult, English, the most common spoken language with “1.132 billion” speakers [@ethnologueWhatAreTop2018], could potentially be used to make accessing and querying a database much easier. This lowers the barrier of entry on accessing relational data and can save time and resources by allowing non-technical users access to the database rather than relying on technical users to write SQL code for queries. This problem is part of a field called NLU.
+
+## Aims {#aims}
+
+The aims of this project is to take a query in english and convert it into the appropriate SQL query.  However, to be able to show a practical use case, the process of converting will be done within the **context of retail**. For example, taking the phrase *“show me all the apples”* could be converted into the query below. 
+
+```{sql sql-example, eval=FALSE}
+-- An example SQL query
+SELECT * FROM products WHERE name='apple'
+```
+
+## Formal Report {#formal-report}
+
+Since there are multiple ways to approach this problem, this project will consist of the following stages.
+
+### Data Gathering {#data-gathering}
+
+Since the project will take part in a retail context, appropriate data needs to be gathered. The data that will need to be gathered will be **product data** . Product data such as product name, the type of product as well as various other details will be gathered from the internet and will be discussed in more detail in Chapter \@ref(data-gathering-chapter).
+
+### Query Parsing {#query-parsing}
+
+To convert the natural language queries to SQL. A variety of methods through a literature review will be gathered and discussed in more detail in the literature review in Chapter \@ref(literature-review) and details of the actual implementation will be discussed in Chapter \@ref(query-parsing-chapter).
+
+### Testing parsing methods
+
+To test the parsing methods, a sample mapping of natural language queries and expected SQL query will be made using the test dataset as discussed in Chapter \@ref(data-gathering) and Chapter \@ref(data-gathering-chapter). The parsing methods will be described in more detail in Chapter \@ref(query-parsing-chapter).
+
+### Evaluation {#evaluation}
+
+An evaluation of the parsing methods will then be written up taking into consideration of accuracy,  measure of “closeness” to the correct solution and since the project is taking part in a retail context, challenges in deploying the methods into production.
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Literature review {#literature-review}
+
+There are currently two ways of approaching this problem. They are 
+
+1. **Analytical approaches**: This involves analysing the structure of the SQL database or schema as well as the natural language query in order to build a SQL query.
+2. **Deep Learning Approaches**: This involves using complex machine learning models and neural networks trained on thousands of examples in order to build a complex model which when given a natural language query and other required inputs, can generate SQL queries
+
+## Analytical Approaches {#analytical-approach}
+
+### FerreroJeremy/ln2sql {#ln2sql}
+
+This GitHub repository [@ferreroFerreroJeremyLn2sql2020] is based on the paper by [@coudercFr2sqlQueryingDatabases2015]. While the [original paper](https://www.researchgate.net/publication/280700277_fr2sql_Interrogation_de_bases_de_donnees_en_francais) is in french, using the Google Chrome web browser will translate the paper to english although not perfectly. 
+
+#### Paper explanation {#ln2sql-model}
+
+
+```{bash generate-ln2sql-plantuml, include=FALSE}
+plantuml figures/plantuml/fr2sql.puml
+```
+
+```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the Seq2SQL paper and translated from French to English"}
+knitr::include_graphics("figures/plantuml/fr2sql.png")
+```
+
+The overview for this paper is in Figure \@ref(fig:fr2sql-diagram) which is extracted and translated from the French paper. The paper breaks down the model into the following steps. Since the paper was translated using Google Translate which is not 100% perfect, I have translated, rewritten and summarised the steps the model takes:
+
+1. **Extraction of meaningful words**
+
+This stage extracts meaningful words from the sentence entered by the user. [TreeTagger](https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) is used filter out the **stop words**. Words that are kept include, but not limited to: common names, which can be the name of a table or column. Proper names, numbers, adjectives, etc can be thought to be column values
+
+For example, the sentence: 
+
+> How old **are** the **students** whose **first name is Jean?**
+
+The filter must return the elements: *"age, pupil, first name, Jean"*. The order must be preserved and is important for the next steps. \newpage
+
+2. **Recovery of the architecture of the database**:
+
+The second step of the process consists in recovering the architecture (structure) of the database on which the model is going to perform the queries on. To do this, the model needs to be aware of the database entities (columns, tables, primary and secondary keys, etc.) in order to allow a matching with the words extracted from the user request in Part 1.
+
+Two methods have been implemented to achieve this result. The first method is to collect information necessary by querying the database using SQL queries of the type *“SHOW TABLES, SHOW COLUMNS,DESCRIBE, etc."*
+
+The second method, consists in analyzing the backup or creation file for the database. By analyzing this file, a connection to the database is not required but a universal SQL schema is necessary (some commands being syntactically different under MySQL or Oracle for example). **Note**: fr2sql is therefore only compatible with an SQL database.
+
+3. **Matching to a thesaurus**:
+
+If the user does not enter a sentence written correctly or if the vocabulary is not **strictly** the same as that of the database, no match between the database and the sentence will be found and no relevant SQL query will be returned. Therefore a thesaurus will be created. For each word, there will be a table matching words to concepts together. For example, the words *"pupil"* and *"students"* represent the same **concept** where a concept is an idea that can be represented by a word or group of words. The purpose of this translator is to make the query of a database accessible to a person who does not know the structure or keywords (table and column names) and therefore are likely to use a synonym of a word used in the database than the word itself. \newpage
+
+4. **Breakdown of the request**:
+
+At this stage of the process, the application has a list of keywords from the request and a thesaurus of words. The idea now is to find a match between the request and the database using the thesaurus in order to better understand the structure of the query to generate. During the match all the words are put in lowercase and each keyword found is tagged according to whether it is a column or a table of the database or something else even if it is still unknown at the moment. 
+
+Breakdown of the sentence is carried out according to Figure \@ref(fig:fr2sql-diagram-breakdown) using the keywords tagged *"table"* and *"column"* found in the sentence to find out which segment of the sentence corresponds to which part of the SQL query to build. The presence of a *"SELECT"* and *"FROM"* segment is mandatory in the sentence. The first indicates which will be the type of selection and on which element(s) exactly, the second specifies in which table(s) to look for the selection item. The *JOIN* and *WHERE* segments are optional. The JOIN segment is used for explicit joins (Part 5) and the WHERE to specify, if any, constraints on the selection. 
+
+Depending on the number and the position of the key words in the sentence, output is not the same and therefore will not give the same output. **Note** that if a request contains no word that relates to a table, it will be invalid and will therefore generate an error.
+
+```{r fr2sql-diagram-breakdown, echo=FALSE, fig.cap=" Diagram representing the division made on the sentence entered by the user in order to know what type of query to generate in output, the white squares representing the tables and the black squares the columns"}
+knitr::include_graphics("figures/drawio/fr2sql-01.png")
+```
+
+5. **Determining the structure of the request**
+
+For each of the segments obtained in Part 4, we analyze the keyword tagged *"unknown"*. These words could be algebraic calculations, counting query etc, or even a value which should be a constraint. That way if a word referring to a **count** such as *"how much"* is found in the first segment of the sentence, which corresponds to *SELECT*, the system identifies the request to be a count request, i.e. *SELECT COUNT (\*)* which is first branch of the first segment in Figure \@ref(fig:fr2sql-diagram-breakdown). fr2sql uses a keyword recognition system in the SELECT and/or WHERE segments for many others types of operations. Table \@ref(tab:section-five) is a non-exhaustive list of these keywords and their operations. \newpage
+
+```{r section-five, echo=FALSE}
+library(kableExtra)
+sql_table_issue = read.csv("tables/fr2sql-part5.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'None exhaustive list of keywords and their operations',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+) %>% kable_styling(full_width = T) %>%
+column_spec(1, width = "8cm")
+```
+
+The paper also discusses **INNER JOINs**. Two types of inner joins exist, **implicit** and **explicit**. When there is a selection or constraint on a column that is not part of the *FROM* table, it is an **implicit join**. In this case it is necessary to make a join between the table of the target column and the table *FROM* which is speciﬁed in the sentence. 
+
+In the case of an explicit join, the table on which we must perform the join is specified directly in the sentence. Using Figure \@ref(fig:explicit-join-erd) as the database structure and the sentence: 
+
+> "Which students have a professor whose the first name is Jean?" 
+
+```{r explicit-join-erd, echo=FALSE, fig.cap="Entity Relationship diagram for explicit join. Taken directly from the paper. Some French-English translations: [enseigner = teach, matiere = Topic, eleve = student, professeur = professor]"}
+knitr::include_graphics("figures/images/explicit_join_erd.png")
+```
+
+Here we must make a join between the table *eleve* (translates to student) and *professeur* (translates to professor) in order to be able to select all the students constrained on the teachers first names.  The construction of the joins by the application is made possible by part 2 as fr2sql knows the primary and foreign keys of each table and can implicitly deduce the effective links between the tables and therefore knows if a table can be linked to another and if so, by which table(s) to pass. fr2sql can create joins through multiple tables if required (as in Figure \@ref(fig:explicit-join-erd), to access the teacher table from the table high through the table teaching and class ).
+
+If the selection or constraint column is neither in the *FROM* table, or in a table accessible by joining from the *FROM* table, then the request is impossible to build. \newpage
+
+6. **Generating the query using a *"lax"* grammar**
+
+The *"permissiveness"* of existing techniques is due to their *"too tolerant"* matching. Given that there is a search for a finite set of data in a fairly large space, strict grammars are used to reduce the space of possible requests until proposing the most plausible solution. fr2sql uses Bidirectional matching to reduce the space for possible requests since it intersects a small dataset with another *"weak"*  dataset.
+
+A lax grammar is used to generate the output request. The rules of this grammar is used to generate the query predetermined by matching. Although this technique adds significant processing time and preprocessing operations it significantly reduces the discrimination of matches and thus allows the use of a grammar which does not aim to have the most discriminating rules possible as the previous steps will have already filtered the majority of the sources of errors. 
+
+Due to the large number of rules where each rule represents the construction of a possible query, each rule is indexed using a hash table for increased performance. To do this, an integer is assigned to each key element of the request. 1 for the elements of *table* type , 2 for *columns*, etc. The natural language query entered gives a series of numbers that are concatenated. The 0 represents that the previous element in the chain can be present 1 to N times within the rule which then leads to an array of indexed rules by integers. To find the rule equivalent to an input request, you find the integer corresponding to the demand structure, which also happens to be the key to value, representing the structure of the request to be produced out, in the table. A visualisation of the hash table is in Figure \@ref(fig:hash-table-diagram)
+
+```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence."}
+knitr::include_graphics("figures/images/rule-hash-table.png")
+```
+
+Now that we know the structure of the query to generate as output, we just need to replace the variable, table and column by their true value or name. Some examples of equivalences are available in Table \@ref(tab:query-equivalences)
+
+```{r query-equivalences, echo=FALSE}
+sql_table_issue = read.csv("tables/query-equivalences.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'Some examples of equivalences between the keywords identified and the queries to be generated', booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue)))
+```
+
+The request is therefore generated based on the presence, number and order of the keywords identified in the sentence input by the user. We call this grammar "lax" because it has enough rules to give the impression that the model accepts all forms of natural language queries. 
+
+**Note** that the problem of **mute constraints** is not supported by fr2sql. Requests such as "What are the students called Jean? "Or" Who are the 18 year old students? Will not be processed correctly by the application. Here,the column on which the constraint must be performed is implicit, it is not clearly specified, so it is impossible for the application to find it.
+
+
+#### GitHub Implementation
+
+The GitHub repository is the implementation of the paper in Chapter \@ref(ln2sql-model). The implementation does not follow the paper exactly and deviates from the original in a few ways. These are
+
+1. **Learning data model**
+
+The original paper proposed both a database connection as mentioned in Chapter \@ref(ln2sql-model) part 2 by querying the database for information about the database and by analysing the database creation file (also knows as a dump file). This implementation only requires a dump file therefore no database connection is required. 
+
+2. **TreeTagger**
+
+The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. 
+
+3. **Output format**:
+
+The original paper used a hash map for query structure generation (Chapter \@ref(ln2sql-model) part 6). This implementation uses a Python class in order to output the query in a JSON structure. The implementation also takes advantage of multi-threading for performance reasons. 
+
+The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query. \newpage
+
+```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository"}
+knitr::include_graphics("figures/images/ln2sql-github.png")
+```
+
+## Seq2SQL {#seq2sql}
+
+Seq2SQL is a machine learning model that uses deep neural networks and policy based reinforcement learning to “translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. The model itself is not of interest but rather, a by product of this paper: **WikiSQL**
+
+### WikiSQL {#wikisql}
+
+The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field [[@zhongSeq2SQLGeneratingStructured2017], `Chapter 3 table 1`] and has also been used as a test dataset for other models details of which are available on the WikiSQL GitHub [@salesforceSalesforceWikiSQL2019]  
+ 
+
+<!--chapter:end:03-literature-review.Rmd-->
+
+As mentioned in Chapter \@ref(data-gathering), a test dataset is required in order to evaluate the different parsing methods as discussed in Chapter \@ref(literature-review). 
+
+```{bash generate-dataset-ERD-plantuml, include=FALSE}
+plantuml figures/plantuml/dataset-ERD.puml
+```
+
+## Gathering the test Data {#gathering-data}
+
+As discussed is Chapter \@ref(data-gathering), the data we will be gathering is **product data**. In order to obtain this data, we will be web scraping. The website we will be using is [https://www.bestwaywholesale.co.uk/](https://www.bestwaywholesale.co.uk) [@bestwaywholesaleUKCashCarry] and we will use **scrapy**, a python library, to perform the web scraping [@scrapyScrapyScrapy2019] and BeautifulSoup4, another python library, [@richardsonBeautifulSoupWe] for parsing the HTML.
+
+
+### Scraping {#scraping}
+ 
+As mentioned in Chapter \@ref(gathering-data), we use scrapy, a python package to iterate through webpages, extracting the information required and storing it in a database. The database we are using is SQLite [@sqliteteamSQLiteHomePage] and SQLAlchemy [@sqlalchemySqlalchemySqlalchemy2019] is used as the ORM (see Chapter \@ref(definitions) for more information on ORMs). A file called `requirements-dataGathering.txt` contains a list of all the python packages used for data scraping
+
+
+Using [@krebsSQLAlchemyORMTutorial] as guidance on how to use SQLAlchemy, A database schema was designed and is visualised in figure \@ref(fig:dataset-schema-diagram) as an ERD. \newpage
+
+```{r dataset-schema-diagram, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
+knitr::include_graphics("figures/plantuml/dataset-ERD.png")
+```
+
+The entities mentioned in figure \@ref(fig:dataset-schema-diagram) are explained in Appendix \@ref(dataset-schema-explained).
+
+> **Note**: Not all the entities in the diagram above are used in the dataset scraping. The entities used in the dataset scraping are found in Appendix \@ref(tables-raw-scrapped-data).
+
+### Scraping Process {#scraping-process}
+
+The scraping process involves various files. Below is a description of each file used in the scraping process and their function. The files are given as a path from the root of the GitHub repository that the files are stored in [@patelZayd62Finalyearproject2019] (Note that the files below are **directly** involved in the scraping process).
+
+- `table_definitions/base.py`: Used for defining the database.
+    - **Note**: This file contains a hard coded path to the dataset (the file in question is `dataset.sqlite3`) and will have to be modified before interacting with the database using SQLAlchemy. More details available in the repository `README.md` [@patelZayd62Finalyearproject2019]
+- `table_definitions/category.py`: A class used to create rows in the category table.
+- `table_definitions/page.py`: A class used to create rows in the page table.
+- `table_definitions/product.py`: A class used to create rows in the product table.
+- `table_definitions/productdata.py`: A class used to create rows in the productdata table. \newpage
+
+- `html_parse/page_product.py`: A function which given a category, gets the associated page rows. For each HTMLcontent in page row, find all the products elements and store in the database.
+- `html_parse/productdata.py`: A function which converts a HTML table to a dictionary. Used to extract detailed information about a scraped product. Used by `scrapers.py` (specifically `class crawlProduct(Spider)`).
+
+- `database.py`: Used to create the actual database file. Uses `table_definitions/base.py` to help create the database.
+- `scrapers.py`: The code responsible for visiting the web pages and getting the HTML that is going to be parsed.
+- `raw_data_pipeline.py`: The "glue" code that takes all the files mentioned above and performs a complete scrape from a category to scraped products.
+
+The scraped data is available in the file **dataset.sqlite3** in this reports associated GitHub repository [@patelZayd62Finalyearproject2019]. 
+
+**Note**:  Some of the data has been manually cleaned. The manual cleaning is included, but not limited to
+
+1. Manually inserting values where the values were null
+2. Making the contents of the database all lowercase
+
+
+The final dataset that will be used to test the data is described in more detail in Appendix \@ref(date-table)
+
+### Other files
+
+- `size_split/split_size.py`: used to separate the size of the products into the size and its unit (e.g. 1.5kg is transformed into 1.5 and kg as two separate values). The script takes the products table as a csv file, split the size and unit into their own table and save the output as a csv, this is then imported into the SQLite database.
+- `lowercase_products.py`: simple script to take each row in the `products` table and make all the letters lowercase
+- `utils.py`: Miscellaneous utility functions such as formatting text in a terminal window 
+
+
+## Gathering Natural Language Queries {#gathering-NLQ}
+
+In order to test the various methods, a set of natural language queries as well as their corresponding SQL queries will be needed. The questions will be stored in `dataset.sqlite3` in the tables `author_question_explicit` and `author_question_generic` details of the SQL table can be found in Appendix \@ref(question-tables) \newpage
+
+### Natural Language Queries {#nlq-questions}
+
+One of the aims of the reports is to find out is how different approaches compare to each other. One way to test this is to have a NLQ which is then mapped to an SQL query.
+
+In order to be more thorough in testing, there will be two sets of questions 
+
+1. author_question_explicit 
+2. author_questions_generic
+
+The explicit dataset will have their natural language queries quite *"rigid"*. What this means that the natural language queries will explicitly mention the names of the columns and will attempt to write the natural language queries similar to how the equivalent SQL query will be  written while trying to avoid using words found in the SQL syntax and being written to sound like a natural language query.  The generic dataset will have the exact same SQL queries but will attempt to have natural language queries that sound more natural and less rigid. This will attempt to more closely mimic natural speech.
+
+The reason for doing this is to test the robustness of the models as well as attempting to *simulate* how these models will be used in a production environment as a service like this is likely to be used by different people and different people phrase things differently but yet can mean the same thing when mapped to SQL. 
+
+An example from the explicit and generic questions is shown in table \@ref(tab:explicit-generic-questions) to better illustrate the differences between the questions. Note that explicit and generic both map to the same SQL query but explicits sentence structure is more similar to the SQL query than generic.
+
+```{r explicit-generic-questions, echo=FALSE}
+library(kableExtra)
+sql_table_issue = read.csv("tables/explicit-generic-questions.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'Sample explicit and generic questions',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+) %>% kable_styling(full_width = T) 
+```
+
+<!--chapter:end:04-data-gathering.Rmd-->
+
+# Query Parsing {#query-parsing-chapter}
+
+This chapter will deal with taking the natural language queries, feeding them into the parsing methods and collecting their results. It will also discuss any changes made to the code as well as well as how to execute the programs. 
+
+## FerreroJeremy/ln2sql (fork) {#ln2sql-query-parsing-chapter}
+
+The repository was forked and some modification were made. You can find the forked repository here [@patelZayd62Ln2sql2020] or https://github.com/zayd62/ln2sql. The changes are described under **Modified/Additional Files**.
+
+### Modified/Additional Files
+
+#### ln2sql/demo/CLITable.py
+
+This file was made by [@goldsboroughHowHaveMultirow2015]. Its purpose is to take a nested list and output a table in the terminal with the appropriate layout and formatting
+
+```{python cli-table-example, attr.source='.numberLines', tidy=TRUE, eval=FALSE}
+data = [["col1", "col2"],["row1,col1", "row1,col2"],["row2,col1", "row2,col2"]]
+```
+
+The output of the file is as follows;
+
+```{bash cli-table-output, tidy=TRUE, eval=FALSE}
+|-----------------------------------------------------------------------------|
+|col1                                  |col2                                  |
+|-----------------------------------------------------------------------------|
+|row1,col1                             |row1,col2                             |
+|-----------------------------------------------------------------------------|
+|row2,col1                             |row2,col2                             |
+|-----------------------------------------------------------------------------|
+```
+#### ln2sql/demo/utils.py
+
+This was made by [@hadidaPrintColorsMost2018]. Its purpose is to take a string and convert it so that when text is rendered on a terminal or shell, the text is rendered with certain colours and styles (e.g. **bold**, \underline{underline}, *italic*, etc) 
+
+#### ln2sql/demo/interactive.py
+
+This file is an interactive demo of parsing natural language queries to SQL queries. It takes a natural language query as input and return the generated SQL query. It also executes the query against the test dataset described in more detail in Chapter \@ref(data-gathering-chapter)
+
+> **Note**: There are hard coded paths in this file. Consult `README.md` on what to change in order for the file to work.
+
+### Using interactive demo
+
+In order to run the interactive demo, it is recommended to create and then activate a Python Virtual Environment (tested on Python 3.7.7).
+
+> **Note**: if you don't have Python 3.7.7 available on your system, you can use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html) to not only manage Virtual Environments, but also specify which Python version to install. Instructions for installing specific Pythons are available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html#installing-a-different-version-of-python) 
+
+Then download the repository linked in Chapter \@ref(ln2sql-query-parsing-chapter) and before running, there are some hard coded file paths that need to be changed, details of which are available in the file `README.md`. After adjusting the variables, open a terminal in the root of the downloaded repository and run the following command to launch the interactive demo of converting language queries into SQL.
+
+```{bash interactive, tidy=TRUE, eval=FALSE}
+python -m ln2sql.demo.interactive
+```
+
+### Running against the test dataset
+
+There are two test datasets as discussed in Chapter \@ref(nlq-questions). running the following commands bellow will run the tests against both datasets. each command will also print a file path to where the results files are saved to. 
+
+```{bash test, tidy=TRUE, eval=FALSE}
+python -m ln2sql.demo.test_dataset_explicit
+python -m ln2sql.demo.test_dataset_generic
+```
+
+For explicit, the test results will be in a file called `test_results_ln2sql_explicit.csv` and for generic, `test_results_ln2sql_generic.csv`
+
+<!--chapter:end:05-query-parsing.Rmd-->
+
+# Evaluating Parsing Methods {#testing-parsing-methods-chapter}
+
+Since the project is taking part in a retail context as mentioned in Chapter \@ref(aims) and that different techniques will be compared as mentioned in Chapter \@ref(query-parsing), being able to evaluate each technique is important. This chapter discusses the evaluation metrics that will be used in order to determine the better parsing method as well as the results of feeding the test dataset into the parsing methods.
+
+## Evaluation Metrics {#eval-metrics}
+
+### Accuracy {#accuracy}
+
+This metric is simply a measure of how many SQL queries did the methods generate that match the actual solution. This metric however does have some issues of which will be discussed below.
+
+#### Results Equivalency {#results-equivalency}
+
+According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13: **Data Manipulation** sub-section **\<declare cursor\>** it states under **General Rules**
+
+> 2) If an \<order by clause\> is not specified, then the table specified by the \<cursor specification\> is T and the ordering of rows in T is implementation-dependent.
+
+Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL). For example, MySQL might return the items in table \@ref(tab:query-results) with `id=0` first then `id=1` where as SQLite might return `id=1` first then `id=0`. 
+
+##### Solution
+
+The solution to this is to ensure that each entry in the SQL table has a numerical unique identifier that way, the generated query and its results can be further sorted by its identifier in order to ensure that results of the query are equivalent regardless of database as the queries can be sorted and compared by its identifier.
+
+Another solution is to run all the parsing methods in a single relational database that way, the ordering of the rows are consistent as row ordering is implementation specific. Since SQLite is already being used to store data related to the project (see Appendix \@ref(dataset-schema-explained)) SQLite is the database that all the parsing methods will use. 
+
+SQLAlchemy, according to it [documentation](https://docs.sqlalchemy.org/en/13/dialects/sqlite.html#module-sqlalchemy.dialects.sqlite.pysqlite), uses `pysqlite` which *"is the same driver as the sqlite3 module included with the Python distribution."* In the interest of reproducibility, the sqlite3 driver version is described bellow as well as the python code used to obtain the version:
+
+```{r,echo=FALSE}
+library(reticulate)
+```
+
+```{python sqlite-version, attr.source='.numberLines', tidy=TRUE}
+import sqlite3
+print(sqlite3.sqlite_version)
+```
+
+
+#### SQL Query Equivalency {#query-equivalency}
+
+There are some **SQL queries** that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue.
+
+```{r example-table, echo=FALSE}
+sql_table_issue = read.csv("tables/sql-table-issue.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'An example SQL table called "test"',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+)
+```
+If we want to, for example, run a query that will *"select all the products that are in the category drinks"*, then the following SQL queries will return the same results. Each query also has a short description on what differentiates it from the other queries and is not an exhaustive list of all possible combinations. 
+
+```{sql sql-similar, eval=FALSE, attr.source='.numberLines', tidy=TRUE, tidy.opts=list(width.cutoff=80)}
+-- Query 1: Common SQL query
+SELECT * FROM test WHERE category='drinks'
+-- Query 2: Selecting table columns using table_name.column_name
+SELECT test.id, test.product_name, test.size, test.category, test.brand FROM 
+    test WHERE category='drinks'
+-- Query 3: Selecting table columns using column_name only
+SELECT id, product_name, size, category, brand FROM test WHERE category='drinks'
+-- Query 4: Mixed use of lowercase and UPPERCASE SQL keywords
+select id, product_name, size, category, brand FROM test 
+    where test.category='drinks'
+```
+The results of all 4 queries above is as follows 
+
+```{r db-open, include=FALSE}
+library(DBI)
+db = dbConnect(RSQLite::SQLite(), dbname = "sql-table-issue.sqlite")
+```
+
+```{sql db-query, connection=db, echo=FALSE, output.var="RESULTS"}
+SELECT * FROM test WHERE category='drinks'
+```
+
+```{r query-results, echo=FALSE}
+knitr::kable(
+  head(RESULTS, 20), caption = "Results of the query", longtable = TRUE,
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(RESULTS))
+)
+```
+\newpage
+
+##### Solution {#query-equivalency-solution}
+
+The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results. One way to do this is to execute both the author SQL query and the generated SQL query and see if the results match, if they do, then we can consider the two queries as equal and that the model has correctly generated the SQL query. 
+
+### Ease of use {#ease-of-use}
+
+Since the end user will receive the SQL query and (possibly), the results of the query executed, this section will discuss how *"easy"* it is for IT Infrastructure staff and/or Application developers to use the query parsing methods. Since this *"easy"* is not quantifiable, the following observations will be made and will be left up to the reader to decide. The observations are:
+
+1. How easy it is to install
+2. Resource requirements
+3. Using the parsing method
+
+## FerreroJeremy/ln2sql Evaluation {#ln2sql-eval}
+
+### Accuracy {#ln2sql-eval-accuracy}
+
+When ran against the test dataset as mentioned in Chapter \@ref(gathering-NLQ), we measured how many queries the method calculated (using the method described in Chapter \@ref(query-equivalency-solution)) correctly and how many incorrectly across both generic and explicit. The results are available in Figure \@ref(fig:ln2sql-graphs)
+
+```{r ln2sql-graphs, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
+knitr::include_graphics("figures/images/ln2sql-graphs.png")
+```
+
+<!--chapter:end:06-testing-parsing-methods.Rmd-->
+
+\newpage
+
+```{=latex}
+%TC:ignore 
+```
+
+# (APPENDIX) Appendix {-}
+
+# Dataset Schema Explained {#dataset-schema-explained}
+
+```{r, echo=FALSE}
+knitr::include_graphics("figures/plantuml/dataset-ERD.png")
+```
+
+Figure \@ref(fig:dataset-schema-diagram) is repeated here. The dataset is stored in a file `dataset.sqlite3` \newpage
+
+## Raw Scrapped Dataset {#tables-raw-scrapped-data}
+
+Below are the tables used in scraping the raw data. Note that this is an internal table and will **NOT** be accessible to the parsers.
+
+- **category**
+    - **id**: used as database primary key
+    - **category**: name of the product category
+
+- **page**
+    - **id**: used as database primary key
+    - **url**: for each category, the product information may span several "pages". This field represents the url of each page
+    - **HTMLContent**: stores the HTML of the url above
+    - **dateTimeCrawled**: the date and time the url was crawled
+    - **category_id**: used to identify which entry in the category table this page belongs to
+
+- **product**
+    - **id**: used as database primary key
+    - **url**: for each page, the there are several product previews. This store the URL to find more detailed information about products. 
+    - **HTMLContent**: stores the HTML of the product preview. A page contains multiple product previews. 
+    - **page_id**: used to identify which entry in the page table this product belongs to
+
+- **productData**
+    - **id**: used as database primary key
+    - **url**: Stores the url of the product we are crawling. 
+    - **HTMLContent**: stores the HTML of the url above
+    - **dateTimeCrawled**: the date and time the url was crawled
+    - **price**: price of the product
+    - **brand**: the brand of the product
+    - **itemName**: the name of the product
+    - **size**: the size of the product
+    - **product_id**: used to identify which entry in the product table this entry belongs to 
+
+## Products table {#date-table}
+
+The products table is the final table to be used as the test dataset. Note that originally, the size and unit columns where 
+
+- **products**
+    - **id**: used as database primary key
+    - **category**: name of the product category
+    - **price**: price of the product
+    - **brand**: the brand of the product
+    - **item name**: the name of the product
+    - **size**: the size of the product
+    - **unit**: the unit of the size (e.g. ml, kg etc) \newpage
+
+## Question tables {#question-tables}
+
+The purpose of theses tables are discussed in Chapter \@ref(nlq-questions)
+
+- **authorQuestion**
+    - **id**: used as database primary key
+    - **englishQuery**: The natural language query
+    - **SQLQuery**: The corresponding SQL query that the model should generate
+
+- **alternativeQuestions**
+    - **id**: used as database primary key
+    - **englishQuery**: The natural language query. An alternative to `authorQuestion.englishQuery` 
+    - **product_id**: used to identify which entry in the `authorQuestion` table this entry belongs to
+
+
+```{=latex}
+%TC:endignore 
+```
+
+<!--chapter:end:85-appen1.Rmd-->
+
+
+```{=latex}
+%TC:ignore 
+```
+# References {-}
+
+```{=latex}
+%TC:endignore 
+```
+
+<!--chapter:end:91-references.Rmd-->
+
+
+<!--chapter:end:91-references.Rmd-->
+

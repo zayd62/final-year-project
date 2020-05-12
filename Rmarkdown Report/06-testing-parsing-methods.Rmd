@@ -1,16 +1,42 @@
-# Testing Parsing Methods {#testing-parsing-methods-chapter}
+# Evaluating Parsing Methods {#testing-parsing-methods-chapter}
 
 Since the project is taking part in a retail context as mentioned in Chapter \@ref(aims) and that different techniques will be compared as mentioned in Chapter \@ref(query-parsing), being able to evaluate each technique is important. This chapter discusses the evaluation metrics that will be used in order to determine the better parsing method as well as the results of feeding the test dataset into the parsing methods.
 
-## Evaluation Metrics {#evaluation-metrics}
+## Evaluation Metrics {#eval-metrics}
 
 ### Accuracy {#accuracy}
 
 This metric is simply a measure of how many SQL queries did the methods generate that match the actual solution. This metric however does have some issues of which will be discussed below.
 
-#### Query Equivalency {#query-equivalency}
+#### Results Equivalency {#results-equivalency}
 
-There are some **SQL queries** that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue. \pagebreak
+According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13: **Data Manipulation** sub-section **\<declare cursor\>** it states under **General Rules**
+
+> 2) If an \<order by clause\> is not specified, then the table specified by the \<cursor specification\> is T and the ordering of rows in T is implementation-dependent.
+
+Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL). For example, MySQL might return the items in table \@ref(tab:query-results) with `id=0` first then `id=1` where as SQLite might return `id=1` first then `id=0`. 
+
+##### Solution
+
+The solution to this is to ensure that each entry in the SQL table has a numerical unique identifier that way, the generated query and its results can be further sorted by its identifier in order to ensure that results of the query are equivalent regardless of database as the queries can be sorted and compared by its identifier.
+
+Another solution is to run all the parsing methods in a single relational database that way, the ordering of the rows are consistent as row ordering is implementation specific. Since SQLite is already being used to store data related to the project (see Appendix \@ref(dataset-schema-explained)) SQLite is the database that all the parsing methods will use. 
+
+SQLAlchemy, according to it [documentation](https://docs.sqlalchemy.org/en/13/dialects/sqlite.html#module-sqlalchemy.dialects.sqlite.pysqlite), uses `pysqlite` which *"is the same driver as the sqlite3 module included with the Python distribution."* In the interest of reproducibility, the sqlite3 driver version is described bellow as well as the python code used to obtain the version:
+
+```{r,echo=FALSE}
+library(reticulate)
+```
+
+```{python sqlite-version, attr.source='.numberLines', tidy=TRUE}
+import sqlite3
+print(sqlite3.sqlite_version)
+```
+
+
+#### SQL Query Equivalency {#query-equivalency}
+
+There are some **SQL queries** that are syntactically different but when executed, return the same result. Table \@ref(tab:example-table) will be used to demonstrate this issue.
 
 ```{r example-table, echo=FALSE}
 sql_table_issue = read.csv("tables/sql-table-issue.csv")
@@ -50,46 +76,26 @@ knitr::kable(
   booktabs = TRUE, col.names = gsub("[.]", " ", names(RESULTS))
 )
 ```
+\newpage
 
-##### Solution
+##### Solution {#query-equivalency-solution}
 
-The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results \newpage
-
-#### Results Equivalency {#results-equivalency}
-
-According to the ISO/IEC 9075:1992 which is the 1992 standard of SQL [@internationalstandardsorganisationISOIEC90751992] , under Chapter 13: **Data Manipulation** sub-section **\<declare cursor\>** it states under **General Rules**
-
-> 2) If an \<order by clause\> is not specified, then the table specified by the \<cursor specification\> is T and the ordering of rows in T is implementation-dependent.
-
-Since the queries above do not have an `ORDER BY` clause, the ordering of the rows in table \@ref(tab:query-results) is not guaranteed to be the same across different implementations of the SQL language by different relational databases (MySQL, PostgreSQL, SQLite are all examples of relational databases that implement SQL). For example, MySQL might return the items in table \@ref(tab:query-results) with `id=0` first then `id=1` where as SQLite might return `id=1` first then `id=0`. 
-
-##### Solution
-
-The solution to this is to ensure that each entry in the SQL table has a numerical unique identifier that way, the generated query and its results can be further sorted by its identifier in order to ensure that results of the query are equivalent regardless of database as the queries can be sorted and compared by its identifier.
-
-Another solution is to run all the parsing methods in a single relational database that way, the ordering of the rows are consistent as row ordering is implementation specific. Since SQLite is already being used to store data related to the project (see Appendix) SQLite is the database that all the parsing methods will use. 
-
-SQLAlchemy, according to it [documentation](https://docs.sqlalchemy.org/en/13/dialects/sqlite.html#module-sqlalchemy.dialects.sqlite.pysqlite), uses `pysqlite` which *"is the same driver as the sqlite3 module included with the Python distribution."* In the interest of reproducibility, the sqlite3 driver version is described bellow as well as the python code used to obtain the version:
-
-```{r,echo=FALSE}
-library(reticulate)
-```
-
-```{python sqlite-version, attr.source='.numberLines', tidy=TRUE}
-import sqlite3
-print(sqlite3.sqlite_version)
-```
+The solution is to determine if the queries are equivalent or not by looking at the results of the query. If they are equivalent, then they will return the same results. One way to do this is to execute both the author SQL query and the generated SQL query and see if the results match, if they do, then we can consider the two queries as equal and that the model has correctly generated the SQL query. 
 
 ### Ease of use {#ease-of-use}
 
-Ease of use is defined as
+Since the end user will receive the SQL query and (possibly), the results of the query executed, this section will discuss how *"easy"* it is for IT Infrastructure staff and/or Application developers to use the query parsing methods. Since this *"easy"* is not quantifiable, the following observations will be made and will be left up to the reader to decide. The observations are:
 
-\begin{center}
-\emph{How easy is to use the tool in a production environment}.
-\end{center}
+1. How easy it is to install
+2. Resource requirements
+3. Using the parsing method
 
-This metric is more subjective in nature as it is difficult to measure ease of use. Instead, various metrics will be discussed for each method and will be left to the reader to decide which methods is the *"easiest"*. The metrics that will be used are:
+## FerreroJeremy/ln2sql Evaluation {#ln2sql-eval}
 
-1. data pre-processing required
-2. specialist hardware/software required
-3. setup process
+### Accuracy {#ln2sql-eval-accuracy}
+
+When ran against the test dataset as mentioned in Chapter \@ref(gathering-NLQ), we measured how many queries the method calculated (using the method described in Chapter \@ref(query-equivalency-solution)) correctly and how many incorrectly across both generic and explicit. The results are available in Figure \@ref(fig:ln2sql-graphs)
+
+```{r ln2sql-graphs, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
+knitr::include_graphics("figures/images/ln2sql-graphs.png")
+```

@@ -1,36 +1,143 @@
 # Literature review {#literature-review}
 
+There are currently two ways of approaching this problem. They are 
+
+1. **Analytical approaches**: This involves analysing the structure of the SQL database or schema as well as the natural language query in order to build a SQL query.
+2. **Deep Learning Approaches**: This involves using complex machine learning models and neural networks trained on thousands of examples in order to build a complex model which when given a natural language query and other required inputs, can generate SQL queries
+
+## Analytical Approaches {#analytical-approach}
+
+### FerreroJeremy/ln2sql {#ln2sql}
+
+This GitHub repository [@ferreroFerreroJeremyLn2sql2020] is based on the paper by [@coudercFr2sqlQueryingDatabases2015]. While the [original paper](https://www.researchgate.net/publication/280700277_fr2sql_Interrogation_de_bases_de_donnees_en_francais) is in french, using the Google Chrome web browser will translate the paper to english although not perfectly. 
+
+#### Paper explanation {#ln2sql-model}
+
+
+```{bash generate-ln2sql-plantuml, include=FALSE}
+plantuml figures/plantuml/fr2sql.puml
+```
+
+```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the Seq2SQL paper and translated from French to English"}
+knitr::include_graphics("figures/plantuml/fr2sql.png")
+```
+
+The overview for this paper is in Figure \@ref(fig:fr2sql-diagram) which is extracted and translated from the French paper. The paper breaks down the model into the following steps. Since the paper was translated using Google Translate which is not 100% perfect, I have translated, rewritten and summarised the steps the model takes:
+
+1. **Extraction of meaningful words**
+
+This stage extracts meaningful words from the sentence entered by the user. [TreeTagger](https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) is used filter out the **stop words**. Words that are kept include, but not limited to: common names, which can be the name of a table or column. Proper names, numbers, adjectives, etc can be thought to be column values
+
+For example, the sentence: 
+
+> How old **are** the **students** whose **first name is Jean?**
+
+The filter must return the elements: *"age, pupil, first name, Jean"*. The order must be preserved and is important for the next steps. \newpage
+
+2. **Recovery of the architecture of the database**:
+
+The second step of the process consists in recovering the architecture (structure) of the database on which the model is going to perform the queries on. To do this, the model needs to be aware of the database entities (columns, tables, primary and secondary keys, etc.) in order to allow a matching with the words extracted from the user request in Part 1.
+
+Two methods have been implemented to achieve this result. The first method is to collect information necessary by querying the database using SQL queries of the type *“SHOW TABLES, SHOW COLUMNS,DESCRIBE, etc."*
+
+The second method, consists in analyzing the backup or creation file for the database. By analyzing this file, a connection to the database is not required but a universal SQL schema is necessary (some commands being syntactically different under MySQL or Oracle for example). **Note**: fr2sql is therefore only compatible with an SQL database.
+
+3. **Matching to a thesaurus**:
+
+If the user does not enter a sentence written correctly or if the vocabulary is not **strictly** the same as that of the database, no match between the database and the sentence will be found and no relevant SQL query will be returned. Therefore a thesaurus will be created. For each word, there will be a table matching words to concepts together. For example, the words *"pupil"* and *"students"* represent the same **concept** where a concept is an idea that can be represented by a word or group of words. The purpose of this translator is to make the query of a database accessible to a person who does not know the structure or keywords (table and column names) and therefore are likely to use a synonym of a word used in the database than the word itself. \newpage
+
+4. **Breakdown of the request**:
+
+At this stage of the process, the application has a list of keywords from the request and a thesaurus of words. The idea now is to find a match between the request and the database using the thesaurus in order to better understand the structure of the query to generate. During the match all the words are put in lowercase and each keyword found is tagged according to whether it is a column or a table of the database or something else even if it is still unknown at the moment. 
+
+Breakdown of the sentence is carried out according to Figure \@ref(fig:fr2sql-diagram-breakdown) using the keywords tagged *"table"* and *"column"* found in the sentence to find out which segment of the sentence corresponds to which part of the SQL query to build. The presence of a *"SELECT"* and *"FROM"* segment is mandatory in the sentence. The first indicates which will be the type of selection and on which element(s) exactly, the second specifies in which table(s) to look for the selection item. The *JOIN* and *WHERE* segments are optional. The JOIN segment is used for explicit joins (Part 5) and the WHERE to specify, if any, constraints on the selection. 
+
+Depending on the number and the position of the key words in the sentence, output is not the same and therefore will not give the same output. **Note** that if a request contains no word that relates to a table, it will be invalid and will therefore generate an error.
+
+```{r fr2sql-diagram-breakdown, echo=FALSE, fig.cap=" Diagram representing the division made on the sentence entered by the user in order to know what type of query to generate in output, the white squares representing the tables and the black squares the columns"}
+knitr::include_graphics("figures/drawio/fr2sql-01.png")
+```
+
+5. **Determining the structure of the request**
+
+For each of the segments obtained in Part 4, we analyze the keyword tagged *"unknown"*. These words could be algebraic calculations, counting query etc, or even a value which should be a constraint. That way if a word referring to a **count** such as *"how much"* is found in the first segment of the sentence, which corresponds to *SELECT*, the system identifies the request to be a count request, i.e. *SELECT COUNT (\*)* which is first branch of the first segment in Figure \@ref(fig:fr2sql-diagram-breakdown). fr2sql uses a keyword recognition system in the SELECT and/or WHERE segments for many others types of operations. Table \@ref(tab:section-five) is a non-exhaustive list of these keywords and their operations. \newpage
+
+```{r section-five, echo=FALSE}
+library(kableExtra)
+sql_table_issue = read.csv("tables/fr2sql-part5.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'None exhaustive list of keywords and their operations',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+) %>% kable_styling(full_width = T) %>%
+column_spec(1, width = "8cm")
+```
+
+The paper also discusses **INNER JOINs**. Two types of inner joins exist, **implicit** and **explicit**. When there is a selection or constraint on a column that is not part of the *FROM* table, it is an **implicit join**. In this case it is necessary to make a join between the table of the target column and the table *FROM* which is speciﬁed in the sentence. 
+
+In the case of an explicit join, the table on which we must perform the join is specified directly in the sentence. Using Figure \@ref(fig:explicit-join-erd) as the database structure and the sentence: 
+
+> "Which students have a professor whose the first name is Jean?" 
+
+```{r explicit-join-erd, echo=FALSE, fig.cap="Entity Relationship diagram for explicit join. Taken directly from the paper. Some French-English translations: [enseigner = teach, matiere = Topic, eleve = student, professeur = professor]"}
+knitr::include_graphics("figures/images/explicit_join_erd.png")
+```
+
+Here we must make a join between the table *eleve* (translates to student) and *professeur* (translates to professor) in order to be able to select all the students constrained on the teachers first names.  The construction of the joins by the application is made possible by part 2 as fr2sql knows the primary and foreign keys of each table and can implicitly deduce the effective links between the tables and therefore knows if a table can be linked to another and if so, by which table(s) to pass. fr2sql can create joins through multiple tables if required (as in Figure \@ref(fig:explicit-join-erd), to access the teacher table from the table high through the table teaching and class ).
+
+If the selection or constraint column is neither in the *FROM* table, or in a table accessible by joining from the *FROM* table, then the request is impossible to build. \newpage
+
+6. **Generating the query using a *"lax"* grammar**
+
+The *"permissiveness"* of existing techniques is due to their *"too tolerant"* matching. Given that there is a search for a finite set of data in a fairly large space, strict grammars are used to reduce the space of possible requests until proposing the most plausible solution. fr2sql uses Bidirectional matching to reduce the space for possible requests since it intersects a small dataset with another *"weak"*  dataset.
+
+A lax grammar is used to generate the output request. The rules of this grammar is used to generate the query predetermined by matching. Although this technique adds significant processing time and preprocessing operations it significantly reduces the discrimination of matches and thus allows the use of a grammar which does not aim to have the most discriminating rules possible as the previous steps will have already filtered the majority of the sources of errors. 
+
+Due to the large number of rules where each rule represents the construction of a possible query, each rule is indexed using a hash table for increased performance. To do this, an integer is assigned to each key element of the request. 1 for the elements of *table* type , 2 for *columns*, etc. The natural language query entered gives a series of numbers that are concatenated. The 0 represents that the previous element in the chain can be present 1 to N times within the rule which then leads to an array of indexed rules by integers. To find the rule equivalent to an input request, you find the integer corresponding to the demand structure, which also happens to be the key to value, representing the structure of the request to be produced out, in the table. A visualisation of the hash table is in Figure \@ref(fig:hash-table-diagram)
+
+```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence."}
+knitr::include_graphics("figures/images/rule-hash-table.png")
+```
+
+Now that we know the structure of the query to generate as output, we just need to replace the variable, table and column by their true value or name. Some examples of equivalences are available in Table \@ref(tab:query-equivalences)
+
+```{r query-equivalences, echo=FALSE}
+sql_table_issue = read.csv("tables/query-equivalences.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'Some examples of equivalences between the keywords identified and the queries to be generated', booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue)))
+```
+
+The request is therefore generated based on the presence, number and order of the keywords identified in the sentence input by the user. We call this grammar "lax" because it has enough rules to give the impression that the model accepts all forms of natural language queries. 
+
+**Note** that the problem of **mute constraints** is not supported by fr2sql. Requests such as "What are the students called Jean? "Or" Who are the 18 year old students? Will not be processed correctly by the application. Here,the column on which the constraint must be performed is implicit, it is not clearly specified, so it is impossible for the application to find it.
+
+
+#### GitHub Implementation
+
+The GitHub repository is the implementation of the paper in Chapter \@ref(ln2sql-model). The implementation does not follow the paper exactly and deviates from the original in a few ways. These are
+
+1. **Learning data model**
+
+The original paper proposed both a database connection as mentioned in Chapter \@ref(ln2sql-model) part 2 by querying the database for information about the database and by analysing the database creation file (also knows as a dump file). This implementation only requires a dump file therefore no database connection is required. 
+
+2. **TreeTagger**
+
+The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. 
+
+3. **Output format**:
+
+The original paper used a hash map for query structure generation (Chapter \@ref(ln2sql-model) part 6). This implementation uses a Python class in order to output the query in a JSON structure. The implementation also takes advantage of multi-threading for performance reasons. 
+
+The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query. \newpage
+
+```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository"}
+knitr::include_graphics("figures/images/ln2sql-github.png")
+```
+
 ## Seq2SQL {#seq2sql}
 
-Seq2SQL is a machine learning model that uses deep neural networks and policy based reinforcement learning to “translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. 
-
-### Model overview {#seq2sql-model-overview}
-
-```{bash generate-seq2sql-plantuml, include=FALSE}
-plantuml figures/plantuml/seq2sql.puml
-```
-
-```{r seq2sql-diagram, echo=FALSE, fig.cap="An overview of Seq2SQL taken from the Seq2SQL paper"}
-knitr::include_graphics("figures/plantuml/seq2sql.png")
-```
-
-Figure \@ref(fig:seq2sql-diagram) demonstrates an overview of the Seq2SQL model. Reinforcement learning is used to *"generate the conditions of the query, which are unsuitable for optimization using cross entropy loss due to their unordered nature"*. Seq2SQL is trained *"using a mixed objective, combining cross entropy losses and RL rewards from in-the-loop query execution on a database."*
+Seq2SQL is a machine learning model that uses deep neural networks and policy based reinforcement learning to “translate natural language questions to corresponding SQL queries” [@zhongSeq2SQLGeneratingStructured2017]. The model itself is not of interest but rather, a by product of this paper: **WikiSQL**
 
 ### WikiSQL {#wikisql}
 
-The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field ([@zhongSeq2SQLGeneratingStructured2017], Chapter 3 table 1) and has also been used as a test dataset for other models details of which are available on the [WikiSQL GitHub](@salesforceSalesforceWikiSQL2019)  
-
-#### Logical Forms {#logical-forms}
-
-In the WikiSQL GitHub repository, there are leaderboards for various other models. One leaderboard is for *"Weakly supervised without logical forms"* and another is for *"Supervised via logical forms."*
-
-## jonjrodriguez/nl2sql {#nl2sql}
-
-The model in Chapter \@ref(seq2sql) uses uses deep neural networks which means that not only is significant time is required to train their models. It also requires the SQL table, the question and query to be defined in a specific format which is discussed in more detail in the WikiSQL Github repository [@salesforceSalesforceWikiSQL2019]. 
-
-This technique by jonjrodriguez [@rodriguezJonjrodriguezNl2sql2019] uses various NLP libraries such as Stanford CoreNLP (as mentioned in the GitHub repository) and can automatically connect to a MySQL database, run various models and provide a CLI in which you can ask a question in natural language (english) and will then return the results of the query. Since the results of the query is returned and source code is available, the actual SQL query will be generated at some point before being executed by MySQL which can be extracted and stored later for evaluation.
-
-## Evaluation {#ch4-eval}
-
-Evaluation of these methods is discussed in Chapter \@ref(testing-parsing-methods-chapter).
+The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field [[@zhongSeq2SQLGeneratingStructured2017], `Chapter 3 table 1`] and has also been used as a test dataset for other models details of which are available on the WikiSQL GitHub [@salesforceSalesforceWikiSQL2019]  
  

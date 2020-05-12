@@ -1,0 +1,8 @@
+question id,author questions,author sql,generated sql,correct prediction
+1,show me all the products in the large bottled drinks category,"SELECT * FROM products WHERE category = ""large bottled drinks""",SELECT * FROM products WHERE products.category = OOV,False
+2,show me all the products in the crisps category,"SELECT * FROM products WHERE category = ""crisps""",SELECT * FROM products WHERE products.category = OOV,False
+3,show me all the products in the hot drinks category,"SELECT * FROM products WHERE category = ""hot drinks""",SELECT * FROM products WHERE products.category = OOV,False
+9,show me the brand and itemname from products,"SELECT brand, itemname FROM products","SELECT products.brand, products.itemname FROM products",True
+11,show me the maximum price of products,SELECT MAX(price) FROM products,SELECT MAX(products.price) FROM products,True
+12,show me the minimum price of products,SELECT MIN(price) FROM products,SELECT MIN(products.price) FROM products,True
+13,show me the average price of the products,SELECT AVG(price) FROM products,SELECT AVG(products.price) FROM products,True

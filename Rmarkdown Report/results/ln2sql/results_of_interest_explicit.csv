@@ -1,0 +1,4 @@
+question id,author questions,author sql,generated sql,correct prediction
+4,"show me all the products where the category is ""biscuits"" or the category is ""hot drinks""","SELECT * FROM products WHERE category = ""biscuits"" OR category = ""hot drinks""",SELECT * FROM products WHERE products.category = 'biscuits' AND products.category = 'hot drinks',False
+8,show me all the products that has a price less than 1 or a price greater than 2,SELECT * FROM products WHERE price < 1 OR price > 2,SELECT * FROM products WHERE products.price < '1' OR products.price > '2',True
+20,show me the price and itemname of all the products in the crisps category,"SELECT price, itemname FROM products WHERE category = ""Crisps""","SELECT products.price, products.itemname FROM products WHERE products.category = OOV",False

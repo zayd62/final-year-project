@@ -40,7 +40,7 @@ The second method, consists in analyzing the backup or creation file for the dat
 
 3. **Matching to a thesaurus**:
 
-If the user does not enter a sentence written correctly or if the vocabulary is not **strictly** the same as that of the database, no match between the database and the sentence will be found and no relevant SQL query will be returned. Therefore a thesaurus will be created. For each word, there will be a table matching words to concepts together. For example, the words *"pupil"* and *"students"* represent the same **concept** where a concept is an idea that can be represented by a word or group of words. The purpose of this translator is to make the query of a database accessible to a person who does not know the structure or keywords (table and column names) and therefore are likely to use a synonym of a word used in the database than the word itself. \newpage
+If the user does not enter a sentence written correctly or if the vocabulary is not **strictly** the same as that of the database, no match between the database and the sentence will be found and no relevant SQL query will be returned. Therefore a thesaurus will be created. For each word, there will be a table matching words to concepts together. For example, the words *"pupil"* and *"students"* represent the same **concept** where a concept is an idea that can be represented by a word or group of words. The purpose of this translator is to make the query of a database accessible to a person who does not know the structure or keywords (table and column names) and therefore are likely to use a synonym of a word used in the database than the word itself.
 
 4. **Breakdown of the request**:
 
@@ -117,13 +117,13 @@ The original paper proposed both a database connection as mentioned in Chapter \
 
 2. **TreeTagger**
 
-The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. 
+The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. \newpage
 
 3. **Output format**:
 
 The original paper used a hash map for query structure generation (Chapter \@ref(ln2sql-model) part 6). This implementation uses a Python class in order to output the query in a JSON structure. The implementation also takes advantage of multi-threading for performance reasons. 
 
-The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query. \newpage
+The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query.
 
 ```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository", out.width = "100%"}
 knitr::include_graphics("figures/ln2sql-github.png")
@@ -137,3 +137,8 @@ Seq2SQL is a machine learning model that uses deep neural networks and policy ba
 
 The release of this paper also included the release of the WikiSQL dataset on GitHub [@salesforceSalesforceWikiSQL2019]. This dataset includes *"a corpus of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia."* This dataset, compared to related datasets, is the largest dataset in this specific field [[@zhongSeq2SQLGeneratingStructured2017], `Chapter 3 table 1`] and has also been used as a test dataset for other models details of which are available on the WikiSQL GitHub [@salesforceSalesforceWikiSQL2019]  
  
+## Deep Learning Approaches {#deep-learning-approach}
+
+### paulfitz/mlsql {#ml2sqls}
+
+This GitHub repository [@fitzpatrickPaulfitzMlsql2020] is based on this GitHub repository [@naverNaverSqlova2020] which in turn is based on the paper by [@hwangComprehensiveExplorationWikiSQL]

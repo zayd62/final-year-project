@@ -1,0 +1,31 @@
+question id,author questions,author sql,generated sql,correct prediction
+1,"show me all the products where the category is ""large bottled drinks""","SELECT * FROM products WHERE category = ""large bottled drinks""",SELECT * FROM products WHERE products.category = 'large bottled drinks',True
+2,show me all the products where the category is crisps,"SELECT * FROM products WHERE category = ""crisps""",SELECT * FROM products WHERE products.category = 'crisps',True
+3,"show me all the products where the category is ""hot drinks""","SELECT * FROM products WHERE category = ""hot drinks""",SELECT * FROM products WHERE products.category = 'hot drinks',True
+4,"show me all the products where the category is ""biscuits"" or the category is ""hot drinks""","SELECT * FROM products WHERE category = ""biscuits"" OR category = ""hot drinks""",SELECT * FROM products WHERE products.category = 'biscuits' AND products.category = 'hot drinks',False
+5,show me all the products that has a price less than 1,SELECT * FROM products WHERE price < 1,SELECT * FROM products WHERE products.price < '1',True
+6,show me all the products that has a price more than 1,SELECT * FROM products WHERE price > 1,SELECT * FROM products WHERE products.price > '1',True
+7,show me all the products where the price is greater than 1 and the price is less than 2,SELECT * FROM products WHERE price > 1 AND price < 2,SELECT * FROM products WHERE products.price > '1' AND products.price < '2',True
+8,show me all the products that has a price less than 1 or a price greater than 2,SELECT * FROM products WHERE price < 1 OR price > 2,SELECT * FROM products WHERE products.price < '1' OR products.price > '2',True
+9,show me the brand and itemname from products,"SELECT brand, itemname FROM products","SELECT products.brand, products.itemname FROM products",True
+10,show me the brand and itemname from products where the category is crisps and the price is greater than 1,"SELECT brand, itemname FROM products WHERE category = ""Crisps"" AND price > 1","SELECT products.brand, products.itemname FROM products WHERE products.category = 'crisps' AND products.price > '1'",False
+11,show me maximum price products,SELECT MAX(price) FROM products,SELECT MAX(products.price) FROM products,True
+12,show me the minimum price products,SELECT MIN(price) FROM products,SELECT MIN(products.price) FROM products,True
+13,show me the average price products,SELECT AVG(price) FROM products,SELECT AVG(products.price) FROM products,True
+14,show me all the products where the brand is cadbury,"SELECT * FROM products WHERE brand = ""cadbury""",SELECT * FROM products WHERE products.brand = 'cadbury',True
+15,show me all the products where the brand is cadbury or the brand is evian,"SELECT * FROM products WHERE brand = ""cadbury"" OR brand = “evian”",SELECT * FROM products WHERE products.brand = 'cadbury' OR products.brand = 'evian',False
+16,show me the brand of all the products,SELECT brand FROM products,SELECT products.brand FROM products,True
+17,show me the brand of all the products where the category is crisps,"SELECT brand FROM products WHERE category = ""crisps""",SELECT products.brand FROM products WHERE products.category = 'crisps',True
+18,show me the brand of all the products where the category is crisps and the brand is walkers,"SELECT brand FROM products WHERE category = ""crisps"" and brand = “walkers”",SELECT products.brand FROM products WHERE products.category = 'crisps' AND products.brand = 'walkers',False
+19,show me the price and itemname of all the products,"SELECT price, itemname FROM products","SELECT products.price, products.itemname FROM products",True
+20,show me the price and itemname of all the products in the crisps category,"SELECT price, itemname FROM products WHERE category = ""Crisps""","SELECT products.price, products.itemname FROM products WHERE products.category = OOV",False
+21,show me the products where the size is 1 and the unit is ltr,"SELECT * FROM products WHERE size = 1 AND unit = ""ltr""",SELECT * FROM products WHERE products.size = '1' AND products.unit = 'ltr',True
+22,show me the products where the size greater than 1 and the unit is ltr,"SELECT * FROM products WHERE size > 1 AND unit = ""ltr""",SELECT * FROM products WHERE products.size > '1' AND products.unit = 'ltr',True
+23,show me the products where the size is less than 1 and the unit is ltr,"SELECT * FROM products WHERE size < 1 AND unit = ""ltr""",SELECT * FROM products WHERE products.size < '1' AND products.unit = 'ltr',True
+24,show me the products where the size is 500 and the unit is ml,"SELECT * FROM products WHERE size = 500 AND unit = ""ml""",SELECT * FROM products WHERE products.size = '500' AND products.unit = 'ml',True
+25,show me the products where the size is greater than 500 and the unit is ml,"SELECT * FROM products WHERE size > 500 AND unit = ""ml""",SELECT * FROM products WHERE products.size > '500' AND products.unit = 'ml',True
+26,show me the products where the size less than 500 and the unit is ml,"SELECT * FROM products WHERE size < 500 AND unit = ""ml""",SELECT * FROM products WHERE products.size < '500' AND products.unit = 'ml',True
+27,show me all the products where the size is less than 600 and the size is greater than 200 and the unit is ml,"SELECT * FROM products WHERE size < 600 AND unit = ""ml"" and size > 200 and unit = ""ml""",SELECT * FROM products WHERE products.size < '600' AND products.size > '200' AND products.unit = 'ml',True
+28,show me the brand and the itemname of all the products where the size is 1 and the unit is ltr,"SELECT brand, itemname FROM products WHERE size = 1 and unit = “ltr”","SELECT products.brand, products.itemname FROM products WHERE products.size = '1' AND products.unit = 'ltr'",False
+29,show me the brand and the itemname of all the products where the size is greater than 10 and the unit is g and in the category is crisps,"SELECT brand, itemname FROM products WHERE size > 10 and unit = ""g"" AND category = ""crisps""","SELECT products.brand, products.itemname FROM products WHERE products.size > '10' AND products.unit = 'g' AND products.category = 'crisps'",True
+30,show me the unique category from products,SELECT DISTINCT products.category FROM products,SELECT DISTINCT products.category FROM products,True

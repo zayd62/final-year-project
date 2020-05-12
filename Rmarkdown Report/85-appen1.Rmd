@@ -63,15 +63,15 @@ The products table is the final table to be used as the test dataset. Note that 
 
 The purpose of theses tables are discussed in Chapter \@ref(nlq-questions)
 
-- **authorQuestion**
+- **author_questions_explicit**
     - **id**: used as database primary key
     - **englishQuery**: The natural language query
     - **SQLQuery**: The corresponding SQL query that the model should generate
 
-- **alternativeQuestions**
+- **author_questions_generic**
     - **id**: used as database primary key
-    - **englishQuery**: The natural language query. An alternative to `authorQuestion.englishQuery` 
-    - **product_id**: used to identify which entry in the `authorQuestion` table this entry belongs to
+    - **englishQuery**: The natural language query
+    - **SQLQuery**: The corresponding SQL query that the model should generate
 
 
 ```{=latex}

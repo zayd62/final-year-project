@@ -35,6 +35,7 @@ description: "This paper describes the process of taking a natural language quer
 - **ERD**: Entity Relationship Diagram
 
 
+
 ## Definitions {#definitions}
 
 - **Database**: A structured set of data held in a computer that is accessible in various ways.

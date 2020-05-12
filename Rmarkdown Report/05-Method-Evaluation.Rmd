@@ -45,6 +45,7 @@ knitr::kable(
   booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
 )
 ```
+
 If we want to, for example, run a query that will *"select all the products that are in the category drinks"*, then the following SQL queries will return the same results. Each query also has a short description on what differentiates it from the other queries and is not an exhaustive list of all possible combinations. 
 
 ```{sql sql-similar, eval=FALSE, attr.source='.numberLines', tidy=TRUE, tidy.opts=list(width.cutoff=80)}
@@ -97,5 +98,46 @@ Since the end user will receive the SQL query and (possibly), the results of the
 When ran against the test dataset as mentioned in Chapter \@ref(gathering-NLQ), we measured how many queries the method calculated (using the method described in Chapter \@ref(query-equivalency-solution)) correctly and how many incorrectly across both generic and explicit. The results are available in Figure \@ref(fig:ln2sql-graphs)
 
 ```{r ln2sql-graphs, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset", out.width = "100%"}
-knitr::include_graphics("results/ln2sql-results.png")
+knitr::include_graphics("results/ln2sql/ln2sql-results.png")
 ```
+
+\newpage The graph on its own suggest that a natural language query that is more explicit is more likely to generate a query that returns the same result as the author query but not perfect whereas a generic query has approximately a 50% chance of calculating it correctly.
+
+Looking at the results in `Rmarkdown Report/results/ln2sql/`, for explicit it managed to correctly generate 80% of the SQL queries. One particularly interesting query it got wrong was the `id = 4` in Table \@ref(tab:ln2sql-interesting-results-explicit). Even though the word *"or"* was explicitly mentioned, ln2sql generated an *"and"*. What is also interesting is that `id = 8` was able to correctly generate an *"or"* although the fact that a different column and different comparator was used. Running, (in interactive mode), `show me all the products where the price is 2 or the price is 1` gives `SELECT * FROM products WHERE products.price = '2' OR products.price = '1'` so given that the comparator is the same, we could infer that it is either the column that causes this deviation, or the fact that we are comapring intergers rather than strings which leads to the model suggesting an *"or"*.
+
+```{r ln2sql-interesting-results-explicit, echo=FALSE, warning=FALSE}
+sql_table_issue = read.csv("results/ln2sql/results_of_interest_explicit.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'queries of interest in explicit',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+)%>% kable_styling(full_width = T)  
+```
+\newpage For generic, the model performed much more poorly (Table \@ref(tab:ln2sql-interesting-results-generic)). It got more than half wrong. `id 1 - 3` suggests that, in comparison to the explicit dataset, having the value first and column name second will result in an incorrect prediction where as having it the other way around (as in the explicit dataset) will result in the correct prediction. This is where the model mainly fails in the generic dataset. The model can handle simple queries such `id = 9 ,11 - 13` but apart from that, ln2sql is more suited to queries that follow the structure of a SQL query.   
+
+```{r ln2sql-interesting-results-generic, echo=FALSE, warning=FALSE}
+sql_table_issue = read.csv("results/ln2sql/results_of_interest_generic.csv")
+knitr::kable(
+  head(sql_table_issue, 20), caption = 'queries of interest in generic',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+)%>% kable_styling(full_width = T)  
+```
+
+### Ease of Use {#ln2sql-eval-ease-of-use}
+
+1. **How easy is it to install**
+
+Installing ln2sql is very easy as the repository has very easy to follow instructions and has most of the resources needed in the repository. While the original [@ferreroFerreroJeremyLn2sql2020] has a very simple user interface as well as an Command Line interface (CLI) through the terminal, it is very easy use the same code that powers the CLI in your own code. This paper, for example used the code to make a terminal interface with colours as well as the ability to execute and return the queries. The code for that is available here [@patelZayd62Ln2sql2020]
+
+2. **Resource requirements**
+
+ln2sql has no external dependencies and a significant slow down was not experienced. The only externel dependency was **pytest** a python testing framework [@PytestdevPytest2020] so as long as you are able to run python (tested on Python 3.7), you should be able to clone the repository and start parsing natural language queries  
+
+3. **Using the parsing method**
+
+The parsing method is just a simple as having an SQL dump file which contains the structure of the databse as well as a language configuration file (included with the repository) and feeding the program an english natural language. Keyword filtering can be improved through the use of a thesaurus (included) as well as the ability to improve the stop word filtering as well. 
+
+Overall, ln2sql is a very quick and easy way to start parsing SQL queries as it is simple to install, run wherever python can run and is open to improvement due to available source code, paper and various configuration files all available to tweak. One small caveat is that the built in GUI and CLI requires the `-m` flag (`python -m ...`) which according to the python CLI docs (accessed via python -h on Ubuntu 18.04 terminal), run library module as a script so you would probably have to convert the module as a package. 
+
+
+
+WikiSQL is the task of mapping a natural language question to a SQL query given a table from a Wikipedia article. We first show that learning highly contextand table-aware word representations is arguably the most important consideration for achieving a high accuracy in the task. We explore three variants of BERT-based architecture and our best model outperforms the previous state of the art by 8.2% and 2.5% in logical form and execution accuracy, respectively. We provide a detailed analysis of the models to guide how word contextualization can be utilized in a such semantic parsing task. We then argue that this score is near the upper bound in WikiSQL, where we observe that the most of the evaluation errors are due to wrong annotations. We also measure human accuracy on a portion of the dataset and show that our model exceeds the human performance, at least by 1.4% execution accuracy

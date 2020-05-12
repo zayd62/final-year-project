@@ -166,3 +166,4 @@ vignettes/*.pdf
 # End of https://www.gitignore.io/api/r,python,visualstudiocode
 
 *.png
+dataset.sqlite3

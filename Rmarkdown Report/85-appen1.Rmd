@@ -8,7 +8,7 @@
 
 # Dataset Schema Explained {#dataset-schema-explained}
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width = "100%"}
 knitr::include_graphics("figures/plantuml/dataset-ERD.png")
 ```
 

@@ -14,7 +14,7 @@ This GitHub repository [@ferreroFerreroJeremyLn2sql2020] is based on the paper b
 #### Paper explanation {#ln2sql-model}
 
 
-```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the fr2sql paper and translated from French to English"}
+```{r fr2sql-diagram, echo=FALSE, fig.cap="An overview of fr2sql taken from the fr2sql paper and translated from French to English", out.width = "100%"}
 knitr::include_graphics("figures/fr2sql.png")
 ```
 
@@ -50,7 +50,7 @@ Breakdown of the sentence is carried out according to Figure \@ref(fig:fr2sql-di
 
 Depending on the number and the position of the key words in the sentence, output is not the same and therefore will not give the same output. **Note** that if a request contains no word that relates to a table, it will be invalid and will therefore generate an error.
 
-```{r fr2sql-diagram-breakdown, echo=FALSE, fig.cap=" Diagram representing the division made on the sentence entered by the user in order to know what type of query to generate in output, the white squares representing the tables and the black squares the columns"}
+```{r fr2sql-diagram-breakdown, echo=FALSE, fig.cap=" Diagram representing the division made on the sentence entered by the user in order to know what type of query to generate in output, the white squares representing the tables and the black squares the columns", out.width = "100%"}
 knitr::include_graphics("figures/sql-breakdown.png")
 ```
 
@@ -74,7 +74,7 @@ In the case of an explicit join, the table on which we must perform the join is 
 
 > "Which students have a professor whose the first name is Jean?" 
 
-```{r explicit-join-erd, echo=FALSE, fig.cap="Entity Relationship diagram for explicit join. Taken directly from the paper. Some French-English translations: [enseigner = teach, matiere = Topic, eleve = student, professeur = professor]"}
+```{r explicit-join-erd, echo=FALSE, fig.cap="Entity Relationship diagram for explicit join. Taken directly from the paper. Some French-English translations: [enseigner = teach, matiere = Topic, eleve = student, professeur = professor]", out.width = "100%"}
 knitr::include_graphics("figures/paper-erd.png")
 ```
 
@@ -90,7 +90,7 @@ A lax grammar is used to generate the output request. The rules of this grammar 
 
 Due to the large number of rules where each rule represents the construction of a possible query, each rule is indexed using a hash table for increased performance. To do this, an integer is assigned to each key element of the request. 1 for the elements of *table* type , 2 for *columns*, etc. The natural language query entered gives a series of numbers that are concatenated. The 0 represents that the previous element in the chain can be present 1 to N times within the rule which then leads to an array of indexed rules by integers. To find the rule equivalent to an input request, you find the integer corresponding to the demand structure, which also happens to be the key to value, representing the structure of the request to be produced out, in the table. A visualisation of the hash table is in Figure \@ref(fig:hash-table-diagram)
 
-```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence."}
+```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence.", out.width = "100%"}
 knitr::include_graphics("figures/keyword-hashtable.png")
 ```
 
@@ -125,7 +125,7 @@ The original paper used a hash map for query structure generation (Chapter \@ref
 
 The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simplified version of the overall architecture of the **program** where as the paper describes how each component works to build the query. \newpage
 
-```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository"}
+```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository", out.width = "100%"}
 knitr::include_graphics("figures/ln2sql-github.png")
 ```
 

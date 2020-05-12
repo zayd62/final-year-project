@@ -14,11 +14,13 @@ geometry: "left=3cm,right=3cm,top=2.9cm,bottom=2.9cm"
 description: "This paper describes the process of taking a natural language query and converting them into a structured language"
 ---
 
-# Acknowledgements {#acknowledgements}
+# Preface {-}
+
+## Acknowledgements {-}
 
 - This document is written using bookdown [@rstudioRstudioBookdown2020] as well as various R packages that Bookdown depends on.
 - This document use a CSL style called `Cite Them Right 10th edition - Harvard` which is saved as the file `harvard.csl` [@zoteroZoteroStyleRepository].
-- Project used Python 3.7 [@pythonPythonDocumentation] and various other python packages which will be cited throughout the paper.
+- Project used Python 3.7 [@pythonsoftwarefoundationPythonDocumentation] and various other python packages which will be cited throughout the paper.
 - Diagrams drawn with draw.io [@JgraphDrawio2020] and/or plantuml [@PlantumlPlantuml2020].
 - Program of Study: **BSc (Hons) Computer Science**.
 - Project Supervisor: **Dr Juilan Hough**.

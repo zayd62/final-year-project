@@ -18,7 +18,7 @@ As mentioned in Chapter \@ref(gathering-data), we use scrapy, a python package t
 
 Using [@krebsSQLAlchemyORMTutorial] as guidance on how to use SQLAlchemy, A database schema was designed and is visualised in figure \@ref(fig:dataset-schema-diagram) as an ERD. \newpage
 
-```{r dataset-schema-diagram, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset"}
+```{r dataset-schema-diagram, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset", out.width = "100%" }
 knitr::include_graphics("figures/plantuml/dataset-ERD.png")
 ```
 

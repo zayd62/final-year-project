@@ -64,4 +64,26 @@ python -m ln2sql.demo.test_dataset_explicit
 python -m ln2sql.demo.test_dataset_generic
 ```
 
-For explicit, the test results will be in a file called `test_results_ln2sql_explicit.csv` and for generic, `test_results_ln2sql_generic.csv`
+For explicit, the test results will be in a file called `test_results_ln2sql_explicit.csv` and for generic, `test_results_ln2sql_generic.csv` \newpage
+
+## paulfitz/mlsql implementation
+
+### Prerequisites
+
+Visit the implementation repository here [@patelZayd62Sqlovatest2020] and follow the instructions on how to setup the implementation. 
+
+#### Same Files
+
+The following files are exactly the same as in Chapter \@ref(ln2sql-query-parsing-chapter)
+
+- CLITable.py
+- utils.py
+
+#### New file
+
+- **products.csv**: this is an SQL dump of the database. This is used for returning answers to natural language query as well as for the model to learn the database structure.
+
+#### Running interactive and tests
+
+Since the setup of this method is much more complicated, detailed instructions are in the repositories `README.md` file available here [@patelZayd62Sqlovatest2020] as well as instructions on how to run the demonstrations. 
+

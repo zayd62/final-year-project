@@ -86,13 +86,7 @@ If the selection or constraint column is neither in the *FROM* table, or in a ta
 
 The *"permissiveness"* of existing techniques is due to their *"too tolerant"* matching. Given that there is a search for a finite set of data in a fairly large space, strict grammars are used to reduce the space of possible requests until proposing the most plausible solution. fr2sql uses Bidirectional matching to reduce the space for possible requests since it intersects a small dataset with another *"weak"*  dataset.
 
-A lax grammar is used to generate the output request. The rules of this grammar is used to generate the query predetermined by matching. Although this technique adds significant processing time and preprocessing operations it significantly reduces the discrimination of matches and thus allows the use of a grammar which does not aim to have the most discriminating rules possible as the previous steps will have already filtered the majority of the sources of errors. 
-
-Due to the large number of rules where each rule represents the construction of a possible query, each rule is indexed using a hash table for increased performance. To do this, an integer is assigned to each key element of the request. 1 for the elements of *table* type , 2 for *columns*, etc. The natural language query entered gives a series of numbers that are concatenated. The 0 represents that the previous element in the chain can be present 1 to N times within the rule which then leads to an array of indexed rules by integers. To find the rule equivalent to an input request, you find the integer corresponding to the demand structure, which also happens to be the key to value, representing the structure of the request to be produced out, in the table. A visualisation of the hash table is in Figure \@ref(fig:hash-table-diagram)
-
-```{r hash-table-diagram, echo=FALSE, fig.cap="Hash table indexing the structures of the requests to generate according to the structure of the entered sentence.", out.width = "100%"}
-knitr::include_graphics("figures/keyword-hashtable.png")
-```
+A lax grammar is used to generate the output request adn the rules of this grammar is used to generate the query predetermined by matching. Although this technique adds significant processing time and preprocessing operations it significantly reduces the discrimination of matches and thus allows the use of a grammar which does not aim to have the most discriminating rules possible as the previous steps will have already filtered the majority of the sources of errors. 
 
 Now that we know the structure of the query to generate as output, we just need to replace the variable, table and column by their true value or name. Some examples of equivalences are available in Table \@ref(tab:query-equivalences)
 
@@ -104,8 +98,32 @@ knitr::kable(
 
 The request is therefore generated based on the presence, number and order of the keywords identified in the sentence input by the user. We call this grammar "lax" because it has enough rules to give the impression that the model accepts all forms of natural language queries. 
 
-**Note** that the problem of **mute constraints** is not supported by fr2sql. Requests such as "What are the students called Jean? "Or" Who are the 18 year old students? Will not be processed correctly by the application. Here,the column on which the constraint must be performed is implicit, it is not clearly specified, so it is impossible for the application to find it.
+**Note** that the problem of **mute constraints** is not supported by fr2sql. Requests such as "What are the students called Jean? "Or" Who are the 18 year old students? Will not be processed correctly by the application. Here,the column on which the constraint must be performed is implicit, it is not clearly specified, so it is impossible for the application to find it. \newpage
 
+**Results of Model**
+
+Below in Figure \@ref(fig:fr2sql-results) are the results when tested against a manually written dataset against the database in Figure \@ref(fig:explicit-join-erd)
+
+```{r fr2sql-results, echo=FALSE, fig.cap="YES means operation is supported, NO means it is not", out.width = "100%"}
+knitr::include_graphics("figures/fr2sql-results.png")
+``` 
+
+Also find below in \@ref(fig:fr2sql-precision) you can find results against differrent categories with different metrics where
+
+$$
+precision = \frac{correct\_answers\_returned}{responses\_returned}
+$$
+
+$$
+recall = \frac{correct\_answers\_returned}{entered\_sentences}
+$$
+
+**f-measure** is *"can be interpreted as a weighted average of the precision and recall,"* [@sklearnSklearnMetricsF1] \newpage
+
+
+```{r fr2sql-precision, echo=FALSE, fig.cap="Results against differrent categories with different metrics", out.width = "100%"}
+knitr::include_graphics("figures/precision.png")
+```
 
 #### GitHub Implementation
 
@@ -117,7 +135,7 @@ The original paper proposed both a database connection as mentioned in Chapter \
 
 2. **TreeTagger**
 
-The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. \newpage
+The original used TreeTagger for not only Part-of-speech tagging, but also to filter out stop words. This implementation uses personal configuration files for **languages**, **stop words** and **synonyms** in order to be more generic. One benefit of this is that all all languages can be supported as long as you have the appropriate configuration files. The repository has the configuration files for english built in. 
 
 3. **Output format**:
 
@@ -128,8 +146,6 @@ The implementation also uses Figure \@ref(fig:ln2sql-diagram) to display a simpl
 ```{r ln2sql-diagram, echo=FALSE, fig.cap="An overview of ln2sql taken from the GitHub repository", out.width = "100%"}
 knitr::include_graphics("figures/ln2sql-github.png")
 ```
-
-
  
 ## Deep Learning Approaches {#deep-learning-approach}
 
@@ -189,7 +205,21 @@ During the decoding (SQL query generation) stage, non-executable (partial) SQL q
 
 In `select` clause, (`select` column, aggregation operator) pairs are excluded when the string-type columns are paired with numerical aggregation operators such as `MAX`, `MIN`, `SUM`, or `AVG`. The pair with highest joint probability is selected from remaining pairs. 
 
-In `where` clause decoding, the executability of each (`where` column, operator, value) pair is tested by checking the answer returned by the partial SQL query $select agg(col_s) where col_w op val$. Here, $col_s$ is the predicted `select` column, `agg` is the predicted aggregation operator, $col_w$ is one of the `where` column candidates, `op` is `where` operator, and `val` stands for the `where` condition value. The queries with empty returns are also excluded from the candidates. The final output of where clause is determined by selecting the output maximizing the joint probability estimated from the output of `where-number`, `where-column`, `where-operator`, and `where-value` modules. 
+In `where` clause decoding, the executability of each (`where` column, operator, value) pair is tested by checking the answer returned by the partial SQL query $select agg(col_s) where col_w op val$. Here, $col_s$ is the predicted `select` column, `agg` is the predicted aggregation operator, $col_w$ is one of the `where` column candidates, `op` is `where` operator, and `val` stands for the `where` condition value. The queries with empty returns are also excluded from the candidates. The final output of where clause is determined by selecting the output maximizing the joint probability estimated from the output of `where-number`, `where-column`, `where-operator`, and `where-value` modules. \newpage
+
+**Results**
+
+According to the GitHub repository for sqlova, the results for the model with and without Execution Guided Decoding is as follows
+
+| **Model**   | Dev <br />logical form <br />accuracy | Dev<br />execution<br/> accuracy | Test<br /> logical form<br /> accuracy | Test<br /> execution<br /> accuracy |
+| ----------- | ------------------------------------- | -------------------------------- | -------------------------------------- | ----------------------------------- |
+| SQLova    | 81.6 (**+5.5**)^                      | 87.2 (**+3.2**)^                 | 80.7 (**+5.3**)^                       | 86.2 (**+2.5**)^                    |
+| SQLova-EG | 84.2 (**+8.2**)*                      | 90.2 (**+3.0**)*                 | 83.6(**+8.2**)*                        | 89.6 (**+2.5**)*                    |
+
+- ^: Compared to current [SOTA](https://github.com/salesforce/WikiSQL) models that do not use execution guided decoding.
+- *: Compared to current [SOTA](https://github.com/salesforce/WikiSQL).
+- The order of where conditions is ignored in measuring logical form accuracy in our model. 
+
 
 #### GitHub Implementation
 

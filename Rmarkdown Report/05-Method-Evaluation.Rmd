@@ -97,7 +97,7 @@ Since the end user will receive the SQL query and (possibly), the results of the
 
 When ran against the test dataset as mentioned in Chapter \@ref(gathering-NLQ), we measured how many queries the method calculated (using the method described in Chapter \@ref(query-equivalency-solution)) correctly and how many incorrectly across both generic and explicit. The results are available in Figure \@ref(fig:ln2sql-graphs)
 
-```{r ln2sql-graphs, echo=FALSE, fig.cap="Entity Relationship Diagram for the dataset", out.width = "100%"}
+```{r ln2sql-graphs, echo=FALSE, fig.cap="results for ln2sql", out.width = "90%"}
 knitr::include_graphics("results/ln2sql/ln2sql-results.png")
 ```
 
@@ -134,10 +134,46 @@ ln2sql has no external dependencies and a significant slow down was not experien
 
 3. **Using the parsing method**
 
-The parsing method is just a simple as having an SQL dump file which contains the structure of the databse as well as a language configuration file (included with the repository) and feeding the program an english natural language. Keyword filtering can be improved through the use of a thesaurus (included) as well as the ability to improve the stop word filtering as well. 
+The parsing method is just a simple as having an SQL dump file which contains the structure of the databse as well as a language configuration file (included with the repository) and feeding the program an english natural language. Keyword filtering can be improved through the use of a thesaurus (included) as well as the ability to improve the stop word filtering as well. A CLI tool and a GUI tool is included as well. 
 
-Overall, ln2sql is a very quick and easy way to start parsing SQL queries as it is simple to install, run wherever python can run and is open to improvement due to available source code, paper and various configuration files all available to tweak. One small caveat is that the built in GUI and CLI requires the `-m` flag (`python -m ...`) which according to the python CLI docs (accessed via python -h on Ubuntu 18.04 terminal), run library module as a script so you would probably have to convert the module as a package. 
+**Conclusion**
 
+Overall, ln2sql is a very quick and easy way to start parsing SQL queries as it is simple to install, run wherever python can run and is open to improvement due to available source code, paper and various configuration files all available to tweak. One small caveat is that the built in GUI and CLI requires the `-m` flag (`python -m ...`) which according to the python CLI docs (accessed via `python -h` on Ubuntu 18.04 terminal), run library module as a script so you would probably have to convert the module to a python package which is beyond the scope of this paper.
 
+## paulfitz/mlsql
 
-WikiSQL is the task of mapping a natural language question to a SQL query given a table from a Wikipedia article. We first show that learning highly contextand table-aware word representations is arguably the most important consideration for achieving a high accuracy in the task. We explore three variants of BERT-based architecture and our best model outperforms the previous state of the art by 8.2% and 2.5% in logical form and execution accuracy, respectively. We provide a detailed analysis of the models to guide how word contextualization can be utilized in a such semantic parsing task. We then argue that this score is near the upper bound in WikiSQL, where we observe that the most of the evaluation errors are due to wrong annotations. We also measure human accuracy on a portion of the dataset and show that our model exceeds the human performance, at least by 1.4% execution accuracy
+### Accuracy {#sqlova-accuracy}
+
+Just like Chapter \@ref(ln2sql-eval-accuracy), we measured the accuracy between the explicit and generic dataset and measured how many were correct or incorrect. The results are in \@ref(fig:results-sqlova)
+
+```{r results-sqlova, echo=FALSE, fig.cap="Results for mlsql", out.width = "80%"}
+knitr::include_graphics("results/sqlova/sqlova-results.png")
+```
+
+\newpage Data suggests that sqlova performed worse than ln2sql based on the graph alone. However, taking a look at the data itself for generic Table \@ref(tab:sqlova-results-generic), `id 1 to 3` appear to have the *where* filter correct, the *select* filter is *itemname* rather than *"\*"*.  Another reason is that sqlova is based on a deep learning approach so to get the best results, the model will need to be trained on some of samples of data relevant to the retail domain where as sqlova was trained on Chapter \@ref(wikisql).
+
+```{r sqlova-results-generic, echo=FALSE, warning=FALSE}
+sql_table_issue = read.csv("results/sqlova/test_results_sqlova_generic.csv")
+knitr::kable(
+  head(sql_table_issue, 5), caption = 'first 5 tests in generic',
+  booktabs = TRUE, col.names = gsub("[.]", " ", names(sql_table_issue))
+)%>% kable_styling(full_width = T)  
+```
+
+### Ease of Use {#sqlova-eval-ease-of-use}
+
+1. **How easy is it to install**
+
+Installation was very simple as the model was made available via a Docker Container so once the contaier was downloaded, only once command is need to run the models. One small issue is that the download was over 4GB so for slow internet conections, unreliable connections and meterred connections may not be able to use this. 
+
+2. **Resource requirements**
+
+One benefit of Docker Containers is that no dependency management is needed but the Docker Software itself is needed to run the container. A strong internet connection is needed to download the model as it is over 4GB and it requires 3GB of RAM which is quite when ran on consumer hardware.  
+
+3. **Using the parsing method**
+
+The model is ONLY interacted with through a REST API so can be accessed programmatically. One way that this can be used by end users is by placing a user interface, e.g. Desktop of Web Application which then communicates with the API on the users behalf. Also, given the fact that this is a Deep learning approach, debugging and improving the will require specialist talent. Deploying the container designed to be simple due to the containarised nature. 
+
+**Conclusion**
+
+While the REST API is nice from a developers perspective, given the weaker performance and higher memory usage, this approach is not as nad as ln2sql. 

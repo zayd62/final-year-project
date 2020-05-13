@@ -1,0 +1,12 @@
+# Conclusion
+
+In conclusion, we have taken two different approaches to the same problem, an analytical and deep learning approach. We have experimented and measured how they perform in a domain specific environment. While deep learning approaches may be able to give good or maybe better than human accuracy, given the specific domain (Retail), the deep learning approach may fail as it works on what it has learnt from thousands on training sessions and may not have any experience with this type of data. An analytical approach like ln2sql attempt to calculate the generated SQL query by breaking down the sentence into its individual components and rebuilding a query from those parts as well as an awareness of the database. In this case, an analytical approach had achieved a much higher success rate than the large and resource intensive Deep Learning model. 
+
+## Further work
+
+Further work could include:
+
+- **More data**: Retail does not just consist of products, there is also the human element such as stores storing data about you for their rewards program so queries into a database with people data.
+    - An extension to this could be different data types such as dates. 
+- **Training**: Using larger amounts of domain specific data, try and train the machine learning model and see if better performance can be obtained. 
+- **ln2sql options**: all the files such as the language configuration files were left as is. Perhaps experimenting with these file could yield a better result. 

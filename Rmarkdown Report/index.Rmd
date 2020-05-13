@@ -33,6 +33,11 @@ description: "This paper describes the process of taking a natural language quer
 - **HTML**: HyperText Markup Language
 - **ORM**: Object Relational Mapper
 - **ERD**: Entity Relationship Diagram
+- **LSTM**: Long Short Term Memory
+- **API**: Application Programming Interface
+- **REST**: REpresentational State Transfer
+- **JSON**: JavaScript Object Notation
+
 
 
 
@@ -47,3 +52,7 @@ description: "This paper describes the process of taking a natural language quer
 - **Stop Words**: Stop words are words that appear to be of little value and are excluded from the vocabulary [@manningIntroductionInformationRetrieval2008]. 
 - **Part of Speech tagging**: Part of speech tagging is the process of taking some text and breaking it down into their parts of speech. [@nlpStanfordNaturalLanguage]
 - **Python Virtual Environment**: Python virtual environments are used to create self contained, isolated versions of python that allow you to install external python packages and modules without affecting other python installations. For example, *"If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run."* Each application will have its own virtual environment and can exist simultaneously [@pythonsoftwarefoundation12VirtualEnvironments]. 
+- **Semantic Parsing**: *" Semantic parsing is the task of translating natural language utterances to (often machine executable) formal meaning representations"*
+- **LSTM**: *"LSTMs are a way of storing information over extended time intervals by recurrent backpropogation."* Before, the introduction of LSTMs, recurrent backpropogation took long periods of time mostly because of insufficient, decaying error backflow [@hochreiterLongShortTermMemory1997].
+- **REST API**: Uses the HTTP protocol to transfer a resource and its state through HTTP protocols [@mozilladevelopernetworkDefinitionREST]
+- **Docker Container**: *"A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another."* [@dockerWhatContainerApp]
